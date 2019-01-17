@@ -1,0 +1,1244 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>8.16_filter与query深入对比解密：相关度，性能 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="8.17_上机动手实战常用的各种query搜索语法.html" />
+    
+    
+    <link rel="prev" href="8.15_快速上机动手实战Query DSL搜索语法.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1、基本概念.html">
+            
+                <a href="../1、基本概念.html">
+            
+                    
+                    1、基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2、安装和启动.html">
+            
+                <a href="../2、安装和启动.html">
+            
+                    
+                    2、安装和启动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    3、快速入门
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../3、快速入门/3、快速入门案例实战.html">
+            
+                <a href="../3、快速入门/3、快速入门案例实战.html">
+            
+                    
+                    3.1、快速入门案例实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../3、快速入门/3.2、多种搜索方式.html">
+            
+                <a href="../3、快速入门/3.2、多种搜索方式.html">
+            
+                    
+                    3.2、多种搜索方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../3、快速入门/3.3、嵌套聚合，下钻分析，聚合分析.html">
+            
+                <a href="../3、快速入门/3.3、嵌套聚合，下钻分析，聚合分析.html">
+            
+                    
+                    3.3、嵌套聚合，下钻分析，聚合分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../3、快速入门/3.4、Elasticsearch的基础分布式架构.html">
+            
+                <a href="../3、快速入门/3.4、Elasticsearch的基础分布式架构.html">
+            
+                    
+                    3.4、Elasticsearch的基础分布式架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../3、快速入门/3.5、shard&replica机制再次梳理以及单node环境中创建index图解.html">
+            
+                <a href="../3、快速入门/3.5、shard&replica机制再次梳理以及单node环境中创建index图解.html">
+            
+                    
+                    3.5、shard&replica机制再次梳理以及单node环境中创建index图解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    4、document
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../4、document/4.1_初步解析document的核心元数据以及图解剖析index创建反例.html">
+            
+                <a href="../4、document/4.1_初步解析document的核心元数据以及图解剖析index创建反例.html">
+            
+                    
+                    4.1_初步解析document的核心元数据以及图解剖析index创建反例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../4、document/4.2_document id的手动指定与自动生成两种方式解析.html">
+            
+                <a href="../4、document/4.2_document id的手动指定与自动生成两种方式解析.html">
+            
+                    
+                    4.2_document id的手动指定与自动生成两种方式解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../4、document/4.3_document的_source元数据以及定制返回结果解析.html">
+            
+                <a href="../4、document/4.3_document的_source元数据以及定制返回结果解析.html">
+            
+                    
+                    4.3_document的_source元数据以及定制返回结果解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../4、document/4.4_document的全量替换、强制创建以及图解lazy delete机制.html">
+            
+                <a href="../4、document/4.4_document的全量替换、强制创建以及图解lazy delete机制.html">
+            
+                    
+                    4.4_document的全量替换、强制创建以及图解lazy delete机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../5、深度图解剖析.html">
+            
+                <a href="../5、深度图解剖析.html">
+            
+                    
+                    5、深度图解剖析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    6、上机动手实战演练
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../6、上机动手实战演练/6.1_基于_version进行乐观锁并发控制.html">
+            
+                <a href="../6、上机动手实战演练/6.1_基于_version进行乐观锁并发控制.html">
+            
+                    
+                    6.1_基于_version进行乐观锁并发控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../6、上机动手实战演练/6.2_基于external version进行乐观锁并发控制.html">
+            
+                <a href="../6、上机动手实战演练/6.2_基于external version进行乐观锁并发控制.html">
+            
+                    
+                    6.2_基于external version进行乐观锁并发控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../6、上机动手实战演练/6.3_图解partial update实现原理以及动手实战演练.html">
+            
+                <a href="../6、上机动手实战演练/6.3_图解partial update实现原理以及动手实战演练.html">
+            
+                    
+                    6.3_图解partial update实现原理以及动手实战演练
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../6、上机动手实战演练/6.4_基于groovy脚本进行partial update.html">
+            
+                <a href="../6、上机动手实战演练/6.4_基于groovy脚本进行partial update.html">
+            
+                    
+                    6.4_基于groovy脚本进行partial update
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../6、上机动手实战演练/6.5_图解partial update乐观锁并发控制原理以及相关操作讲解.html">
+            
+                <a href="../6、上机动手实战演练/6.5_图解partial update乐观锁并发控制原理以及相关操作讲解.html">
+            
+                    
+                    6.5_图解partial update乐观锁并发控制原理以及相关操作讲解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../6、上机动手实战演练/6.6_mget批量查询api.html">
+            
+                <a href="../6、上机动手实战演练/6.6_mget批量查询api.html">
+            
+                    
+                    6.6_mget批量查询api
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    7、分布式文档系统
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../7、分布式文档系统/7.1_上机动手实战演练bulk批量增删改.html">
+            
+                <a href="../7、分布式文档系统/7.1_上机动手实战演练bulk批量增删改.html">
+            
+                    
+                    7.1_上机动手实战演练bulk批量增删改
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../7、分布式文档系统/7.2_阶段性总结以及什么是distributed document store.html">
+            
+                <a href="../7、分布式文档系统/7.2_阶段性总结以及什么是distributed document store.html">
+            
+                    
+                    7.2_阶段性总结以及什么是distributed document store
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../7、分布式文档系统/7.3_深度图解剖析document数据路由原理.html">
+            
+                <a href="../7、分布式文档系统/7.3_深度图解剖析document数据路由原理.html">
+            
+                    
+                    7.3_深度图解剖析document数据路由原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../7、分布式文档系统/7.4_document增删改内部原理图解揭秘.html">
+            
+                <a href="../7、分布式文档系统/7.4_document增删改内部原理图解揭秘.html">
+            
+                    
+                    7.4_document增删改内部原理图解揭秘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../7、分布式文档系统/7.5_图解写一致性原理以及quorum机制深入剖析.html">
+            
+                <a href="../7、分布式文档系统/7.5_图解写一致性原理以及quorum机制深入剖析.html">
+            
+                    
+                    7.5_图解写一致性原理以及quorum机制深入剖析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../7、分布式文档系统/7.6_document查询内部原理图解揭秘.html">
+            
+                <a href="../7、分布式文档系统/7.6_document查询内部原理图解揭秘.html">
+            
+                    
+                    7.6_document查询内部原理图解揭秘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../7、分布式文档系统/7.7_bulk api的奇特json格式与底层性能优化关系大揭秘.html">
+            
+                <a href="../7、分布式文档系统/7.7_bulk api的奇特json格式与底层性能优化关系大揭秘.html">
+            
+                    
+                    7.7_bulk api的奇特json格式与底层性能优化关系大揭秘
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    8、初识搜索引擎
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="8.1_search结果深入解析（search timeout机制揭秘）.html">
+            
+                <a href="8.1_search结果深入解析（search timeout机制揭秘）.html">
+            
+                    
+                    8.1_search结果深入解析（search timeout机制揭秘）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="8.2_multi-index&multi-type搜索模式解析以及搜索原理初步图解.html">
+            
+                <a href="8.2_multi-index&multi-type搜索模式解析以及搜索原理初步图解.html">
+            
+                    
+                    8.2_multi-index&multi-type搜索模式解析以及搜索原理初步图解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="8.3_分页搜索以及deep paging性能问题深度图解揭秘.html">
+            
+                <a href="8.3_分页搜索以及deep paging性能问题深度图解揭秘.html">
+            
+                    
+                    8.3_分页搜索以及deep paging性能问题深度图解揭秘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="8.4_快速掌握query string search语法以及_all metadata原理揭秘.html">
+            
+                <a href="8.4_快速掌握query string search语法以及_all metadata原理揭秘.html">
+            
+                    
+                    8.4_快速掌握query string search语法以及_all metadata原理揭秘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="8.5_用一个例子告诉你mapping到底是什么.html">
+            
+                <a href="8.5_用一个例子告诉你mapping到底是什么.html">
+            
+                    
+                    8.5_用一个例子告诉你mapping到底是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="8.6_精确匹配与全文搜索的对比分析.html">
+            
+                <a href="8.6_精确匹配与全文搜索的对比分析.html">
+            
+                    
+                    8.6_精确匹配与全文搜索的对比分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="8.7_倒排索引核心原理快速揭秘.html">
+            
+                <a href="8.7_倒排索引核心原理快速揭秘.html">
+            
+                    
+                    8.7_倒排索引核心原理快速揭秘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="8.8_分词器的内部组成到底是什么，以及内置分词器的介绍.html">
+            
+                <a href="8.8_分词器的内部组成到底是什么，以及内置分词器的介绍.html">
+            
+                    
+                    8.8_分词器的内部组成到底是什么，以及内置分词器的介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="8.9_query string的分词以及mapping引入案例遗留问题的大揭秘.html">
+            
+                <a href="8.9_query string的分词以及mapping引入案例遗留问题的大揭秘.html">
+            
+                    
+                    8.9_query string的分词以及mapping引入案例遗留问题的大揭秘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="8.10_什么是mapping再次回炉透彻理解.html">
+            
+                <a href="8.10_什么是mapping再次回炉透彻理解.html">
+            
+                    
+                    8.10_什么是mapping再次回炉透彻理解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="8.11_mapping的核心数据类型以及dynamic mapping.html">
+            
+                <a href="8.11_mapping的核心数据类型以及dynamic mapping.html">
+            
+                    
+                    8.11_mapping的核心数据类型以及dynamic mapping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.12" data-path="8.12_手动建立和修改mapping以及定制string类型数据是否分词.html">
+            
+                <a href="8.12_手动建立和修改mapping以及定制string类型数据是否分词.html">
+            
+                    
+                    8.12_手动建立和修改mapping以及定制string类型数据是否分词
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.13" data-path="8.13_mapping复杂数据类型以及object类型数据底层结构大揭秘.html">
+            
+                <a href="8.13_mapping复杂数据类型以及object类型数据底层结构大揭秘.html">
+            
+                    
+                    8.13_mapping复杂数据类型以及object类型数据底层结构大揭秘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.14" data-path="8.14_search api的基础语法介绍.html">
+            
+                <a href="8.14_search api的基础语法介绍.html">
+            
+                    
+                    8.14_search api的基础语法介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.15" data-path="8.15_快速上机动手实战Query DSL搜索语法.html">
+            
+                <a href="8.15_快速上机动手实战Query DSL搜索语法.html">
+            
+                    
+                    8.15_快速上机动手实战Query DSL搜索语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.16" data-path="8.16_filter与query深入对比解密：相关度，性能.html">
+            
+                <a href="8.16_filter与query深入对比解密：相关度，性能.html">
+            
+                    
+                    8.16_filter与query深入对比解密：相关度，性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.17" data-path="8.17_上机动手实战常用的各种query搜索语法.html">
+            
+                <a href="8.17_上机动手实战常用的各种query搜索语法.html">
+            
+                    
+                    8.17_上机动手实战常用的各种query搜索语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.18" data-path="8.18_上机动手实战多搜索条件组合查询.html">
+            
+                <a href="8.18_上机动手实战多搜索条件组合查询.html">
+            
+                    
+                    8.18_上机动手实战多搜索条件组合查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.19" data-path="8.19_上机动手实战如何定位不合法的搜索以及其原因.html">
+            
+                <a href="8.19_上机动手实战如何定位不合法的搜索以及其原因.html">
+            
+                    
+                    8.19_上机动手实战如何定位不合法的搜索以及其原因
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.20" data-path="../8、初识搜素引擎/8.21_上机动手实战如何定制搜索结果的排序规则.html">
+            
+                <a href="../8、初识搜素引擎/8.21_上机动手实战如何定制搜索结果的排序规则.html">
+            
+                    
+                    8.21_上机动手实战如何定制搜索结果的排序规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.21" data-path="8.22_解密如何将一个field索引两次来解决字符串排序问题.html">
+            
+                <a href="8.22_解密如何将一个field索引两次来解决字符串排序问题.html">
+            
+                    
+                    8.22_解密如何将一个field索引两次来解决字符串排序问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.22" data-path="8.23_相关度评分TF&IDF算法独家解密.html">
+            
+                <a href="8.23_相关度评分TF&IDF算法独家解密.html">
+            
+                    
+                    8.23_相关度评分TF&IDF算法独家解密
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.23" data-path="8.24_内核级知识点之doc value初步探秘.html">
+            
+                <a href="8.24_内核级知识点之doc value初步探秘.html">
+            
+                    
+                    8.24_内核级知识点之doc value初步探秘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.24" data-path="8.25_分布式搜索引擎内核解密之query phase.html">
+            
+                <a href="8.25_分布式搜索引擎内核解密之query phase.html">
+            
+                    
+                    8.25_分布式搜索引擎内核解密之query phase
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.25" data-path="8.26_分布式搜索引擎内核解密之fetch phase.html">
+            
+                <a href="8.26_分布式搜索引擎内核解密之fetch phase.html">
+            
+                    
+                    8.26_分布式搜索引擎内核解密之fetch phase
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.26" data-path="8.27_搜索相关参数梳理以及bouncing results问题解决方案.html">
+            
+                <a href="8.27_搜索相关参数梳理以及bouncing results问题解决方案.html">
+            
+                    
+                    8.27_搜索相关参数梳理以及bouncing results问题解决方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.27" data-path="8.28_上机动手实战基于scoll技术滚动搜索大量数据.html">
+            
+                <a href="8.28_上机动手实战基于scoll技术滚动搜索大量数据.html">
+            
+                    
+                    8.28_上机动手实战基于scoll技术滚动搜索大量数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    9、索引管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../9、索引管理/9.1_快速上机动手实战创建、修改以及删除索引.html">
+            
+                <a href="../9、索引管理/9.1_快速上机动手实战创建、修改以及删除索引.html">
+            
+                    
+                    9.1_快速上机动手实战创建、修改以及删除索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../9、索引管理/9.2_快速上机动手实战修改分词器以及定制自己的分词器.html">
+            
+                <a href="../9、索引管理/9.2_快速上机动手实战修改分词器以及定制自己的分词器.html">
+            
+                    
+                    9.2_快速上机动手实战修改分词器以及定制自己的分词器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../9、索引管理/9.3_内核级知识点：深入探秘type底层数据结构.html">
+            
+                <a href="../9、索引管理/9.3_内核级知识点：深入探秘type底层数据结构.html">
+            
+                    
+                    9.3_内核级知识点：深入探秘type底层数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../9、索引管理/9.4_mapping root object深入剖析.html">
+            
+                <a href="../9、索引管理/9.4_mapping root object深入剖析.html">
+            
+                    
+                    9.4_mapping root object深入剖析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../9、索引管理/9.5_定制化自己的dynamic mapping策略.html">
+            
+                <a href="../9、索引管理/9.5_定制化自己的dynamic mapping策略.html">
+            
+                    
+                    9.5_定制化自己的dynamic mapping策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../9、索引管理/9.6_复杂上机实验：基于scoll+bulk+索引别名实现零停机重建索引.html">
+            
+                <a href="../9、索引管理/9.6_复杂上机实验：基于scoll+bulk+索引别名实现零停机重建索引.html">
+            
+                    
+                    9.6_复杂上机实验：基于scoll+bulk+索引别名实现零停机重建索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    10、内核原理探秘
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../10、内核原理探秘/10.1_倒排索引组成结构以及其索引可变原因揭秘.html">
+            
+                <a href="../10、内核原理探秘/10.1_倒排索引组成结构以及其索引可变原因揭秘.html">
+            
+                    
+                    10.1_倒排索引组成结构以及其索引可变原因揭秘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../10、内核原理探秘/10.2_深度图解剖析document写入原理（buffer，segment，commit）.html">
+            
+                <a href="../10、内核原理探秘/10.2_深度图解剖析document写入原理（buffer，segment，commit）.html">
+            
+                    
+                    10.2_深度图解剖析document写入原理（buffer，segment，commit）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../10、内核原理探秘/10.3_优化写入流程实现NRT近实时（filesystem cache，refresh）.html">
+            
+                <a href="../10、内核原理探秘/10.3_优化写入流程实现NRT近实时（filesystem cache，refresh）.html">
+            
+                    
+                    10.3_优化写入流程实现NRT近实时（filesystem cache，refresh）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../10、内核原理探秘/10.4_继续优化写入流程实现durability可靠存储（translog，flush）.html">
+            
+                <a href="../10、内核原理探秘/10.4_继续优化写入流程实现durability可靠存储（translog，flush）.html">
+            
+                    
+                    10.4_继续优化写入流程实现durability可靠存储（translog，flush）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../10、内核原理探秘/10.5_最后优化写入流程实现海量磁盘文件合并（segment merge，optimize）.html">
+            
+                <a href="../10、内核原理探秘/10.5_最后优化写入流程实现海量磁盘文件合并（segment merge，optimize）.html">
+            
+                    
+                    10.5_最后优化写入流程实现海量磁盘文件合并（segment merge，optimize）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    11、Java API初步使用_员工管理案例
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../11、Java API初步使用_员工管理案例/11.1_基于Java实现员工信息的增删改查.html">
+            
+                <a href="../11、Java API初步使用_员工管理案例/11.1_基于Java实现员工信息的增删改查.html">
+            
+                    
+                    11.1_基于Java实现员工信息的增删改查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../11、Java API初步使用_员工管理案例/11.2_基于Java对员工信息进行复杂的搜索操作.html">
+            
+                <a href="../11、Java API初步使用_员工管理案例/11.2_基于Java对员工信息进行复杂的搜索操作.html">
+            
+                    
+                    11.2_基于Java对员工信息进行复杂的搜索操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../11、Java API初步使用_员工管理案例/11.3_基于Java对员工信息进行聚合分析.html">
+            
+                <a href="../11、Java API初步使用_员工管理案例/11.3_基于Java对员工信息进行聚合分析.html">
+            
+                    
+                    11.3_基于Java对员工信息进行聚合分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >8.16_filter与query深入对比解密：相关度，性能</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="816filter&#x4E0E;query&#x6DF1;&#x5165;&#x5BF9;&#x6BD4;&#x89E3;&#x5BC6;&#xFF1A;&#x76F8;&#x5173;&#x5EA6;&#xFF0C;&#x6027;&#x80FD;">8.16_filter&#x4E0E;query&#x6DF1;&#x5165;&#x5BF9;&#x6BD4;&#x89E3;&#x5BC6;&#xFF1A;&#x76F8;&#x5173;&#x5EA6;&#xFF0C;&#x6027;&#x80FD;</h1>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="8.15_快速上机动手实战Query DSL搜索语法.html" class="navigation navigation-prev " aria-label="Previous page: 8.15_快速上机动手实战Query DSL搜索语法">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="8.17_上机动手实战常用的各种query搜索语法.html" class="navigation navigation-next " aria-label="Next page: 8.17_上机动手实战常用的各种query搜索语法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"8.16_filter与query深入对比解密：相关度，性能","level":"1.9.16","depth":2,"next":{"title":"8.17_上机动手实战常用的各种query搜索语法","level":"1.9.17","depth":2,"path":"8、初识搜索引擎/8.17_上机动手实战常用的各种query搜索语法.md","ref":"8、初识搜索引擎/8.17_上机动手实战常用的各种query搜索语法.md","articles":[]},"previous":{"title":"8.15_快速上机动手实战Query DSL搜索语法","level":"1.9.15","depth":2,"path":"8、初识搜索引擎/8.15_快速上机动手实战Query DSL搜索语法.md","ref":"8、初识搜索引擎/8.15_快速上机动手实战Query DSL搜索语法.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"8、初识搜索引擎/8.16_filter与query深入对比解密：相关度，性能.md","mtime":"2019-01-16T08:18:18.809Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-17T04:10:33.580Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

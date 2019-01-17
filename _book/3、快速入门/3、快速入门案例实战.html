@@ -1,0 +1,1538 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3.1、快速入门案例实战 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="3.2、多种搜索方式.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1、基本概念.html">
+            
+                <a href="../1、基本概念.html">
+            
+                    
+                    1、基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2、安装和启动.html">
+            
+                <a href="../2、安装和启动.html">
+            
+                    
+                    2、安装和启动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    3、快速入门
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1" data-path="3、快速入门案例实战.html">
+            
+                <a href="3、快速入门案例实战.html">
+            
+                    
+                    3.1、快速入门案例实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="3.2、多种搜索方式.html">
+            
+                <a href="3.2、多种搜索方式.html">
+            
+                    
+                    3.2、多种搜索方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="3.3、嵌套聚合，下钻分析，聚合分析.html">
+            
+                <a href="3.3、嵌套聚合，下钻分析，聚合分析.html">
+            
+                    
+                    3.3、嵌套聚合，下钻分析，聚合分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="3.4、Elasticsearch的基础分布式架构.html">
+            
+                <a href="3.4、Elasticsearch的基础分布式架构.html">
+            
+                    
+                    3.4、Elasticsearch的基础分布式架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="3.5、shard&replica机制再次梳理以及单node环境中创建index图解.html">
+            
+                <a href="3.5、shard&replica机制再次梳理以及单node环境中创建index图解.html">
+            
+                    
+                    3.5、shard&replica机制再次梳理以及单node环境中创建index图解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    4、document
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../4、document/4.1_初步解析document的核心元数据以及图解剖析index创建反例.html">
+            
+                <a href="../4、document/4.1_初步解析document的核心元数据以及图解剖析index创建反例.html">
+            
+                    
+                    4.1_初步解析document的核心元数据以及图解剖析index创建反例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../4、document/4.2_document id的手动指定与自动生成两种方式解析.html">
+            
+                <a href="../4、document/4.2_document id的手动指定与自动生成两种方式解析.html">
+            
+                    
+                    4.2_document id的手动指定与自动生成两种方式解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../4、document/4.3_document的_source元数据以及定制返回结果解析.html">
+            
+                <a href="../4、document/4.3_document的_source元数据以及定制返回结果解析.html">
+            
+                    
+                    4.3_document的_source元数据以及定制返回结果解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../4、document/4.4_document的全量替换、强制创建以及图解lazy delete机制.html">
+            
+                <a href="../4、document/4.4_document的全量替换、强制创建以及图解lazy delete机制.html">
+            
+                    
+                    4.4_document的全量替换、强制创建以及图解lazy delete机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../5、深度图解剖析.html">
+            
+                <a href="../5、深度图解剖析.html">
+            
+                    
+                    5、深度图解剖析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    6、上机动手实战演练
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../6、上机动手实战演练/6.1_基于_version进行乐观锁并发控制.html">
+            
+                <a href="../6、上机动手实战演练/6.1_基于_version进行乐观锁并发控制.html">
+            
+                    
+                    6.1_基于_version进行乐观锁并发控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../6、上机动手实战演练/6.2_基于external version进行乐观锁并发控制.html">
+            
+                <a href="../6、上机动手实战演练/6.2_基于external version进行乐观锁并发控制.html">
+            
+                    
+                    6.2_基于external version进行乐观锁并发控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../6、上机动手实战演练/6.3_图解partial update实现原理以及动手实战演练.html">
+            
+                <a href="../6、上机动手实战演练/6.3_图解partial update实现原理以及动手实战演练.html">
+            
+                    
+                    6.3_图解partial update实现原理以及动手实战演练
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../6、上机动手实战演练/6.4_基于groovy脚本进行partial update.html">
+            
+                <a href="../6、上机动手实战演练/6.4_基于groovy脚本进行partial update.html">
+            
+                    
+                    6.4_基于groovy脚本进行partial update
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../6、上机动手实战演练/6.5_图解partial update乐观锁并发控制原理以及相关操作讲解.html">
+            
+                <a href="../6、上机动手实战演练/6.5_图解partial update乐观锁并发控制原理以及相关操作讲解.html">
+            
+                    
+                    6.5_图解partial update乐观锁并发控制原理以及相关操作讲解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../6、上机动手实战演练/6.6_mget批量查询api.html">
+            
+                <a href="../6、上机动手实战演练/6.6_mget批量查询api.html">
+            
+                    
+                    6.6_mget批量查询api
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    7、分布式文档系统
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../7、分布式文档系统/7.1_上机动手实战演练bulk批量增删改.html">
+            
+                <a href="../7、分布式文档系统/7.1_上机动手实战演练bulk批量增删改.html">
+            
+                    
+                    7.1_上机动手实战演练bulk批量增删改
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../7、分布式文档系统/7.2_阶段性总结以及什么是distributed document store.html">
+            
+                <a href="../7、分布式文档系统/7.2_阶段性总结以及什么是distributed document store.html">
+            
+                    
+                    7.2_阶段性总结以及什么是distributed document store
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../7、分布式文档系统/7.3_深度图解剖析document数据路由原理.html">
+            
+                <a href="../7、分布式文档系统/7.3_深度图解剖析document数据路由原理.html">
+            
+                    
+                    7.3_深度图解剖析document数据路由原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../7、分布式文档系统/7.4_document增删改内部原理图解揭秘.html">
+            
+                <a href="../7、分布式文档系统/7.4_document增删改内部原理图解揭秘.html">
+            
+                    
+                    7.4_document增删改内部原理图解揭秘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../7、分布式文档系统/7.5_图解写一致性原理以及quorum机制深入剖析.html">
+            
+                <a href="../7、分布式文档系统/7.5_图解写一致性原理以及quorum机制深入剖析.html">
+            
+                    
+                    7.5_图解写一致性原理以及quorum机制深入剖析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../7、分布式文档系统/7.6_document查询内部原理图解揭秘.html">
+            
+                <a href="../7、分布式文档系统/7.6_document查询内部原理图解揭秘.html">
+            
+                    
+                    7.6_document查询内部原理图解揭秘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../7、分布式文档系统/7.7_bulk api的奇特json格式与底层性能优化关系大揭秘.html">
+            
+                <a href="../7、分布式文档系统/7.7_bulk api的奇特json格式与底层性能优化关系大揭秘.html">
+            
+                    
+                    7.7_bulk api的奇特json格式与底层性能优化关系大揭秘
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    8、初识搜索引擎
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../8、初识搜索引擎/8.1_search结果深入解析（search timeout机制揭秘）.html">
+            
+                <a href="../8、初识搜索引擎/8.1_search结果深入解析（search timeout机制揭秘）.html">
+            
+                    
+                    8.1_search结果深入解析（search timeout机制揭秘）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../8、初识搜索引擎/8.2_multi-index&multi-type搜索模式解析以及搜索原理初步图解.html">
+            
+                <a href="../8、初识搜索引擎/8.2_multi-index&multi-type搜索模式解析以及搜索原理初步图解.html">
+            
+                    
+                    8.2_multi-index&multi-type搜索模式解析以及搜索原理初步图解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../8、初识搜索引擎/8.3_分页搜索以及deep paging性能问题深度图解揭秘.html">
+            
+                <a href="../8、初识搜索引擎/8.3_分页搜索以及deep paging性能问题深度图解揭秘.html">
+            
+                    
+                    8.3_分页搜索以及deep paging性能问题深度图解揭秘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../8、初识搜索引擎/8.4_快速掌握query string search语法以及_all metadata原理揭秘.html">
+            
+                <a href="../8、初识搜索引擎/8.4_快速掌握query string search语法以及_all metadata原理揭秘.html">
+            
+                    
+                    8.4_快速掌握query string search语法以及_all metadata原理揭秘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../8、初识搜索引擎/8.5_用一个例子告诉你mapping到底是什么.html">
+            
+                <a href="../8、初识搜索引擎/8.5_用一个例子告诉你mapping到底是什么.html">
+            
+                    
+                    8.5_用一个例子告诉你mapping到底是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../8、初识搜索引擎/8.6_精确匹配与全文搜索的对比分析.html">
+            
+                <a href="../8、初识搜索引擎/8.6_精确匹配与全文搜索的对比分析.html">
+            
+                    
+                    8.6_精确匹配与全文搜索的对比分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../8、初识搜索引擎/8.7_倒排索引核心原理快速揭秘.html">
+            
+                <a href="../8、初识搜索引擎/8.7_倒排索引核心原理快速揭秘.html">
+            
+                    
+                    8.7_倒排索引核心原理快速揭秘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../8、初识搜索引擎/8.8_分词器的内部组成到底是什么，以及内置分词器的介绍.html">
+            
+                <a href="../8、初识搜索引擎/8.8_分词器的内部组成到底是什么，以及内置分词器的介绍.html">
+            
+                    
+                    8.8_分词器的内部组成到底是什么，以及内置分词器的介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../8、初识搜索引擎/8.9_query string的分词以及mapping引入案例遗留问题的大揭秘.html">
+            
+                <a href="../8、初识搜索引擎/8.9_query string的分词以及mapping引入案例遗留问题的大揭秘.html">
+            
+                    
+                    8.9_query string的分词以及mapping引入案例遗留问题的大揭秘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="../8、初识搜索引擎/8.10_什么是mapping再次回炉透彻理解.html">
+            
+                <a href="../8、初识搜索引擎/8.10_什么是mapping再次回炉透彻理解.html">
+            
+                    
+                    8.10_什么是mapping再次回炉透彻理解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="../8、初识搜索引擎/8.11_mapping的核心数据类型以及dynamic mapping.html">
+            
+                <a href="../8、初识搜索引擎/8.11_mapping的核心数据类型以及dynamic mapping.html">
+            
+                    
+                    8.11_mapping的核心数据类型以及dynamic mapping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.12" data-path="../8、初识搜索引擎/8.12_手动建立和修改mapping以及定制string类型数据是否分词.html">
+            
+                <a href="../8、初识搜索引擎/8.12_手动建立和修改mapping以及定制string类型数据是否分词.html">
+            
+                    
+                    8.12_手动建立和修改mapping以及定制string类型数据是否分词
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.13" data-path="../8、初识搜索引擎/8.13_mapping复杂数据类型以及object类型数据底层结构大揭秘.html">
+            
+                <a href="../8、初识搜索引擎/8.13_mapping复杂数据类型以及object类型数据底层结构大揭秘.html">
+            
+                    
+                    8.13_mapping复杂数据类型以及object类型数据底层结构大揭秘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.14" data-path="../8、初识搜索引擎/8.14_search api的基础语法介绍.html">
+            
+                <a href="../8、初识搜索引擎/8.14_search api的基础语法介绍.html">
+            
+                    
+                    8.14_search api的基础语法介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.15" data-path="../8、初识搜索引擎/8.15_快速上机动手实战Query DSL搜索语法.html">
+            
+                <a href="../8、初识搜索引擎/8.15_快速上机动手实战Query DSL搜索语法.html">
+            
+                    
+                    8.15_快速上机动手实战Query DSL搜索语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.16" data-path="../8、初识搜索引擎/8.16_filter与query深入对比解密：相关度，性能.html">
+            
+                <a href="../8、初识搜索引擎/8.16_filter与query深入对比解密：相关度，性能.html">
+            
+                    
+                    8.16_filter与query深入对比解密：相关度，性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.17" data-path="../8、初识搜索引擎/8.17_上机动手实战常用的各种query搜索语法.html">
+            
+                <a href="../8、初识搜索引擎/8.17_上机动手实战常用的各种query搜索语法.html">
+            
+                    
+                    8.17_上机动手实战常用的各种query搜索语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.18" data-path="../8、初识搜索引擎/8.18_上机动手实战多搜索条件组合查询.html">
+            
+                <a href="../8、初识搜索引擎/8.18_上机动手实战多搜索条件组合查询.html">
+            
+                    
+                    8.18_上机动手实战多搜索条件组合查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.19" data-path="../8、初识搜索引擎/8.19_上机动手实战如何定位不合法的搜索以及其原因.html">
+            
+                <a href="../8、初识搜索引擎/8.19_上机动手实战如何定位不合法的搜索以及其原因.html">
+            
+                    
+                    8.19_上机动手实战如何定位不合法的搜索以及其原因
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.20" data-path="../8、初识搜素引擎/8.21_上机动手实战如何定制搜索结果的排序规则.html">
+            
+                <a href="../8、初识搜素引擎/8.21_上机动手实战如何定制搜索结果的排序规则.html">
+            
+                    
+                    8.21_上机动手实战如何定制搜索结果的排序规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.21" data-path="../8、初识搜索引擎/8.22_解密如何将一个field索引两次来解决字符串排序问题.html">
+            
+                <a href="../8、初识搜索引擎/8.22_解密如何将一个field索引两次来解决字符串排序问题.html">
+            
+                    
+                    8.22_解密如何将一个field索引两次来解决字符串排序问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.22" data-path="../8、初识搜索引擎/8.23_相关度评分TF&IDF算法独家解密.html">
+            
+                <a href="../8、初识搜索引擎/8.23_相关度评分TF&IDF算法独家解密.html">
+            
+                    
+                    8.23_相关度评分TF&IDF算法独家解密
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.23" data-path="../8、初识搜索引擎/8.24_内核级知识点之doc value初步探秘.html">
+            
+                <a href="../8、初识搜索引擎/8.24_内核级知识点之doc value初步探秘.html">
+            
+                    
+                    8.24_内核级知识点之doc value初步探秘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.24" data-path="../8、初识搜索引擎/8.25_分布式搜索引擎内核解密之query phase.html">
+            
+                <a href="../8、初识搜索引擎/8.25_分布式搜索引擎内核解密之query phase.html">
+            
+                    
+                    8.25_分布式搜索引擎内核解密之query phase
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.25" data-path="../8、初识搜索引擎/8.26_分布式搜索引擎内核解密之fetch phase.html">
+            
+                <a href="../8、初识搜索引擎/8.26_分布式搜索引擎内核解密之fetch phase.html">
+            
+                    
+                    8.26_分布式搜索引擎内核解密之fetch phase
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.26" data-path="../8、初识搜索引擎/8.27_搜索相关参数梳理以及bouncing results问题解决方案.html">
+            
+                <a href="../8、初识搜索引擎/8.27_搜索相关参数梳理以及bouncing results问题解决方案.html">
+            
+                    
+                    8.27_搜索相关参数梳理以及bouncing results问题解决方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.27" data-path="../8、初识搜索引擎/8.28_上机动手实战基于scoll技术滚动搜索大量数据.html">
+            
+                <a href="../8、初识搜索引擎/8.28_上机动手实战基于scoll技术滚动搜索大量数据.html">
+            
+                    
+                    8.28_上机动手实战基于scoll技术滚动搜索大量数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    9、索引管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../9、索引管理/9.1_快速上机动手实战创建、修改以及删除索引.html">
+            
+                <a href="../9、索引管理/9.1_快速上机动手实战创建、修改以及删除索引.html">
+            
+                    
+                    9.1_快速上机动手实战创建、修改以及删除索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../9、索引管理/9.2_快速上机动手实战修改分词器以及定制自己的分词器.html">
+            
+                <a href="../9、索引管理/9.2_快速上机动手实战修改分词器以及定制自己的分词器.html">
+            
+                    
+                    9.2_快速上机动手实战修改分词器以及定制自己的分词器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../9、索引管理/9.3_内核级知识点：深入探秘type底层数据结构.html">
+            
+                <a href="../9、索引管理/9.3_内核级知识点：深入探秘type底层数据结构.html">
+            
+                    
+                    9.3_内核级知识点：深入探秘type底层数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../9、索引管理/9.4_mapping root object深入剖析.html">
+            
+                <a href="../9、索引管理/9.4_mapping root object深入剖析.html">
+            
+                    
+                    9.4_mapping root object深入剖析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../9、索引管理/9.5_定制化自己的dynamic mapping策略.html">
+            
+                <a href="../9、索引管理/9.5_定制化自己的dynamic mapping策略.html">
+            
+                    
+                    9.5_定制化自己的dynamic mapping策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../9、索引管理/9.6_复杂上机实验：基于scoll+bulk+索引别名实现零停机重建索引.html">
+            
+                <a href="../9、索引管理/9.6_复杂上机实验：基于scoll+bulk+索引别名实现零停机重建索引.html">
+            
+                    
+                    9.6_复杂上机实验：基于scoll+bulk+索引别名实现零停机重建索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    10、内核原理探秘
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../10、内核原理探秘/10.1_倒排索引组成结构以及其索引可变原因揭秘.html">
+            
+                <a href="../10、内核原理探秘/10.1_倒排索引组成结构以及其索引可变原因揭秘.html">
+            
+                    
+                    10.1_倒排索引组成结构以及其索引可变原因揭秘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../10、内核原理探秘/10.2_深度图解剖析document写入原理（buffer，segment，commit）.html">
+            
+                <a href="../10、内核原理探秘/10.2_深度图解剖析document写入原理（buffer，segment，commit）.html">
+            
+                    
+                    10.2_深度图解剖析document写入原理（buffer，segment，commit）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../10、内核原理探秘/10.3_优化写入流程实现NRT近实时（filesystem cache，refresh）.html">
+            
+                <a href="../10、内核原理探秘/10.3_优化写入流程实现NRT近实时（filesystem cache，refresh）.html">
+            
+                    
+                    10.3_优化写入流程实现NRT近实时（filesystem cache，refresh）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../10、内核原理探秘/10.4_继续优化写入流程实现durability可靠存储（translog，flush）.html">
+            
+                <a href="../10、内核原理探秘/10.4_继续优化写入流程实现durability可靠存储（translog，flush）.html">
+            
+                    
+                    10.4_继续优化写入流程实现durability可靠存储（translog，flush）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../10、内核原理探秘/10.5_最后优化写入流程实现海量磁盘文件合并（segment merge，optimize）.html">
+            
+                <a href="../10、内核原理探秘/10.5_最后优化写入流程实现海量磁盘文件合并（segment merge，optimize）.html">
+            
+                    
+                    10.5_最后优化写入流程实现海量磁盘文件合并（segment merge，optimize）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    11、Java API初步使用_员工管理案例
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../11、Java API初步使用_员工管理案例/11.1_基于Java实现员工信息的增删改查.html">
+            
+                <a href="../11、Java API初步使用_员工管理案例/11.1_基于Java实现员工信息的增删改查.html">
+            
+                    
+                    11.1_基于Java实现员工信息的增删改查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../11、Java API初步使用_员工管理案例/11.2_基于Java对员工信息进行复杂的搜索操作.html">
+            
+                <a href="../11、Java API初步使用_员工管理案例/11.2_基于Java对员工信息进行复杂的搜索操作.html">
+            
+                    
+                    11.2_基于Java对员工信息进行复杂的搜索操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../11、Java API初步使用_员工管理案例/11.3_基于Java对员工信息进行聚合分析.html">
+            
+                <a href="../11、Java API初步使用_员工管理案例/11.3_基于Java对员工信息进行聚合分析.html">
+            
+                    
+                    11.3_基于Java对员工信息进行聚合分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3.1、快速入门案例实战</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="3&#x3001;&#x5FEB;&#x901F;&#x5165;&#x95E8;&#x6848;&#x4F8B;&#x5B9E;&#x6218;">3&#x3001;&#x5FEB;&#x901F;&#x5165;&#x95E8;&#x6848;&#x4F8B;&#x5B9E;&#x6218;</h1>
+<blockquote>
+<p><a href="3&#x3001;&#x5FEB;&#x901F;&#x5165;&#x95E8;&#x6848;&#x4F8B;&#x5B9E;&#x6218;.html#1&#x3001;document&#x6570;&#x636E;&#x683C;&#x5F0F;">1&#x3001;document&#x6570;&#x636E;&#x683C;&#x5F0F;</a></p>
+<p><a href="3&#x3001;&#x5FEB;&#x901F;&#x5165;&#x95E8;&#x6848;&#x4F8B;&#x5B9E;&#x6218;.html#2&#x3001;&#x7535;&#x5546;&#x7F51;&#x7AD9;&#x5546;&#x54C1;&#x7BA1;&#x7406;&#x6848;&#x4F8B;&#xFF1A;&#x80CC;&#x666F;&#x4ECB;&#x7ECD;">2&#x3001;&#x7535;&#x5546;&#x7F51;&#x7AD9;&#x5546;&#x54C1;&#x7BA1;&#x7406;&#x6848;&#x4F8B;&#xFF1A;&#x80CC;&#x666F;&#x4ECB;&#x7ECD;</a></p>
+<p><a href="3&#x3001;&#x5FEB;&#x901F;&#x5165;&#x95E8;&#x6848;&#x4F8B;&#x5B9E;&#x6218;.html#3&#x3001;&#x7B80;&#x5355;&#x7684;&#x96C6;&#x7FA4;&#x7BA1;&#x7406;">3&#x3001;&#x7B80;&#x5355;&#x7684;&#x96C6;&#x7FA4;&#x7BA1;&#x7406;</a></p>
+</blockquote>
+<pre><code>&#x67E5;&#x770B;&#x7D22;&#x5F15;&#xFF1A;GET /_cat/indices?v
+&#x521B;&#x5EFA;&#x7D22;&#x5F15;&#xFF1A;PUT /test_index?pretty
+&#x5220;&#x9664;&#x7D22;&#x5F15;&#xFF1A;DELETE /test_index?pretty
+</code></pre><blockquote>
+<p><a href="3&#x3001;&#x5FEB;&#x901F;&#x5165;&#x95E8;&#x6848;&#x4F8B;&#x5B9E;&#x6218;.html#4&#x3001;&#x5546;&#x54C1;&#x7684;CRUD&#x64CD;&#x4F5C;&#xFF08;document%20CRUD&#x64CD;&#x4F5C;&#xFF09;">4&#x3001;&#x5546;&#x54C1;&#x7684;CRUD&#x64CD;&#x4F5C;&#xFF08;document CRUD&#x64CD;&#x4F5C;&#xFF09;</a></p>
+</blockquote>
+<pre><code>&#x521B;&#x5EFA;&#xFF1A;
+PUT /index/type/id
+PUT /ecommerce/product/1
+PUT /ecommerce/product/2
+PUT /ecommerce/product/3
+&#x67E5;&#x8BE2;&#xFF1A;
+GET /index/type/id
+GET /ecommerce/product/1
+&#x4FEE;&#x6539;&#xFF1A;
+POST /ecommerce/product/1/_update
+DELETE /ecommerce/product/1
+</code></pre><p><a href="https://www.cnblogs.com/liuqianli/p/8432931.html" target="_blank">https://www.cnblogs.com/liuqianli/p/8432931.html</a></p>
+<hr>
+<h2 id="1&#x3001;document&#x6570;&#x636E;&#x683C;&#x5F0F;">1&#x3001;document&#x6570;&#x636E;&#x683C;&#x5F0F;</h2>
+<p>&#x9762;&#x5411;&#x6587;&#x6863;&#x7684;&#x641C;&#x7D22;&#x5206;&#x6790;&#x5F15;&#x64CE;</p>
+<blockquote>
+<p>&#xFF08;1&#xFF09;&#x5E94;&#x7528;&#x7CFB;&#x7EDF;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x90FD;&#x662F;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#xFF0C;&#x590D;&#x6742;&#x7684;</p>
+<p>&#xFF08;2&#xFF09;&#x5BF9;&#x8C61;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#xFF0C;&#x53EA;&#x80FD;&#x62C6;&#x89E3;&#x5F00;&#x6765;&#xFF0C;&#x53D8;&#x4E3A;&#x6241;&#x5E73;&#x7684;&#x591A;&#x5F20;&#x8868;&#xFF0C;&#x6BCF;&#x6B21;&#x67E5;&#x8BE2;&#x7684;&#x65F6;&#x5019;&#x8FD8;&#x5F97;&#x8FD8;&#x539F;&#x56DE;&#x5BF9;&#x8C61;&#x683C;&#x5F0F;&#xFF0C;&#x76F8;&#x5F53;&#x9EBB;&#x70E6;</p>
+<p>&#xFF08;3&#xFF09;ES&#x662F;&#x9762;&#x5411;&#x6587;&#x6863;&#x7684;&#xFF0C;&#x6587;&#x6863;&#x4E2D;&#x5B58;&#x50A8;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x4E0E;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x57FA;&#x4E8E;&#x8FD9;&#x79CD;&#x6587;&#x6863;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;es&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x590D;&#x6742;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x5168;&#x6587;&#x68C0;&#x7D22;&#xFF0C;&#x5206;&#x6790;&#x805A;&#x5408;&#x7B49;&#x529F;&#x80FD;</p>
+<p>&#xFF08;4&#xFF09;es&#x7684;document&#x7528;json&#x6570;&#x636E;&#x683C;&#x5F0F;&#x6765;&#x8868;&#x8FBE;</p>
+</blockquote>
+<pre><code>public class Employee {
+
+  private String email;
+  private String firstName;
+  private String lastName;
+  private EmployeeInfo info;
+  private Date joinDate;
+
+}
+
+private class EmployeeInfo {
+
+  private String bio; // &#x6027;&#x683C;
+  private Integer age;
+  private String[] interests; // &#x5174;&#x8DA3;&#x7231;&#x597D;
+
+}
+
+EmployeeInfo info = new EmployeeInfo();
+info.setBio(&quot;curious and modest&quot;);
+info.setAge(30);
+info.setInterests(new String[]{&quot;bike&quot;, &quot;climb&quot;});
+
+Employee employee = new Employee();
+employee.setEmail(&quot;zhangsan@sina.com&quot;);
+employee.setFirstName(&quot;san&quot;);
+employee.setLastName(&quot;zhang&quot;);
+employee.setInfo(info);
+employee.setJoinDate(new Date());
+</code></pre><p>employee&#x5BF9;&#x8C61;&#xFF1A;&#x91CC;&#x9762;&#x5305;&#x542B;&#x4E86;Employee&#x7C7B;&#x81EA;&#x5DF1;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;EmployeeInfo&#x5BF9;&#x8C61;</p>
+<p>&#x4E24;&#x5F20;&#x8868;&#xFF1A;employee&#x8868;&#xFF0C;employee_info&#x8868;&#xFF0C;&#x5C06;employee&#x5BF9;&#x8C61;&#x7684;&#x6570;&#x636E;&#x91CD;&#x65B0;&#x62C6;&#x5F00;&#x6765;&#xFF0C;&#x53D8;&#x6210;Employee&#x6570;&#x636E;&#x548C;EmployeeInfo&#x6570;&#x636E;
+employee&#x8868;&#xFF1A;email&#xFF0C;first_name&#xFF0C;last_name&#xFF0C;join_date&#xFF0C;4&#x4E2A;&#x5B57;&#x6BB5;
+employee_info&#x8868;&#xFF1A;bio&#xFF0C;age&#xFF0C;interests&#xFF0C;3&#x4E2A;&#x5B57;&#x6BB5;&#xFF1B;&#x6B64;&#x5916;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x5916;&#x952E;&#x5B57;&#x6BB5;&#xFF0C;&#x6BD4;&#x5982;employee_id&#xFF0C;&#x5173;&#x8054;&#x7740;employee&#x8868;</p>
+<pre><code>{
+    &quot;email&quot;:      &quot;zhangsan@sina.com&quot;,
+    &quot;first_name&quot;: &quot;san&quot;,
+    &quot;last_name&quot;: &quot;zhang&quot;,
+    &quot;info&quot;: {
+        &quot;bio&quot;:         &quot;curious and modest&quot;,
+        &quot;age&quot;:         30,
+        &quot;interests&quot;: [ &quot;bike&quot;, &quot;climb&quot; ]
+    },
+    &quot;join_date&quot;: &quot;2017/01/01&quot;
+}
+</code></pre><p>&#x6211;&#x4EEC;&#x5C31;&#x660E;&#x767D;&#x4E86;es&#x7684;document&#x6570;&#x636E;&#x683C;&#x5F0F;&#x548C;&#x6570;&#x636E;&#x5E93;&#x7684;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x7684;&#x533A;&#x522B;</p>
+<hr>
+<h2 id="2&#x3001;&#x7535;&#x5546;&#x7F51;&#x7AD9;&#x5546;&#x54C1;&#x7BA1;&#x7406;&#x6848;&#x4F8B;&#xFF1A;&#x80CC;&#x666F;&#x4ECB;&#x7ECD;">2&#x3001;&#x7535;&#x5546;&#x7F51;&#x7AD9;&#x5546;&#x54C1;&#x7BA1;&#x7406;&#x6848;&#x4F8B;&#xFF1A;&#x80CC;&#x666F;&#x4ECB;&#x7ECD;</h2>
+<p>&#x6709;&#x4E00;&#x4E2A;&#x7535;&#x5546;&#x7F51;&#x7AD9;&#xFF0C;&#x9700;&#x8981;&#x4E3A;&#x5176;&#x57FA;&#x4E8E;ES&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x540E;&#x53F0;&#x7CFB;&#x7EDF;&#xFF0C;&#x63D0;&#x4F9B;&#x4EE5;&#x4E0B;&#x529F;&#x80FD;&#xFF1A;</p>
+<blockquote>
+<p>&#xFF08;1&#xFF09;&#x5BF9;&#x5546;&#x54C1;&#x4FE1;&#x606F;&#x8FDB;&#x884C;CRUD&#xFF08;&#x589E;&#x5220;&#x6539;&#x67E5;&#xFF09;&#x64CD;&#x4F5C;</p>
+<p>&#xFF08;2&#xFF09;&#x6267;&#x884C;&#x7B80;&#x5355;&#x7684;&#x7ED3;&#x6784;&#x5316;&#x67E5;&#x8BE2;</p>
+<p>&#xFF08;3&#xFF09;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x7B80;&#x5355;&#x7684;&#x5168;&#x6587;&#x68C0;&#x7D22;&#xFF0C;&#x4EE5;&#x53CA;&#x590D;&#x6742;&#x7684;phrase&#xFF08;&#x77ED;&#x8BED;&#xFF09;&#x68C0;&#x7D22;</p>
+<p>&#xFF08;4&#xFF09;&#x5BF9;&#x4E8E;&#x5168;&#x6587;&#x68C0;&#x7D22;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x9AD8;&#x4EAE;&#x663E;&#x793A;</p>
+<p>&#xFF08;5&#xFF09;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x7B80;&#x5355;&#x7684;&#x805A;&#x5408;&#x5206;&#x6790;</p>
+</blockquote>
+<hr>
+<h2 id="3&#x3001;&#x7B80;&#x5355;&#x7684;&#x96C6;&#x7FA4;&#x7BA1;&#x7406;">3&#x3001;&#x7B80;&#x5355;&#x7684;&#x96C6;&#x7FA4;&#x7BA1;&#x7406;</h2>
+<blockquote>
+<p>&#xFF08;1&#xFF09;&#x5FEB;&#x901F;&#x68C0;&#x67E5;&#x96C6;&#x7FA4;&#x7684;&#x5065;&#x5EB7;&#x72B6;&#x51B5;</p>
+</blockquote>
+<p>es&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x5957;api&#xFF0C;&#x53EB;&#x505A;cat api&#xFF0C;&#x53EF;&#x4EE5;&#x67E5;&#x770B;es&#x4E2D;&#x5404;&#x79CD;&#x5404;&#x6837;&#x7684;&#x6570;&#x636E;</p>
+<pre><code>GET /_cat/health?v
+
+epoch      timestamp cluster       status node.total node.data shards pri relo init unassign pending_tasks max_task_wait_time active_shards_percent
+1488006741 15:12:21  elasticsearch yellow          1         1      1   1    0    0        1             0                  -                 50.0%
+
+epoch      timestamp cluster       status node.total node.data shards pri relo init unassign pending_tasks max_task_wait_time active_shards_percent
+1488007113 15:18:33  elasticsearch green           2         2      2   1    0    0        0             0                  -                100.0%
+
+epoch      timestamp cluster       status node.total node.data shards pri relo init unassign pending_tasks max_task_wait_time active_shards_percent
+1488007216 15:20:16  elasticsearch yellow          1         1      1   1    0    0        1             0                  -                 50.0%
+</code></pre><p>&#x5982;&#x4F55;&#x5FEB;&#x901F;&#x4E86;&#x89E3;&#x96C6;&#x7FA4;&#x7684;&#x5065;&#x5EB7;&#x72B6;&#x51B5;&#xFF1F;green&#x3001;yellow&#x3001;red&#xFF1F;</p>
+<blockquote>
+<p>green&#xFF1A;&#x6BCF;&#x4E2A;&#x7D22;&#x5F15;&#x7684;primary shard&#x548C;replica shard&#x90FD;&#x662F;active&#x72B6;&#x6001;&#x7684;</p>
+<p>yellow&#xFF1A;&#x6BCF;&#x4E2A;&#x7D22;&#x5F15;&#x7684;primary shard&#x90FD;&#x662F;active&#x72B6;&#x6001;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x90E8;&#x5206;replica shard&#x4E0D;&#x662F;active&#x72B6;&#x6001;&#xFF0C;&#x5904;&#x4E8E;&#x4E0D;&#x53EF;&#x7528;&#x7684;&#x72B6;&#x6001;</p>
+<p>red&#xFF1A;&#x4E0D;&#x662F;&#x6240;&#x6709;&#x7D22;&#x5F15;&#x7684;primary shard&#x90FD;&#x662F;active&#x72B6;&#x6001;&#x7684;&#xFF0C;&#x90E8;&#x5206;&#x7D22;&#x5F15;&#x6709;&#x6570;&#x636E;&#x4E22;&#x5931;&#x4E86;</p>
+</blockquote>
+<p>&#x4E3A;&#x4EC0;&#x4E48;&#x73B0;&#x5728;&#x4F1A;&#x5904;&#x4E8E;&#x4E00;&#x4E2A;yellow&#x72B6;&#x6001;&#xFF1F;</p>
+<p>&#x6211;&#x4EEC;&#x73B0;&#x5728;&#x5C31;&#x4E00;&#x4E2A;&#x7B14;&#x8BB0;&#x672C;&#x7535;&#x8111;&#xFF0C;&#x5C31;&#x542F;&#x52A8;&#x4E86;&#x4E00;&#x4E2A;es&#x8FDB;&#x7A0B;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x5C31;&#x53EA;&#x6709;&#x4E00;&#x4E2A;node&#x3002;&#x73B0;&#x5728;es&#x4E2D;&#x6709;&#x4E00;&#x4E2A;index&#xFF0C;&#x5C31;&#x662F;kibana&#x81EA;&#x5DF1;&#x5185;&#x7F6E;&#x5EFA;&#x7ACB;&#x7684;index&#x3002;&#x7531;&#x4E8E;&#x9ED8;&#x8BA4;&#x7684;&#x914D;&#x7F6E;&#x662F;&#x7ED9;&#x6BCF;&#x4E2A;index&#x5206;&#x914D;5&#x4E2A;primary shard&#x548C;5&#x4E2A;replica shard&#xFF0C;&#x800C;&#x4E14;primary shard&#x548C;replica shard&#x4E0D;&#x80FD;&#x5728;&#x540C;&#x4E00;&#x53F0;&#x673A;&#x5668;&#x4E0A;&#xFF08;&#x4E3A;&#x4E86;&#x5BB9;&#x9519;&#xFF09;&#x3002;&#x73B0;&#x5728;kibana&#x81EA;&#x5DF1;&#x5EFA;&#x7ACB;&#x7684;index&#x662F;1&#x4E2A;primary shard&#x548C;1&#x4E2A;replica shard&#x3002;&#x5F53;&#x524D;&#x5C31;&#x4E00;&#x4E2A;node&#xFF0C;&#x6240;&#x4EE5;&#x53EA;&#x6709;1&#x4E2A;primary shard&#x88AB;&#x5206;&#x914D;&#x4E86;&#x548C;&#x542F;&#x52A8;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x4E00;&#x4E2A;replica shard&#x6CA1;&#x6709;&#x7B2C;&#x4E8C;&#x53F0;&#x673A;&#x5668;&#x53BB;&#x542F;&#x52A8;&#x3002;</p>
+<p>&#x505A;&#x4E00;&#x4E2A;&#x5C0F;&#x5B9E;&#x9A8C;&#xFF1A;&#x6B64;&#x65F6;&#x53EA;&#x8981;&#x542F;&#x52A8;&#x7B2C;&#x4E8C;&#x4E2A;es&#x8FDB;&#x7A0B;&#xFF0C;&#x5C31;&#x4F1A;&#x5728;es&#x96C6;&#x7FA4;&#x4E2D;&#x6709;2&#x4E2A;node&#xFF0C;&#x7136;&#x540E;&#x90A3;1&#x4E2A;replica shard&#x5C31;&#x4F1A;&#x81EA;&#x52A8;&#x5206;&#x914D;&#x8FC7;&#x53BB;&#xFF0C;&#x7136;&#x540E;cluster status&#x5C31;&#x4F1A;&#x53D8;&#x6210;green&#x72B6;&#x6001;&#x3002;</p>
+<blockquote>
+<p>&#xFF08;2&#xFF09;&#x5FEB;&#x901F;&#x67E5;&#x770B;&#x96C6;&#x7FA4;&#x4E2D;&#x6709;&#x54EA;&#x4E9B;&#x7D22;&#x5F15;</p>
+</blockquote>
+<pre><code>GET /_cat/indices?v
+
+health status index   uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+yellow open   .kibana rUm9n9wMRQCCrRDEhqneBg   1   1          1            0      3.1kb          3.1kb
+</code></pre><blockquote>
+<p>&#xFF08;3&#xFF09;&#x7B80;&#x5355;&#x7684;&#x7D22;&#x5F15;&#x64CD;&#x4F5C;</p>
+</blockquote>
+<pre><code>&#x521B;&#x5EFA;&#x7D22;&#x5F15;&#xFF1A;PUT /test_index?pretty
+
+health status index      uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+yellow open   test_index XmS9DTAtSkSZSwWhhGEKkQ   5   1          0            0       650b           650b
+yellow open   .kibana    rUm9n9wMRQCCrRDEhqneBg   1   1          1            0      3.1kb          3.1kb
+</code></pre><blockquote>
+<p>&#xFF08;4&#xFF09;&#x5220;&#x9664;&#x7D22;&#x5F15;&#xFF1A;DELETE /test_index?pretty</p>
+</blockquote>
+<pre><code>health status index   uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+yellow open   .kibana rUm9n9wMRQCCrRDEhqneBg   1   1          1            0      3.1kb          3.1kb
+</code></pre><hr>
+<h2 id="4&#x3001;&#x5546;&#x54C1;&#x7684;crud&#x64CD;&#x4F5C;&#xFF08;document-crud&#x64CD;&#x4F5C;&#xFF09;">4&#x3001;&#x5546;&#x54C1;&#x7684;CRUD&#x64CD;&#x4F5C;&#xFF08;document CRUD&#x64CD;&#x4F5C;&#xFF09;</h2>
+<blockquote>
+<p>&#xFF08;1&#xFF09;&#x65B0;&#x589E;&#x5546;&#x54C1;&#xFF1A;&#x65B0;&#x589E;&#x6587;&#x6863;&#xFF0C;&#x5EFA;&#x7ACB;&#x7D22;&#x5F15;</p>
+</blockquote>
+<pre><code>PUT /index/type/id
+{
+  &quot;json&#x6570;&#x636E;&quot;
+}
+
+PUT /ecommerce/product/1
+{
+    &quot;name&quot; : &quot;gaolujie yagao&quot;,
+    &quot;desc&quot; :  &quot;gaoxiao meibai&quot;,
+    &quot;price&quot; :  30,
+    &quot;producer&quot; :      &quot;gaolujie producer&quot;,
+    &quot;tags&quot;: [ &quot;meibai&quot;, &quot;fangzhu&quot; ]
+}
+
+{
+  &quot;_index&quot;: &quot;ecommerce&quot;,
+  &quot;_type&quot;: &quot;product&quot;,
+  &quot;_id&quot;: &quot;1&quot;,
+  &quot;_version&quot;: 1,
+  &quot;result&quot;: &quot;created&quot;,
+  &quot;_shards&quot;: {
+    &quot;total&quot;: 2,
+    &quot;successful&quot;: 1,
+    &quot;failed&quot;: 0
+  },
+  &quot;created&quot;: true
+}
+
+PUT /ecommerce/product/2
+{
+    &quot;name&quot; : &quot;jiajieshi yagao&quot;,
+    &quot;desc&quot; :  &quot;youxiao fangzhu&quot;,
+    &quot;price&quot; :  25,
+    &quot;producer&quot; :      &quot;jiajieshi producer&quot;,
+    &quot;tags&quot;: [ &quot;fangzhu&quot; ]
+}
+
+PUT /ecommerce/product/3
+{
+    &quot;name&quot; : &quot;zhonghua yagao&quot;,
+    &quot;desc&quot; :  &quot;caoben zhiwu&quot;,
+    &quot;price&quot; :  40,
+    &quot;producer&quot; :      &quot;zhonghua producer&quot;,
+    &quot;tags&quot;: [ &quot;qingxin&quot; ]
+}
+</code></pre><p>es&#x4F1A;&#x81EA;&#x52A8;&#x5EFA;&#x7ACB;index&#x548C;type&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x63D0;&#x524D;&#x521B;&#x5EFA;&#xFF0C;&#x800C;&#x4E14;es&#x9ED8;&#x8BA4;&#x4F1A;&#x5BF9;document&#x6BCF;&#x4E2A;field&#x90FD;&#x5EFA;&#x7ACB;&#x5012;&#x6392;&#x7D22;&#x5F15;&#xFF0C;&#x8BA9;&#x5176;&#x53EF;&#x4EE5;&#x88AB;&#x641C;&#x7D22;</p>
+<blockquote>
+<p>&#xFF08;2&#xFF09;&#x67E5;&#x8BE2;&#x5546;&#x54C1;&#xFF1A;&#x68C0;&#x7D22;&#x6587;&#x6863;</p>
+</blockquote>
+<pre><code>GET /index/type/id
+GET /ecommerce/product/1
+
+{
+  &quot;_index&quot;: &quot;ecommerce&quot;,
+  &quot;_type&quot;: &quot;product&quot;,
+  &quot;_id&quot;: &quot;1&quot;,
+  &quot;_version&quot;: 1,
+  &quot;found&quot;: true,
+  &quot;_source&quot;: {
+    &quot;name&quot;: &quot;gaolujie yagao&quot;,
+    &quot;desc&quot;: &quot;gaoxiao meibai&quot;,
+    &quot;price&quot;: 30,
+    &quot;producer&quot;: &quot;gaolujie producer&quot;,
+    &quot;tags&quot;: [
+      &quot;meibai&quot;,
+      &quot;fangzhu&quot;
+    ]
+  }
+}
+</code></pre><blockquote>
+<p>&#xFF08;3&#xFF09;&#x4FEE;&#x6539;&#x5546;&#x54C1;&#xFF1A;&#x66FF;&#x6362;&#x6587;&#x6863;</p>
+</blockquote>
+<pre><code>PUT /ecommerce/product/1
+{
+    &quot;name&quot; : &quot;jiaqiangban gaolujie yagao&quot;,
+    &quot;desc&quot; :  &quot;gaoxiao meibai&quot;,
+    &quot;price&quot; :  30,
+    &quot;producer&quot; :      &quot;gaolujie producer&quot;,
+    &quot;tags&quot;: [ &quot;meibai&quot;, &quot;fangzhu&quot; ]
+}
+
+{
+  &quot;_index&quot;: &quot;ecommerce&quot;,
+  &quot;_type&quot;: &quot;product&quot;,
+  &quot;_id&quot;: &quot;1&quot;,
+  &quot;_version&quot;: 1,
+  &quot;result&quot;: &quot;created&quot;,
+  &quot;_shards&quot;: {
+    &quot;total&quot;: 2,
+    &quot;successful&quot;: 1,
+    &quot;failed&quot;: 0
+  },
+  &quot;created&quot;: true
+}
+
+{
+  &quot;_index&quot;: &quot;ecommerce&quot;,
+  &quot;_type&quot;: &quot;product&quot;,
+  &quot;_id&quot;: &quot;1&quot;,
+  &quot;_version&quot;: 2,
+  &quot;result&quot;: &quot;updated&quot;,
+  &quot;_shards&quot;: {
+    &quot;total&quot;: 2,
+    &quot;successful&quot;: 1,
+    &quot;failed&quot;: 0
+  },
+  &quot;created&quot;: false
+}
+
+
+PUT /ecommerce/product/1
+{
+    &quot;name&quot; : &quot;jiaqiangban gaolujie yagao&quot;
+}
+</code></pre><p>&#x66FF;&#x6362;&#x65B9;&#x5F0F;&#x6709;&#x4E00;&#x4E2A;&#x4E0D;&#x597D;&#xFF0C;&#x5373;&#x4F7F;&#x5FC5;&#x987B;&#x5E26;&#x4E0A;&#x6240;&#x6709;&#x7684;field&#xFF0C;&#x624D;&#x80FD;&#x53BB;&#x8FDB;&#x884C;&#x4FE1;&#x606F;&#x7684;&#x4FEE;&#x6539;</p>
+<blockquote>
+<p>&#xFF08;4&#xFF09;&#x4FEE;&#x6539;&#x5546;&#x54C1;&#xFF1A;&#x66F4;&#x65B0;&#x6587;&#x6863;</p>
+</blockquote>
+<pre><code>POST /ecommerce/product/1/_update
+{
+  &quot;doc&quot;: {
+    &quot;name&quot;: &quot;jiaqiangban gaolujie yagao&quot;
+  }
+}
+
+{
+  &quot;_index&quot;: &quot;ecommerce&quot;,
+  &quot;_type&quot;: &quot;product&quot;,
+  &quot;_id&quot;: &quot;1&quot;,
+  &quot;_version&quot;: 8,
+  &quot;result&quot;: &quot;updated&quot;,
+  &quot;_shards&quot;: {
+    &quot;total&quot;: 2,
+    &quot;successful&quot;: 1,
+    &quot;failed&quot;: 0
+  }
+}
+</code></pre><p>&#x6211;&#x7684;&#x98CE;&#x683C;&#xFF0C;&#x5176;&#x5B9E;&#x6709;&#x9009;&#x62E9;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4E0D;&#x592A;&#x559C;&#x6B22;&#x5FF5;ppt&#xFF0C;&#x6216;&#x8005;&#x7167;&#x7740;&#x6587;&#x6863;&#x505A;&#xFF0C;&#x6216;&#x8005;&#x76F4;&#x63A5;&#x7C98;&#x8D34;&#x5199;&#x597D;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5C3D;&#x91CF;&#x662F;&#x7EAF;&#x624B;&#x6572;&#x4EE3;&#x7801;</p>
+<blockquote>
+<p>&#xFF08;5&#xFF09;&#x5220;&#x9664;&#x5546;&#x54C1;&#xFF1A;&#x5220;&#x9664;&#x6587;&#x6863;</p>
+</blockquote>
+<pre><code>DELETE /ecommerce/product/1
+
+{
+  &quot;found&quot;: true,
+  &quot;_index&quot;: &quot;ecommerce&quot;,
+  &quot;_type&quot;: &quot;product&quot;,
+  &quot;_id&quot;: &quot;1&quot;,
+  &quot;_version&quot;: 9,
+  &quot;result&quot;: &quot;deleted&quot;,
+  &quot;_shards&quot;: {
+    &quot;total&quot;: 2,
+    &quot;successful&quot;: 1,
+    &quot;failed&quot;: 0
+  }
+}
+
+{
+  &quot;_index&quot;: &quot;ecommerce&quot;,
+  &quot;_type&quot;: &quot;product&quot;,
+  &quot;_id&quot;: &quot;1&quot;,
+  &quot;found&quot;: false
+}
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="3.2、多种搜索方式.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 3.2、多种搜索方式">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3.1、快速入门案例实战","level":"1.4.1","depth":2,"next":{"title":"3.2、多种搜索方式","level":"1.4.2","depth":2,"path":"3、快速入门/3.2、多种搜索方式.md","ref":"3、快速入门/3.2、多种搜索方式.md","articles":[]},"previous":{"title":"3、快速入门","level":"1.4","depth":1,"ref":"","articles":[{"title":"3.1、快速入门案例实战","level":"1.4.1","depth":2,"path":"3、快速入门/3、快速入门案例实战.md","ref":"3、快速入门/3、快速入门案例实战.md","articles":[]},{"title":"3.2、多种搜索方式","level":"1.4.2","depth":2,"path":"3、快速入门/3.2、多种搜索方式.md","ref":"3、快速入门/3.2、多种搜索方式.md","articles":[]},{"title":"3.3、嵌套聚合，下钻分析，聚合分析","level":"1.4.3","depth":2,"path":"3、快速入门/3.3、嵌套聚合，下钻分析，聚合分析.md","ref":"3、快速入门/3.3、嵌套聚合，下钻分析，聚合分析.md","articles":[]},{"title":"3.4、Elasticsearch的基础分布式架构","level":"1.4.4","depth":2,"path":"3、快速入门/3.4、Elasticsearch的基础分布式架构.md","ref":"3、快速入门/3.4、Elasticsearch的基础分布式架构.md","articles":[]},{"title":"3.5、shard&replica机制再次梳理以及单node环境中创建index图解","level":"1.4.5","depth":2,"path":"3、快速入门/3.5、shard&replica机制再次梳理以及单node环境中创建index图解.md","ref":"3、快速入门/3.5、shard&replica机制再次梳理以及单node环境中创建index图解.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3、快速入门/3、快速入门案例实战.md","mtime":"2019-01-16T07:42:54.339Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-17T04:10:33.580Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
