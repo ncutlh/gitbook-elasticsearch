@@ -1158,6 +1158,44 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="89query-string&#x7684;&#x5206;&#x8BCD;&#x4EE5;&#x53CA;mapping&#x5F15;&#x5165;&#x6848;&#x4F8B;&#x9057;&#x7559;&#x95EE;&#x9898;&#x7684;&#x5927;&#x63ED;&#x79D8;">8.9_query string&#x7684;&#x5206;&#x8BCD;&#x4EE5;&#x53CA;mapping&#x5F15;&#x5165;&#x6848;&#x4F8B;&#x9057;&#x7559;&#x95EE;&#x9898;&#x7684;&#x5927;&#x63ED;&#x79D8;</h1>
+<p>1&#x3001;query string&#x5206;&#x8BCD;</p>
+<p>query string&#x5FC5;&#x987B;&#x4EE5;&#x548C;index&#x5EFA;&#x7ACB;&#x65F6;&#x76F8;&#x540C;&#x7684;analyzer&#x8FDB;&#x884C;&#x5206;&#x8BCD;
+query string&#x5BF9;exact value&#x548C;full text&#x7684;&#x533A;&#x522B;&#x5BF9;&#x5F85;</p>
+<p>date&#xFF1A;exact value
+_all&#xFF1A;full text</p>
+<p>&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x6709;&#x4E00;&#x4E2A;document&#xFF0C;&#x5176;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;field&#xFF0C;&#x5305;&#x542B;&#x7684;value&#x662F;&#xFF1A;hello you and me&#xFF0C;&#x5EFA;&#x7ACB;&#x5012;&#x6392;&#x7D22;&#x5F15;
+&#x6211;&#x4EEC;&#x8981;&#x641C;&#x7D22;&#x8FD9;&#x4E2A;document&#x5BF9;&#x5E94;&#x7684;index&#xFF0C;&#x641C;&#x7D22;&#x6587;&#x672C;&#x662F;hell me&#xFF0C;&#x8FD9;&#x4E2A;&#x641C;&#x7D22;&#x6587;&#x672C;&#x5C31;&#x662F;query string
+query string&#xFF0C;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;es&#x4F1A;&#x4F7F;&#x7528;&#x5B83;&#x5BF9;&#x5E94;&#x7684;field&#x5EFA;&#x7ACB;&#x5012;&#x6392;&#x7D22;&#x5F15;&#x65F6;&#x76F8;&#x540C;&#x7684;&#x5206;&#x8BCD;&#x5668;&#x53BB;&#x8FDB;&#x884C;&#x5206;&#x8BCD;&#xFF0C;&#x5206;&#x8BCD;&#x548C;normalization&#xFF0C;&#x53EA;&#x6709;&#x8FD9;&#x6837;&#xFF0C;&#x624D;&#x80FD;&#x5B9E;&#x73B0;&#x6B63;&#x786E;&#x7684;&#x641C;&#x7D22;</p>
+<p>&#x6211;&#x4EEC;&#x5EFA;&#x7ACB;&#x5012;&#x6392;&#x7D22;&#x5F15;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C06;dogs --&gt; dog&#xFF0C;&#x7ED3;&#x679C;&#x4F60;&#x641C;&#x7D22;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8FD8;&#x662F;&#x4E00;&#x4E2A;dogs&#xFF0C;&#x90A3;&#x4E0D;&#x5C31;&#x641C;&#x7D22;&#x4E0D;&#x5230;&#x4E86;&#x5417;&#xFF1F;&#x6240;&#x4EE5;&#x641C;&#x7D22;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x90A3;&#x4E2A;dogs&#x4E5F;&#x5FC5;&#x987B;&#x53D8;&#x6210;dog&#x624D;&#x884C;&#x3002;&#x624D;&#x80FD;&#x641C;&#x7D22;&#x5230;&#x3002;</p>
+<p>&#x77E5;&#x8BC6;&#x70B9;&#xFF1A;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;field&#xFF0C;&#x53EF;&#x80FD;&#x6709;&#x7684;&#x5C31;&#x662F;full text&#xFF0C;&#x6709;&#x7684;&#x5C31;&#x662F;exact value</p>
+<p>post_date&#xFF0C;date&#xFF1A;exact value
+_all&#xFF1A;full text&#xFF0C;&#x5206;&#x8BCD;&#xFF0C;normalization</p>
+<p>2&#x3001;mapping&#x5F15;&#x5165;&#x6848;&#x4F8B;&#x9057;&#x7559;&#x95EE;&#x9898;&#x5927;&#x63ED;&#x79D8;</p>
+<p>GET /_search?q=2017</p>
+<p>&#x641C;&#x7D22;&#x7684;&#x662F;_all field&#xFF0C;document&#x6240;&#x6709;&#x7684;field&#x90FD;&#x4F1A;&#x62FC;&#x63A5;&#x6210;&#x4E00;&#x4E2A;&#x5927;&#x4E32;&#xFF0C;&#x8FDB;&#x884C;&#x5206;&#x8BCD;</p>
+<p>2017-01-02 my second article this is my second article in this website 11400</p>
+<pre><code>    doc1        doc2        doc3
+</code></pre><p>2017        <em>        </em>        <em>
+01        </em><br>02                <em>
+03                        </em></p>
+<p>_all&#xFF0C;2017&#xFF0C;&#x81EA;&#x7136;&#x4F1A;&#x641C;&#x7D22;&#x5230;3&#x4E2A;docuemnt</p>
+<p>GET /_search?q=2017-01-01</p>
+<p>_all&#xFF0C;2017-01-01&#xFF0C;query string&#x4F1A;&#x7528;&#x8DDF;&#x5EFA;&#x7ACB;&#x5012;&#x6392;&#x7D22;&#x5F15;&#x4E00;&#x6837;&#x7684;&#x5206;&#x8BCD;&#x5668;&#x53BB;&#x8FDB;&#x884C;&#x5206;&#x8BCD;</p>
+<p>2017
+01
+01</p>
+<p>GET /_search?q=post_date:2017-01-01</p>
+<p>date&#xFF0C;&#x4F1A;&#x4F5C;&#x4E3A;exact value&#x53BB;&#x5EFA;&#x7ACB;&#x7D22;&#x5F15;</p>
+<pre><code>    doc1        doc2        doc3
+</code></pre><p>2017-01-01    <em><br>2017-01-02            </em><br>2017-01-03                    *</p>
+<p>post_date:2017-01-01&#xFF0C;2017-01-01&#xFF0C;doc1&#x4E00;&#x6761;document</p>
+<p>GET /_search?q=post_date:2017&#xFF0C;&#x8FD9;&#x4E2A;&#x5728;&#x8FD9;&#x91CC;&#x4E0D;&#x8BB2;&#x89E3;&#xFF0C;&#x56E0;&#x4E3A;&#x662F;es 5.2&#x4EE5;&#x540E;&#x505A;&#x7684;&#x4E00;&#x4E2A;&#x4F18;&#x5316;</p>
+<p>3&#x3001;&#x6D4B;&#x8BD5;&#x5206;&#x8BCD;&#x5668;</p>
+<p>GET /_analyze
+{
+  &quot;analyzer&quot;: &quot;standard&quot;,
+  &quot;text&quot;: &quot;Text to analyze&quot;
+}</p>
 
                                 
                                 </section>
@@ -1201,7 +1239,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"8.9_query string的分词以及mapping引入案例遗留问题的大揭秘","level":"1.9.9","depth":2,"next":{"title":"8.10_什么是mapping再次回炉透彻理解","level":"1.9.10","depth":2,"path":"8、初识搜索引擎/8.10_什么是mapping再次回炉透彻理解.md","ref":"8、初识搜索引擎/8.10_什么是mapping再次回炉透彻理解.md","articles":[]},"previous":{"title":"8.8_分词器的内部组成到底是什么，以及内置分词器的介绍","level":"1.9.8","depth":2,"path":"8、初识搜索引擎/8.8_分词器的内部组成到底是什么，以及内置分词器的介绍.md","ref":"8、初识搜索引擎/8.8_分词器的内部组成到底是什么，以及内置分词器的介绍.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"8、初识搜索引擎/8.9_query string的分词以及mapping引入案例遗留问题的大揭秘.md","mtime":"2019-01-16T08:18:18.799Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-17T04:10:33.580Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"8.9_query string的分词以及mapping引入案例遗留问题的大揭秘","level":"1.9.9","depth":2,"next":{"title":"8.10_什么是mapping再次回炉透彻理解","level":"1.9.10","depth":2,"path":"8、初识搜索引擎/8.10_什么是mapping再次回炉透彻理解.md","ref":"8、初识搜索引擎/8.10_什么是mapping再次回炉透彻理解.md","articles":[]},"previous":{"title":"8.8_分词器的内部组成到底是什么，以及内置分词器的介绍","level":"1.9.8","depth":2,"path":"8、初识搜索引擎/8.8_分词器的内部组成到底是什么，以及内置分词器的介绍.md","ref":"8、初识搜索引擎/8.8_分词器的内部组成到底是什么，以及内置分词器的介绍.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"8、初识搜索引擎/8.9_query string的分词以及mapping引入案例遗留问题的大揭秘.md","mtime":"2019-01-17T08:03:31.100Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-17T08:10:17.820Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

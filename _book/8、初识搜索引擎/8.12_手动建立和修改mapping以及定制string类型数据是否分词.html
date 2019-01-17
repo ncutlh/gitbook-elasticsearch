@@ -1158,6 +1158,100 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="812&#x624B;&#x52A8;&#x5EFA;&#x7ACB;&#x548C;&#x4FEE;&#x6539;mapping&#x4EE5;&#x53CA;&#x5B9A;&#x5236;string&#x7C7B;&#x578B;&#x6570;&#x636E;&#x662F;&#x5426;&#x5206;&#x8BCD;">8.12_&#x624B;&#x52A8;&#x5EFA;&#x7ACB;&#x548C;&#x4FEE;&#x6539;mapping&#x4EE5;&#x53CA;&#x5B9A;&#x5236;string&#x7C7B;&#x578B;&#x6570;&#x636E;&#x662F;&#x5426;&#x5206;&#x8BCD;</h1>
+<p>1&#x3001;&#x5982;&#x4F55;&#x5EFA;&#x7ACB;&#x7D22;&#x5F15;</p>
+<p>analyzed
+not_analyzed
+no</p>
+<p>2&#x3001;&#x4FEE;&#x6539;mapping</p>
+<p>&#x53EA;&#x80FD;&#x521B;&#x5EFA;index&#x65F6;&#x624B;&#x52A8;&#x5EFA;&#x7ACB;mapping&#xFF0C;&#x6216;&#x8005;&#x65B0;&#x589E;field mapping&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x80FD;update field mapping</p>
+<p>PUT /website
+{
+  &quot;mappings&quot;: {
+    &quot;article&quot;: {
+      &quot;properties&quot;: {
+        &quot;author_id&quot;: {
+          &quot;type&quot;: &quot;long&quot;
+        },
+        &quot;title&quot;: {
+          &quot;type&quot;: &quot;text&quot;,
+          &quot;analyzer&quot;: &quot;english&quot;
+        },
+        &quot;content&quot;: {
+          &quot;type&quot;: &quot;text&quot;
+        },
+        &quot;post_date&quot;: {
+          &quot;type&quot;: &quot;date&quot;
+        },
+        &quot;publisher_id&quot;: {
+          &quot;type&quot;: &quot;text&quot;,
+          &quot;index&quot;: &quot;not_analyzed&quot;
+        }
+      }
+    }
+  }
+}</p>
+<p>PUT /website
+{
+  &quot;mappings&quot;: {
+    &quot;article&quot;: {
+      &quot;properties&quot;: {
+        &quot;author_id&quot;: {
+          &quot;type&quot;: &quot;text&quot;
+        }
+      }
+    }
+  }
+}</p>
+<p>{
+  &quot;error&quot;: {
+    &quot;root_cause&quot;: [
+      {
+        &quot;type&quot;: &quot;index_already_exists_exception&quot;,
+        &quot;reason&quot;: &quot;index [website/co1dgJ-uTYGBEEOOL8GsQQ] already exists&quot;,
+        &quot;index_uuid&quot;: &quot;co1dgJ-uTYGBEEOOL8GsQQ&quot;,
+        &quot;index&quot;: &quot;website&quot;
+      }
+    ],
+    &quot;type&quot;: &quot;index_already_exists_exception&quot;,
+    &quot;reason&quot;: &quot;index [website/co1dgJ-uTYGBEEOOL8GsQQ] already exists&quot;,
+    &quot;index_uuid&quot;: &quot;co1dgJ-uTYGBEEOOL8GsQQ&quot;,
+    &quot;index&quot;: &quot;website&quot;
+  },
+  &quot;status&quot;: 400
+}</p>
+<p>PUT /website/_mapping/article
+{
+  &quot;properties&quot; : {
+    &quot;new_field&quot; : {
+      &quot;type&quot; :    &quot;string&quot;,
+      &quot;index&quot;:    &quot;not_analyzed&quot;
+    }
+  }
+}</p>
+<p>3&#x3001;&#x6D4B;&#x8BD5;mapping</p>
+<p>GET /website/_analyze
+{
+  &quot;field&quot;: &quot;content&quot;,
+  &quot;text&quot;: &quot;my-dogs&quot; 
+}</p>
+<p>GET website/_analyze
+{
+  &quot;field&quot;: &quot;new_field&quot;,
+  &quot;text&quot;: &quot;my dogs&quot;
+}</p>
+<p>{
+  &quot;error&quot;: {
+    &quot;root_cause&quot;: [
+      {
+        &quot;type&quot;: &quot;remote_transport_exception&quot;,
+        &quot;reason&quot;: &quot;[4onsTYV][127.0.0.1:9300][indices:admin/analyze[s]]&quot;
+      }
+    ],
+    &quot;type&quot;: &quot;illegal_argument_exception&quot;,
+    &quot;reason&quot;: &quot;Can&apos;t process field [new_field], Analysis requests are only supported on tokenized fields&quot;
+  },
+  &quot;status&quot;: 400
+}</p>
 
                                 
                                 </section>
@@ -1201,7 +1295,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"8.12_手动建立和修改mapping以及定制string类型数据是否分词","level":"1.9.12","depth":2,"next":{"title":"8.13_mapping复杂数据类型以及object类型数据底层结构大揭秘","level":"1.9.13","depth":2,"path":"8、初识搜索引擎/8.13_mapping复杂数据类型以及object类型数据底层结构大揭秘.md","ref":"8、初识搜索引擎/8.13_mapping复杂数据类型以及object类型数据底层结构大揭秘.md","articles":[]},"previous":{"title":"8.11_mapping的核心数据类型以及dynamic mapping","level":"1.9.11","depth":2,"path":"8、初识搜索引擎/8.11_mapping的核心数据类型以及dynamic mapping.md","ref":"8、初识搜索引擎/8.11_mapping的核心数据类型以及dynamic mapping.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"8、初识搜索引擎/8.12_手动建立和修改mapping以及定制string类型数据是否分词.md","mtime":"2019-01-16T08:18:18.804Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-17T04:10:33.580Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"8.12_手动建立和修改mapping以及定制string类型数据是否分词","level":"1.9.12","depth":2,"next":{"title":"8.13_mapping复杂数据类型以及object类型数据底层结构大揭秘","level":"1.9.13","depth":2,"path":"8、初识搜索引擎/8.13_mapping复杂数据类型以及object类型数据底层结构大揭秘.md","ref":"8、初识搜索引擎/8.13_mapping复杂数据类型以及object类型数据底层结构大揭秘.md","articles":[]},"previous":{"title":"8.11_mapping的核心数据类型以及dynamic mapping","level":"1.9.11","depth":2,"path":"8、初识搜索引擎/8.11_mapping的核心数据类型以及dynamic mapping.md","ref":"8、初识搜索引擎/8.11_mapping的核心数据类型以及dynamic mapping.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"8、初识搜索引擎/8.12_手动建立和修改mapping以及定制string类型数据是否分词.md","mtime":"2019-01-17T08:40:32.715Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-17T08:10:17.820Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

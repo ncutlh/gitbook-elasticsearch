@@ -1158,6 +1158,78 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="83&#x5206;&#x9875;&#x641C;&#x7D22;&#x4EE5;&#x53CA;deep-paging&#x6027;&#x80FD;&#x95EE;&#x9898;&#x6DF1;&#x5EA6;&#x56FE;&#x89E3;&#x63ED;&#x79D8;">8.3_&#x5206;&#x9875;&#x641C;&#x7D22;&#x4EE5;&#x53CA;deep paging&#x6027;&#x80FD;&#x95EE;&#x9898;&#x6DF1;&#x5EA6;&#x56FE;&#x89E3;&#x63ED;&#x79D8;</h1>
+<h2 id="831&#x3001;&#x8BB2;&#x89E3;&#x5982;&#x4F55;&#x4F7F;&#x7528;es&#x8FDB;&#x884C;&#x5206;&#x9875;&#x641C;&#x7D22;&#x7684;&#x8BED;&#x6CD5;">8.3.1&#x3001;&#x8BB2;&#x89E3;&#x5982;&#x4F55;&#x4F7F;&#x7528;es&#x8FDB;&#x884C;&#x5206;&#x9875;&#x641C;&#x7D22;&#x7684;&#x8BED;&#x6CD5;</h2>
+<pre><code>size&#xFF0C;from
+
+GET /_search?size=10
+GET /_search?size=10&amp;from=0
+GET /_search?size=10&amp;from=20
+
+&#x5206;&#x9875;&#x7684;&#x4E0A;&#x673A;&#x5B9E;&#x9A8C;
+
+GET /test_index/test_type/_search
+
+&quot;hits&quot;: {
+    &quot;total&quot;: 9,
+    &quot;max_score&quot;: 1,
+</code></pre><p>&#x6211;&#x4EEC;&#x5047;&#x8BBE;&#x5C06;&#x8FD9;9&#x6761;&#x6570;&#x636E;&#x5206;&#x6210;3&#x9875;&#xFF0C;&#x6BCF;&#x4E00;&#x9875;&#x662F;3&#x6761;&#x6570;&#x636E;&#xFF0C;&#x6765;&#x5B9E;&#x9A8C;&#x4E00;&#x4E0B;&#x8FD9;&#x4E2A;&#x5206;&#x9875;&#x641C;&#x7D22;&#x7684;&#x6548;&#x679C;</p>
+<pre><code>GET /test_index/test_type/_search?from=0&amp;size=3
+
+{
+  &quot;took&quot;: 2,
+  &quot;timed_out&quot;: false,
+  &quot;_shards&quot;: {
+    &quot;total&quot;: 5,
+    &quot;successful&quot;: 5,
+    &quot;failed&quot;: 0
+  },
+  &quot;hits&quot;: {
+    &quot;total&quot;: 9,
+    &quot;max_score&quot;: 1,
+    &quot;hits&quot;: [
+      {
+        &quot;_index&quot;: &quot;test_index&quot;,
+        &quot;_type&quot;: &quot;test_type&quot;,
+        &quot;_id&quot;: &quot;8&quot;,
+        &quot;_score&quot;: 1,
+        &quot;_source&quot;: {
+          &quot;test_field&quot;: &quot;test client 2&quot;
+        }
+      },
+      {
+        &quot;_index&quot;: &quot;test_index&quot;,
+        &quot;_type&quot;: &quot;test_type&quot;,
+        &quot;_id&quot;: &quot;6&quot;,
+        &quot;_score&quot;: 1,
+        &quot;_source&quot;: {
+          &quot;test_field&quot;: &quot;tes test&quot;
+        }
+      },
+      {
+        &quot;_index&quot;: &quot;test_index&quot;,
+        &quot;_type&quot;: &quot;test_type&quot;,
+        &quot;_id&quot;: &quot;4&quot;,
+        &quot;_score&quot;: 1,
+        &quot;_source&quot;: {
+          &quot;test_field&quot;: &quot;test4&quot;
+        }
+      }
+    ]
+  }
+}
+
+&#x7B2C;&#x4E00;&#x9875;&#xFF1A;id=8,6,4
+
+GET /test_index/test_type/_search?from=3&amp;size=3
+
+&#x7B2C;&#x4E8C;&#x9875;&#xFF1A;id=2,&#x81EA;&#x52A8;&#x751F;&#x6210;,7
+
+GET /test_index/test_type/_search?from=6&amp;size=3
+
+&#x7B2C;&#x4E09;&#x9875;&#xFF1A;id=1,11,3
+</code></pre><h2 id="832&#x3001;&#x4EC0;&#x4E48;&#x662F;deep-paging&#x95EE;&#x9898;&#xFF1F;&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x4EA7;&#x751F;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x5B83;&#x7684;&#x5E95;&#x5C42;&#x539F;&#x7406;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;">8.3.2&#x3001;&#x4EC0;&#x4E48;&#x662F;deep paging&#x95EE;&#x9898;&#xFF1F;&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x4EA7;&#x751F;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x5B83;&#x7684;&#x5E95;&#x5C42;&#x539F;&#x7406;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</h2>
+<p>deep paging&#x6027;&#x80FD;&#x95EE;&#x9898;&#xFF0C;&#x4EE5;&#x53CA;&#x539F;&#x7406;&#x6DF1;&#x5EA6;&#x56FE;&#x89E3;&#x63ED;&#x79D8;&#xFF0C;&#x5F88;&#x9AD8;&#x7EA7;&#x7684;&#x77E5;&#x8BC6;&#x70B9;</p>
+<p><img src="../assets/deep paging&#x56FE;&#x89E3;.png" alt="deep paging&#x56FE;&#x89E3;.png"></p>
 
                                 
                                 </section>
@@ -1201,7 +1273,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"8.3_分页搜索以及deep paging性能问题深度图解揭秘","level":"1.9.3","depth":2,"next":{"title":"8.4_快速掌握query string search语法以及_all metadata原理揭秘","level":"1.9.4","depth":2,"path":"8、初识搜索引擎/8.4_快速掌握query string search语法以及_all metadata原理揭秘.md","ref":"8、初识搜索引擎/8.4_快速掌握query string search语法以及_all metadata原理揭秘.md","articles":[]},"previous":{"title":"8.2_multi-index&multi-type搜索模式解析以及搜索原理初步图解","level":"1.9.2","depth":2,"path":"8、初识搜索引擎/8.2_multi-index&multi-type搜索模式解析以及搜索原理初步图解.md","ref":"8、初识搜索引擎/8.2_multi-index&multi-type搜索模式解析以及搜索原理初步图解.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"8、初识搜索引擎/8.3_分页搜索以及deep paging性能问题深度图解揭秘.md","mtime":"2019-01-16T08:18:18.793Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-17T04:10:33.580Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"8.3_分页搜索以及deep paging性能问题深度图解揭秘","level":"1.9.3","depth":2,"next":{"title":"8.4_快速掌握query string search语法以及_all metadata原理揭秘","level":"1.9.4","depth":2,"path":"8、初识搜索引擎/8.4_快速掌握query string search语法以及_all metadata原理揭秘.md","ref":"8、初识搜索引擎/8.4_快速掌握query string search语法以及_all metadata原理揭秘.md","articles":[]},"previous":{"title":"8.2_multi-index&multi-type搜索模式解析以及搜索原理初步图解","level":"1.9.2","depth":2,"path":"8、初识搜索引擎/8.2_multi-index&multi-type搜索模式解析以及搜索原理初步图解.md","ref":"8、初识搜索引擎/8.2_multi-index&multi-type搜索模式解析以及搜索原理初步图解.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"8、初识搜索引擎/8.3_分页搜索以及deep paging性能问题深度图解揭秘.md","mtime":"2019-01-17T07:25:59.829Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-17T08:10:17.820Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

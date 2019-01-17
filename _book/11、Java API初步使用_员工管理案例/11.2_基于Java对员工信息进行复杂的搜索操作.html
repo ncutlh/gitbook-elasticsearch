@@ -1158,6 +1158,43 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="112&#x57FA;&#x4E8E;java&#x5BF9;&#x5458;&#x5DE5;&#x4FE1;&#x606F;&#x8FDB;&#x884C;&#x590D;&#x6742;&#x7684;&#x641C;&#x7D22;&#x64CD;&#x4F5C;">11.2_&#x57FA;&#x4E8E;Java&#x5BF9;&#x5458;&#x5DE5;&#x4FE1;&#x606F;&#x8FDB;&#x884C;&#x590D;&#x6742;&#x7684;&#x641C;&#x7D22;&#x64CD;&#x4F5C;</h1>
+<p>SearchResponse response = client.prepareSearch(&quot;index1&quot;, &quot;index2&quot;)
+        .setTypes(&quot;type1&quot;, &quot;type2&quot;)
+        .setQuery(QueryBuilders.termQuery(&quot;multi&quot;, &quot;test&quot;))                 // Query
+        .setPostFilter(QueryBuilders.rangeQuery(&quot;age&quot;).from(12).to(18))     // Filter
+        .setFrom(0).setSize(60)
+        .get();</p>
+<p>&#x9700;&#x6C42;&#xFF1A;</p>
+<p>&#xFF08;1&#xFF09;&#x641C;&#x7D22;&#x804C;&#x4F4D;&#x4E2D;&#x5305;&#x542B;technique&#x7684;&#x5458;&#x5DE5;
+&#xFF08;2&#xFF09;&#x540C;&#x65F6;&#x8981;&#x6C42;age&#x5728;30&#x5230;40&#x5C81;&#x4E4B;&#x95F4;
+&#xFF08;3&#xFF09;&#x5206;&#x9875;&#x67E5;&#x8BE2;&#xFF0C;&#x67E5;&#x627E;&#x7B2C;&#x4E00;&#x9875;</p>
+<p>GET /company/employee/_search
+{
+  &quot;query&quot;: {
+    &quot;bool&quot;: {
+      &quot;must&quot;: [
+        {
+          &quot;match&quot;: {
+            &quot;position&quot;: &quot;technique&quot;
+          }
+        }
+      ],
+      &quot;filter&quot;: {
+        &quot;range&quot;: {
+          &quot;age&quot;: {
+            &quot;gte&quot;: 30,
+            &quot;lte&quot;: 40
+          }
+        }
+      }
+    }
+  },
+  &quot;from&quot;: 0,
+  &quot;size&quot;: 1
+}</p>
+<p>&#x544A;&#x8BC9;&#x5927;&#x5BB6;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x521A;&#x624D;&#x4E00;&#x8FB9;&#x8FD0;&#x884C;&#x521B;&#x5EFA;document&#xFF0C;&#x4E00;&#x8FB9;&#x641C;&#x7D22;&#x4EC0;&#x4E48;&#x90FD;&#x6CA1;&#x641C;&#x7D22;&#x5230;&#xFF1F;&#xFF1F;&#xFF1F;&#xFF1F;</p>
+<p>&#x8FD1;&#x5B9E;&#x65F6;&#xFF01;&#xFF01;&#xFF01;</p>
+<p>&#x9ED8;&#x8BA4;&#x662F;1&#x79D2;&#x4EE5;&#x540E;&#xFF0C;&#x5199;&#x5165;es&#x7684;&#x6570;&#x636E;&#xFF0C;&#x624D;&#x80FD;&#x88AB;&#x641C;&#x7D22;&#x5230;&#x3002;&#x5F88;&#x660E;&#x663E;&#x521A;&#x624D;&#xFF0C;&#x5199;&#x5165;&#x6570;&#x636E;&#x4E0D;&#x5230;&#x4E00;&#x79D2;&#xFF0C;&#x6211;&#x95E8;&#x5C31;&#x5728;&#x641C;&#x7D22;&#x3002;</p>
 
                                 
                                 </section>
@@ -1201,7 +1238,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"11.2_基于Java对员工信息进行复杂的搜索操作","level":"1.12.2","depth":2,"next":{"title":"11.3_基于Java对员工信息进行聚合分析","level":"1.12.3","depth":2,"path":"11、Java API初步使用_员工管理案例/11.3_基于Java对员工信息进行聚合分析.md","ref":"11、Java API初步使用_员工管理案例/11.3_基于Java对员工信息进行聚合分析.md","articles":[]},"previous":{"title":"11.1_基于Java实现员工信息的增删改查","level":"1.12.1","depth":2,"path":"11、Java API初步使用_员工管理案例/11.1_基于Java实现员工信息的增删改查.md","ref":"11、Java API初步使用_员工管理案例/11.1_基于Java实现员工信息的增删改查.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"11、Java API初步使用_员工管理案例/11.2_基于Java对员工信息进行复杂的搜索操作.md","mtime":"2019-01-16T08:18:18.830Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-17T04:10:33.580Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"11.2_基于Java对员工信息进行复杂的搜索操作","level":"1.12.2","depth":2,"next":{"title":"11.3_基于Java对员工信息进行聚合分析","level":"1.12.3","depth":2,"path":"11、Java API初步使用_员工管理案例/11.3_基于Java对员工信息进行聚合分析.md","ref":"11、Java API初步使用_员工管理案例/11.3_基于Java对员工信息进行聚合分析.md","articles":[]},"previous":{"title":"11.1_基于Java实现员工信息的增删改查","level":"1.12.1","depth":2,"path":"11、Java API初步使用_员工管理案例/11.1_基于Java实现员工信息的增删改查.md","ref":"11、Java API初步使用_员工管理案例/11.1_基于Java实现员工信息的增删改查.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"11、Java API初步使用_员工管理案例/11.2_基于Java对员工信息进行复杂的搜索操作.md","mtime":"2019-01-17T08:45:51.478Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-17T08:10:17.820Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

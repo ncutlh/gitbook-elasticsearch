@@ -12,7 +12,7 @@
     * [3.5、shard&replica机制再次梳理以及单node环境中创建index图解](3、快速入门/3.5、shard&replica机制再次梳理以及单node环境中创建index图解.md)
 * 4、document
     * [4.1_初步解析document的核心元数据以及图解剖析index创建反例](4、document/4.1_初步解析document的核心元数据以及图解剖析index创建反例.md)
-    * [4.2_document id的手动指定与自动生成两种方式解析](4、document/4.2_document id的手动指定与自动生成两种方式解析.md)
+    * [4.2_document id的手动指定与自动生成两种方式解析.md](4、document/4.2_document id的手动指定与自动生成两种方式解析.md.md)
     * [4.3_document的_source元数据以及定制返回结果解析](4、document/4.3_document的_source元数据以及定制返回结果解析.md)
     * [4.4_document的全量替换、强制创建以及图解lazy delete机制](4、document/4.4_document的全量替换、强制创建以及图解lazy delete机制.md)
 * [5、深度图解剖析](5、深度图解剖析.md)
