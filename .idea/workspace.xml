@@ -2,99 +2,72 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9c5fa2b-c5ee-4ef7-abf1-6740c083f1a2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/document增删改内核级原理.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/9、索引管理/9.5_定制化自己的dynamic_mapping策略.md" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/7、分布式文档系统/7.7_bulk api的奇特json格式与底层性能优化关系大揭秘.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/8、初识搜素引擎/8.21_上机动手实战如何定制搜索结果的排序规则.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/8、初识搜索引擎/8.11_mapping的核心数据类型以及dynamic mapping.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/8、初识搜索引擎/8.15_快速上机动手实战Query DSL搜索语法.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/8、初识搜索引擎/8.1_search结果深入解析（search timeout机制揭秘）.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/9、索引管理/9.4_mapping root object深入剖析.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/9、索引管理/9.5_定制化自己的dynamic mapping策略.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/.idea/elasticsearch.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/1、基本概念.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/2、安装和启动.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/3、快速入门/3.2、多种搜索方式.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/3、快速入门/3.3、嵌套聚合，下钻分析，聚合分析.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/3、快速入门/3.4、Elasticsearch的基础分布式架构.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/3、快速入门/3.5、shard&amp;replica机制再次梳理以及单node环境中创建index图解.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/3、快速入门/3、快速入门案例实战.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/4、document/4.1_初步解析document的核心元数据以及图解剖析index创建反例.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/4、document/4.2_document id的手动指定与自动生成两种方式解析.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/4、document/4.3_document的_source元数据以及定制返回结果解析.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/4、document/4.4_document的全量替换、强制创建以及图解lazy delete机制.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/5、深度图解剖析.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/6、上机动手实战演练/6.1_基于_version进行乐观锁并发控制.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/6、上机动手实战演练/6.2_基于external version进行乐观锁并发控制.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/6、上机动手实战演练/6.3_图解partial update实现原理以及动手实战演练.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/6、上机动手实战演练/6.4_基于groovy脚本进行partial update.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/6、上机动手实战演练/6.5_图解partial update乐观锁并发控制原理以及相关操作讲解.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/6、上机动手实战演练/6.6_mget批量查询api.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/7、分布式文档系统/7.1_上机动手实战演练bulk批量增删改.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/7、分布式文档系统/7.2_阶段性总结以及什么是distributed document store.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/7、分布式文档系统/7.3_深度图解剖析document数据路由原理.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/7、分布式文档系统/7.4_document增删改内部原理图解揭秘.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/7、分布式文档系统/7.5_图解写一致性原理以及quorum机制深入剖析.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/7、分布式文档系统/7.6_document查询内部原理图解揭秘.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/7、分布式文档系统/7.7_bulk api的奇特json格式与底层性能优化关系大揭秘.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.1_search结果深入解析（search timeout机制揭秘）.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/assets/ES的基础分布式架构.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/assets/GET_cat_indices.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/assets/GUID不冲突解释.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/assets/document路由原理.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/assets/es document delete的原理.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/assets/es增删改内部原理.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/assets/index如何创建的反例分析.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/assets/partial update内置乐观锁并发控制.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/assets/shard&amp;replica机制再次梳理.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/assets/shard和replica的解释.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/assets/单node环境下创建index.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/assets/图解2个node环境下replica shard是如何分配的.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/assets/图解Elasticsearch内部如何基于_version进行乐观锁并发控制.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/assets/图解partial update实现原理以及其优点.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/assets/容错纠正.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/assets/小错误纠正.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/assets/扩容过程分析.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/assets/深度图解剖析Elasticsearch并发冲突问题.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/assets/深度图解剖析悲观锁与乐观锁两种并发控制方案.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/gitbook/gitbook-plugin-fontsettings/fontsettings.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/gitbook/gitbook-plugin-fontsettings/website.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/gitbook/gitbook-plugin-highlight/ebook.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/gitbook/gitbook-plugin-highlight/website.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/gitbook/gitbook-plugin-livereload/plugin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/gitbook/gitbook-plugin-lunr/lunr.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/gitbook/gitbook-plugin-lunr/search-lunr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/gitbook/gitbook-plugin-search/lunr.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/gitbook/gitbook-plugin-search/search-engine.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/gitbook/gitbook-plugin-search/search.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/gitbook/gitbook-plugin-search/search.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/gitbook/gitbook-plugin-sharing/buttons.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/index.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/4、document/4.2_document id的手动指定与自动生成两种方式解析.md" afterPath="$PROJECT_DIR$/4、document/4.2_document_id的手动指定与自动生成两种方式解析.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/4、document/4.4_document的全量替换、强制创建以及图解lazy delete机制.md" afterPath="$PROJECT_DIR$/4、document/4.4_document的全量替换、强制创建以及图解lazy_delete机制.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/6、上机动手实战演练/6.2_基于external version进行乐观锁并发控制.md" afterPath="$PROJECT_DIR$/6、上机动手实战演练/6.2_基于external_version进行乐观锁并发控制.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/6、上机动手实战演练/6.3_图解partial update实现原理以及动手实战演练.md" afterPath="$PROJECT_DIR$/6、上机动手实战演练/6.3_图解partial_update实现原理以及动手实战演练.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/6、上机动手实战演练/6.4_基于groovy脚本进行partial update.md" afterPath="$PROJECT_DIR$/6、上机动手实战演练/6.4_基于groovy脚本进行partial_update.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/6、上机动手实战演练/6.5_图解partial update乐观锁并发控制原理以及相关操作讲解.md" afterPath="$PROJECT_DIR$/6、上机动手实战演练/6.5_图解partial_update乐观锁并发控制原理以及相关操作讲解.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/7、分布式文档系统/7.2_阶段性总结以及什么是distributed document store.md" afterPath="$PROJECT_DIR$/7、分布式文档系统/7.2_阶段性总结以及什么是distributed_document_store.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/8、初识搜索引擎/8.14_search api的基础语法介绍.md" afterPath="$PROJECT_DIR$/8、初识搜索引擎/8.14_search_api的基础语法介绍.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/8、初识搜索引擎/8.24_内核级知识点之doc value初步探秘.md" afterPath="$PROJECT_DIR$/8、初识搜索引擎/8.24_内核级知识点之doc_value初步探秘.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/8、初识搜索引擎/8.25_分布式搜索引擎内核解密之query phase.md" afterPath="$PROJECT_DIR$/8、初识搜索引擎/8.25_分布式搜索引擎内核解密之query_phase.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/8、初识搜索引擎/8.26_分布式搜索引擎内核解密之fetch phase.md" afterPath="$PROJECT_DIR$/8、初识搜索引擎/8.26_分布式搜索引擎内核解密之fetch_phase.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/8、初识搜索引擎/8.27_搜索相关参数梳理以及bouncing results问题解决方案.md" afterPath="$PROJECT_DIR$/8、初识搜索引擎/8.27_搜索相关参数梳理以及bouncing_results问题解决方案.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/8、初识搜索引擎/8.3_分页搜索以及deep paging性能问题深度图解揭秘.md" afterPath="$PROJECT_DIR$/8、初识搜索引擎/8.3_分页搜索以及deep_paging性能问题深度图解揭秘.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/8、初识搜索引擎/8.4_快速掌握query string search语法以及_all metadata原理揭秘.md" afterPath="$PROJECT_DIR$/8、初识搜索引擎/8.4_快速掌握query_string_search语法以及_all_metadata原理揭秘.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/assets/deep paging图解.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/assets/document增删改内核级原理.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/assets/fetch phase.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/assets/query phase.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/assets/timeout机制详解.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/assets/初步图解搜索原理.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/12、操作命令汇总.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/7、分布式文档系统/7.7_bulk_api的奇特json格式与底层性能优化关系大揭秘.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/8、初识搜索引擎/8.11_mapping的核心数据类型以及dynamic_mapping.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/8、初识搜索引擎/8.15_快速上机动手实战Query_DSL搜索语法.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/8、初识搜索引擎/8.1_search结果深入解析（search_timeout机制揭秘）.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/8、初识搜索引擎/8.21_上机动手实战如何定制搜索结果的排序规则.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/9、索引管理/9.4_mapping_root_object深入剖析.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/10、内核原理探秘/10.1_倒排索引组成结构以及其索引可变原因揭秘.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/10、内核原理探秘/10.2_深度图解剖析document写入原理（buffer，segment，commit）.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/10、内核原理探秘/10.3_优化写入流程实现NRT近实时（filesystem cache，refresh）.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/10、内核原理探秘/10.4_继续优化写入流程实现durability可靠存储（translog，flush）.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/10、内核原理探秘/10.5_最后优化写入流程实现海量磁盘文件合并（segment merge，optimize）.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/11、Java API初步使用_员工管理案例/11.1_基于Java实现员工信息的增删改查.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/11、Java API初步使用_员工管理案例/11.2_基于Java对员工信息进行复杂的搜索操作.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/11、Java API初步使用_员工管理案例/11.3_基于Java对员工信息进行聚合分析.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/12、操作命令汇总.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/4、document/4.2_document_id的手动指定与自动生成两种方式解析.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/4、document/4.4_document的全量替换、强制创建以及图解lazy_delete机制.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/6、上机动手实战演练/6.2_基于external_version进行乐观锁并发控制.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/6、上机动手实战演练/6.3_图解partial_update实现原理以及动手实战演练.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/6、上机动手实战演练/6.4_基于groovy脚本进行partial_update.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/6、上机动手实战演练/6.5_图解partial_update乐观锁并发控制原理以及相关操作讲解.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/7、分布式文档系统/7.2_阶段性总结以及什么是distributed_document_store.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/7、分布式文档系统/7.7_bulk_api的奇特json格式与底层性能优化关系大揭秘.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.10_什么是mapping再次回炉透彻理解.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.11_mapping的核心数据类型以及dynamic_mapping.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.12_手动建立和修改mapping以及定制string类型数据是否分词.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.13_mapping复杂数据类型以及object类型数据底层结构大揭秘.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.14_search_api的基础语法介绍.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.15_快速上机动手实战Query_DSL搜索语法.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.16_filter与query深入对比解密：相关度，性能.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.17_上机动手实战常用的各种query搜索语法.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.18_上机动手实战多搜索条件组合查询.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.19_上机动手实战如何定位不合法的搜索以及其原因.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.1_search结果深入解析（search_timeout机制揭秘）.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.21_上机动手实战如何定制搜索结果的排序规则.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.22_解密如何将一个field索引两次来解决字符串排序问题.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.23_相关度评分TF&amp;IDF算法独家解密.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.24_内核级知识点之doc_value初步探秘.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.25_分布式搜索引擎内核解密之query_phase.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.26_分布式搜索引擎内核解密之fetch_phase.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.27_搜索相关参数梳理以及bouncing_results问题解决方案.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.28_上机动手实战基于scoll技术滚动搜索大量数据.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.2_multi-index&amp;multi-type搜索模式解析以及搜索原理初步图解.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.3_分页搜索以及deep_paging性能问题深度图解揭秘.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.4_快速掌握query_string_search语法以及_all_metadata原理揭秘.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.5_用一个例子告诉你mapping到底是什么.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.6_精确匹配与全文搜索的对比分析.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.7_倒排索引核心原理快速揭秘.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.8_分词器的内部组成到底是什么，以及内置分词器的介绍.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.9_query string的分词以及mapping引入案例遗留问题的大揭秘.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/9、索引管理/9.1_快速上机动手实战创建、修改以及删除索引.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/9、索引管理/9.2_快速上机动手实战修改分词器以及定制自己的分词器.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/9、索引管理/9.3_内核级知识点：深入探秘type底层数据结构.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/9、索引管理/9.4_mapping_root_object深入剖析.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/9、索引管理/9.5_定制化自己的dynamic_mapping策略.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/9、索引管理/9.6_复杂上机实验：基于scoll+bulk+索引别名实现零停机重建索引.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/search_index.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/10、内核原理探秘/10.1_倒排索引组成结构以及其索引可变原因揭秘.md" afterPath="$PROJECT_DIR$/10、内核原理探秘/10.1_倒排索引组成结构以及其索引可变原因揭秘.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/10、内核原理探秘/10.2_深度图解剖析document写入原理（buffer，segment，commit）.md" afterPath="$PROJECT_DIR$/10、内核原理探秘/10.2_深度图解剖析document写入原理（buffer，segment，commit）.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/8、初识搜索引擎/8.17_上机动手实战常用的各种query搜索语法.md" afterPath="$PROJECT_DIR$/8、初识搜索引擎/8.17_上机动手实战常用的各种query搜索语法.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/8、初识搜索引擎/8.18_上机动手实战多搜索条件组合查询.md" afterPath="$PROJECT_DIR$/8、初识搜索引擎/8.18_上机动手实战多搜索条件组合查询.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/8、初识搜索引擎/8.19_上机动手实战如何定位不合法的搜索以及其原因.md" afterPath="$PROJECT_DIR$/8、初识搜索引擎/8.19_上机动手实战如何定位不合法的搜索以及其原因.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/9、索引管理/9.6_复杂上机实验：基于scoll+bulk+索引别名实现零停机重建索引.md" afterPath="$PROJECT_DIR$/9、索引管理/9.6_复杂上机实验：基于scoll+bulk+索引别名实现零停机重建索引.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SUMMARY.md" afterPath="$PROJECT_DIR$/SUMMARY.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -156,7 +129,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="315">
-                <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+                <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -195,7 +168,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="435">
-                <caret line="29" column="32" lean-forward="true" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+                <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -564,7 +537,7 @@
       <option name="presentableId" value="Default" />
       <updated>1547611067828</updated>
       <workItem from="1547611069974" duration="14902000" />
-      <workItem from="1547708245626" duration="13629000" />
+      <workItem from="1547708245626" duration="13669000" />
     </task>
     <task id="LOCAL-00001" summary="README">
       <created>1547708486238</created>
@@ -587,11 +560,18 @@
       <option name="project" value="LOCAL" />
       <updated>1547782073877</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="8、初识搜索引擎">
+      <created>1547798123775</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1547798123775</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28531000" />
+    <option name="totallyTimeSpent" value="28571000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
@@ -1064,7 +1044,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="435">
-            <caret line="29" column="32" lean-forward="true" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+            <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
             <folding />
           </first_editor>
           <second_editor />
@@ -1097,7 +1077,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="315">
-            <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+            <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
             <folding />
           </first_editor>
           <second_editor />
