@@ -1,7 +1,7 @@
-#Introduction
+#Elasticsearch目录
 
 
-* [Introduction](README.md)
+* [Elasticsearch目录](README.md)
 * [1、基本概念](1、基本概念.md)
 * [2、安装和启动](2、安装和启动.md)
 * 3、快速入门
@@ -12,16 +12,16 @@
     * [3.5、shard&replica机制再次梳理以及单node环境中创建index图解](3、快速入门/3.5、shard&replica机制再次梳理以及单node环境中创建index图解.md)
 * 4、document
     * [4.1_初步解析document的核心元数据以及图解剖析index创建反例](4、document/4.1_初步解析document的核心元数据以及图解剖析index创建反例.md)
-    * [4.2_document id的手动指定与自动生成两种方式解析.md](4、document/4.2_document id的手动指定与自动生成两种方式解析.md.md)
+    * [4.2_document id的手动指定与自动生成两种方式解析.md](4、document/4.2_document_id的手动指定与自动生成两种方式解析.md)
     * [4.3_document的_source元数据以及定制返回结果解析](4、document/4.3_document的_source元数据以及定制返回结果解析.md)
-    * [4.4_document的全量替换、强制创建以及图解lazy delete机制](4、document/4.4_document的全量替换、强制创建以及图解lazy delete机制.md)
+    * [4.4_document的全量替换、强制创建以及图解lazy delete机制](4、document/4.4_document的全量替换、强制创建以及图解lazy_delete机制.md)
 * [5、深度图解剖析](5、深度图解剖析.md)
 * 6、上机动手实战演练
     * [6.1_基于_version进行乐观锁并发控制](6、上机动手实战演练/6.1_基于_version进行乐观锁并发控制.md)
-    * [6.2_基于external version进行乐观锁并发控制](6、上机动手实战演练/6.2_基于external version进行乐观锁并发控制.md)
-    * [6.3_图解partial update实现原理以及动手实战演练](6、上机动手实战演练/6.3_图解partial update实现原理以及动手实战演练.md)
-    * [6.4_基于groovy脚本进行partial update](6、上机动手实战演练/6.4_基于groovy脚本进行partial update.md)
-    * [6.5_图解partial update乐观锁并发控制原理以及相关操作讲解](6、上机动手实战演练/6.5_图解partial update乐观锁并发控制原理以及相关操作讲解.md)
+    * [6.2_基于external version进行乐观锁并发控制](6、上机动手实战演练/6.2_基于external_version进行乐观锁并发控制.md)
+    * [6.3_图解partial update实现原理以及动手实战演练](6、上机动手实战演练/6.3_图解partial_update实现原理以及动手实战演练.md)
+    * [6.4_基于groovy脚本进行partial update](6、上机动手实战演练/6.4_基于groovy脚本进行partial_update.md)
+    * [6.5_图解partial update乐观锁并发控制原理以及相关操作讲解](6、上机动手实战演练/6.5_图解partial_update乐观锁并发控制原理以及相关操作讲解.md)
     * [6.6_mget批量查询api](6、上机动手实战演练/6.6_mget批量查询api.md)
 * 7、分布式文档系统
     * [7.1_上机动手实战演练bulk批量增删改](7、分布式文档系统/7.1_上机动手实战演练bulk批量增删改.md)
@@ -45,7 +45,7 @@
     * [8.11_mapping的核心数据类型以及dynamic mapping](8、初识搜索引擎/8.11_mapping的核心数据类型以及dynamic mapping.md)
     * [8.12_手动建立和修改mapping以及定制string类型数据是否分词](8、初识搜索引擎/8.12_手动建立和修改mapping以及定制string类型数据是否分词.md)
     * [8.13_mapping复杂数据类型以及object类型数据底层结构大揭秘](8、初识搜索引擎/8.13_mapping复杂数据类型以及object类型数据底层结构大揭秘.md)
-    * [8.14_search api的基础语法介绍](8、初识搜索引擎/8.14_search api的基础语法介绍.md)
+    * [8.14_search api的基础语法介绍](8、初识搜索引擎/8.14_search_api的基础语法介绍.md)
     * [8.15_快速上机动手实战Query DSL搜索语法](8、初识搜索引擎/8.15_快速上机动手实战Query DSL搜索语法.md)
     * [8.16_filter与query深入对比解密：相关度，性能](8、初识搜索引擎/8.16_filter与query深入对比解密：相关度，性能.md)
     * [8.17_上机动手实战常用的各种query搜索语法](8、初识搜索引擎/8.17_上机动手实战常用的各种query搜索语法.md)
@@ -76,3 +76,10 @@
     * [11.1_基于Java实现员工信息的增删改查](11、Java API初步使用_员工管理案例/11.1_基于Java实现员工信息的增删改查.md)
     * [11.2_基于Java对员工信息进行复杂的搜索操作](11、Java API初步使用_员工管理案例/11.2_基于Java对员工信息进行复杂的搜索操作.md)
     * [11.3_基于Java对员工信息进行聚合分析](11、Java API初步使用_员工管理案例/11.3_基于Java对员工信息进行聚合分析.md)
+* [12、操作命令汇总.md](12、操作命令汇总.md)
+* 参考：
+>中文api： https://www.elastic.co/guide/cn/elasticsearch/guide/current/index.html
+
+>mac安装：https://www.jianshu.com/p/18074e1e719f
+
+>安装分词器：https://www.cnblogs.com/wangchuanfu/p/7239165.html
