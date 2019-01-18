@@ -2,72 +2,93 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9c5fa2b-c5ee-4ef7-abf1-6740c083f1a2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/assets/deep paging图解.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/assets/document增删改内核级原理.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/assets/fetch phase.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/assets/query phase.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/assets/timeout机制详解.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/assets/初步图解搜索原理.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/12、操作命令汇总.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/7、分布式文档系统/7.7_bulk_api的奇特json格式与底层性能优化关系大揭秘.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/8、初识搜索引擎/8.11_mapping的核心数据类型以及dynamic_mapping.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/8、初识搜索引擎/8.15_快速上机动手实战Query_DSL搜索语法.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/8、初识搜索引擎/8.1_search结果深入解析（search_timeout机制揭秘）.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/8、初识搜索引擎/8.21_上机动手实战如何定制搜索结果的排序规则.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/9、索引管理/9.4_mapping_root_object深入剖析.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/10、内核原理探秘/10.1_倒排索引组成结构以及其索引可变原因揭秘.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/10、内核原理探秘/10.2_深度图解剖析document写入原理（buffer，segment，commit）.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/10、内核原理探秘/10.3_优化写入流程实现NRT近实时（filesystem cache，refresh）.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/10、内核原理探秘/10.4_继续优化写入流程实现durability可靠存储（translog，flush）.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/10、内核原理探秘/10.5_最后优化写入流程实现海量磁盘文件合并（segment merge，optimize）.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/11、Java API初步使用_员工管理案例/11.1_基于Java实现员工信息的增删改查.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/11、Java API初步使用_员工管理案例/11.2_基于Java对员工信息进行复杂的搜索操作.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/11、Java API初步使用_员工管理案例/11.3_基于Java对员工信息进行聚合分析.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/12、操作命令汇总.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/4、document/4.2_document_id的手动指定与自动生成两种方式解析.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/4、document/4.4_document的全量替换、强制创建以及图解lazy_delete机制.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/6、上机动手实战演练/6.2_基于external_version进行乐观锁并发控制.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/6、上机动手实战演练/6.3_图解partial_update实现原理以及动手实战演练.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/6、上机动手实战演练/6.4_基于groovy脚本进行partial_update.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/6、上机动手实战演练/6.5_图解partial_update乐观锁并发控制原理以及相关操作讲解.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/7、分布式文档系统/7.2_阶段性总结以及什么是distributed_document_store.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/7、分布式文档系统/7.7_bulk_api的奇特json格式与底层性能优化关系大揭秘.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.10_什么是mapping再次回炉透彻理解.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.11_mapping的核心数据类型以及dynamic_mapping.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.12_手动建立和修改mapping以及定制string类型数据是否分词.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.13_mapping复杂数据类型以及object类型数据底层结构大揭秘.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.14_search_api的基础语法介绍.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.15_快速上机动手实战Query_DSL搜索语法.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.16_filter与query深入对比解密：相关度，性能.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.17_上机动手实战常用的各种query搜索语法.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.18_上机动手实战多搜索条件组合查询.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.19_上机动手实战如何定位不合法的搜索以及其原因.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.1_search结果深入解析（search_timeout机制揭秘）.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.21_上机动手实战如何定制搜索结果的排序规则.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.22_解密如何将一个field索引两次来解决字符串排序问题.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.23_相关度评分TF&amp;IDF算法独家解密.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.24_内核级知识点之doc_value初步探秘.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.25_分布式搜索引擎内核解密之query_phase.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.26_分布式搜索引擎内核解密之fetch_phase.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.27_搜索相关参数梳理以及bouncing_results问题解决方案.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.28_上机动手实战基于scoll技术滚动搜索大量数据.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.2_multi-index&amp;multi-type搜索模式解析以及搜索原理初步图解.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.3_分页搜索以及deep_paging性能问题深度图解揭秘.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.4_快速掌握query_string_search语法以及_all_metadata原理揭秘.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.5_用一个例子告诉你mapping到底是什么.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.6_精确匹配与全文搜索的对比分析.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.7_倒排索引核心原理快速揭秘.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.8_分词器的内部组成到底是什么，以及内置分词器的介绍.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.9_query string的分词以及mapping引入案例遗留问题的大揭秘.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/9、索引管理/9.1_快速上机动手实战创建、修改以及删除索引.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/9、索引管理/9.2_快速上机动手实战修改分词器以及定制自己的分词器.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/9、索引管理/9.3_内核级知识点：深入探秘type底层数据结构.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/9、索引管理/9.4_mapping_root_object深入剖析.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/9、索引管理/9.5_定制化自己的dynamic_mapping策略.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/9、索引管理/9.6_复杂上机实验：基于scoll+bulk+索引别名实现零停机重建索引.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/search_index.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/assets/commit point+translog进行数据恢复.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/assets/segment merge.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_book/assets/终极版本的es数据写入流程.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/commit point+translog进行数据恢复.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/segment merge.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/终极版本的es数据写入流程.png" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/8、初识搜索引擎/8.26_分布式搜索引擎内核解密之fetch_phase.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.25_分布式搜索引擎内核解密之query_phase.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.26_分布式搜索引擎内核解密之fetch_phase.html" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/8、初识搜索引擎/8.25_分布式搜索引擎内核解密之query_phase.md" afterPath="$PROJECT_DIR$/8、初识搜索引擎/8.25_分布式搜索引擎内核解密query phase和fetch phase.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/10、内核原理探秘/10.3_优化写入流程实现NRT近实时（filesystem cache，refresh）.md" afterPath="$PROJECT_DIR$/10、内核原理探秘/10.3_优化写入流程实现NRT近实时（filesystem cache，refresh）.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/10、内核原理探秘/10.4_继续优化写入流程实现durability可靠存储（translog，flush）.md" afterPath="$PROJECT_DIR$/10、内核原理探秘/10.4_继续优化写入流程实现durability可靠存储（translog，flush）.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/10、内核原理探秘/10.5_最后优化写入流程实现海量磁盘文件合并（segment merge，optimize）.md" afterPath="$PROJECT_DIR$/10、内核原理探秘/10.5_最后优化写入流程实现海量磁盘文件合并（segment merge，optimize）.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/8、初识搜索引擎/8.10_什么是mapping再次回炉透彻理解.md" afterPath="$PROJECT_DIR$/8、初识搜索引擎/8.10_什么是mapping再次回炉透彻理解.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/8、初识搜索引擎/8.22_解密如何将一个field索引两次来解决字符串排序问题.md" afterPath="$PROJECT_DIR$/8、初识搜索引擎/8.22_解密如何将一个field索引两次来解决字符串排序问题.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/8、初识搜索引擎/8.23_相关度评分TF&amp;IDF算法独家解密.md" afterPath="$PROJECT_DIR$/8、初识搜索引擎/8.23_相关度评分TF&amp;IDF算法独家解密.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/8、初识搜索引擎/8.24_内核级知识点之doc_value初步探秘.md" afterPath="$PROJECT_DIR$/8、初识搜索引擎/8.24_内核级知识点之doc_value初步探秘.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SUMMARY.md" afterPath="$PROJECT_DIR$/SUMMARY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/.idea/workspace.xml" afterPath="$PROJECT_DIR$/_book/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/10、内核原理探秘/10.1_倒排索引组成结构以及其索引可变原因揭秘.html" afterPath="$PROJECT_DIR$/_book/10、内核原理探秘/10.1_倒排索引组成结构以及其索引可变原因揭秘.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/10、内核原理探秘/10.2_深度图解剖析document写入原理（buffer，segment，commit）.html" afterPath="$PROJECT_DIR$/_book/10、内核原理探秘/10.2_深度图解剖析document写入原理（buffer，segment，commit）.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/10、内核原理探秘/10.3_优化写入流程实现NRT近实时（filesystem cache，refresh）.html" afterPath="$PROJECT_DIR$/_book/10、内核原理探秘/10.3_优化写入流程实现NRT近实时（filesystem cache，refresh）.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/10、内核原理探秘/10.4_继续优化写入流程实现durability可靠存储（translog，flush）.html" afterPath="$PROJECT_DIR$/_book/10、内核原理探秘/10.4_继续优化写入流程实现durability可靠存储（translog，flush）.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/10、内核原理探秘/10.5_最后优化写入流程实现海量磁盘文件合并（segment merge，optimize）.html" afterPath="$PROJECT_DIR$/_book/10、内核原理探秘/10.5_最后优化写入流程实现海量磁盘文件合并（segment merge，optimize）.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/11、Java API初步使用_员工管理案例/11.1_基于Java实现员工信息的增删改查.html" afterPath="$PROJECT_DIR$/_book/11、Java API初步使用_员工管理案例/11.1_基于Java实现员工信息的增删改查.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/11、Java API初步使用_员工管理案例/11.2_基于Java对员工信息进行复杂的搜索操作.html" afterPath="$PROJECT_DIR$/_book/11、Java API初步使用_员工管理案例/11.2_基于Java对员工信息进行复杂的搜索操作.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/11、Java API初步使用_员工管理案例/11.3_基于Java对员工信息进行聚合分析.html" afterPath="$PROJECT_DIR$/_book/11、Java API初步使用_员工管理案例/11.3_基于Java对员工信息进行聚合分析.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/1、基本概念.html" afterPath="$PROJECT_DIR$/_book/1、基本概念.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/2、安装和启动.html" afterPath="$PROJECT_DIR$/_book/2、安装和启动.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/3、快速入门/3.2、多种搜索方式.html" afterPath="$PROJECT_DIR$/_book/3、快速入门/3.2、多种搜索方式.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/3、快速入门/3.3、嵌套聚合，下钻分析，聚合分析.html" afterPath="$PROJECT_DIR$/_book/3、快速入门/3.3、嵌套聚合，下钻分析，聚合分析.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/3、快速入门/3.4、Elasticsearch的基础分布式架构.html" afterPath="$PROJECT_DIR$/_book/3、快速入门/3.4、Elasticsearch的基础分布式架构.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/3、快速入门/3.5、shard&amp;replica机制再次梳理以及单node环境中创建index图解.html" afterPath="$PROJECT_DIR$/_book/3、快速入门/3.5、shard&amp;replica机制再次梳理以及单node环境中创建index图解.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/3、快速入门/3、快速入门案例实战.html" afterPath="$PROJECT_DIR$/_book/3、快速入门/3、快速入门案例实战.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/4、document/4.1_初步解析document的核心元数据以及图解剖析index创建反例.html" afterPath="$PROJECT_DIR$/_book/4、document/4.1_初步解析document的核心元数据以及图解剖析index创建反例.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/4、document/4.2_document_id的手动指定与自动生成两种方式解析.html" afterPath="$PROJECT_DIR$/_book/4、document/4.2_document_id的手动指定与自动生成两种方式解析.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/4、document/4.3_document的_source元数据以及定制返回结果解析.html" afterPath="$PROJECT_DIR$/_book/4、document/4.3_document的_source元数据以及定制返回结果解析.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/4、document/4.4_document的全量替换、强制创建以及图解lazy_delete机制.html" afterPath="$PROJECT_DIR$/_book/4、document/4.4_document的全量替换、强制创建以及图解lazy_delete机制.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/5、深度图解剖析.html" afterPath="$PROJECT_DIR$/_book/5、深度图解剖析.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/6、上机动手实战演练/6.1_基于_version进行乐观锁并发控制.html" afterPath="$PROJECT_DIR$/_book/6、上机动手实战演练/6.1_基于_version进行乐观锁并发控制.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/6、上机动手实战演练/6.2_基于external_version进行乐观锁并发控制.html" afterPath="$PROJECT_DIR$/_book/6、上机动手实战演练/6.2_基于external_version进行乐观锁并发控制.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/6、上机动手实战演练/6.3_图解partial_update实现原理以及动手实战演练.html" afterPath="$PROJECT_DIR$/_book/6、上机动手实战演练/6.3_图解partial_update实现原理以及动手实战演练.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/6、上机动手实战演练/6.4_基于groovy脚本进行partial_update.html" afterPath="$PROJECT_DIR$/_book/6、上机动手实战演练/6.4_基于groovy脚本进行partial_update.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/6、上机动手实战演练/6.5_图解partial_update乐观锁并发控制原理以及相关操作讲解.html" afterPath="$PROJECT_DIR$/_book/6、上机动手实战演练/6.5_图解partial_update乐观锁并发控制原理以及相关操作讲解.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/6、上机动手实战演练/6.6_mget批量查询api.html" afterPath="$PROJECT_DIR$/_book/6、上机动手实战演练/6.6_mget批量查询api.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/7、分布式文档系统/7.1_上机动手实战演练bulk批量增删改.html" afterPath="$PROJECT_DIR$/_book/7、分布式文档系统/7.1_上机动手实战演练bulk批量增删改.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/7、分布式文档系统/7.2_阶段性总结以及什么是distributed_document_store.html" afterPath="$PROJECT_DIR$/_book/7、分布式文档系统/7.2_阶段性总结以及什么是distributed_document_store.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/7、分布式文档系统/7.3_深度图解剖析document数据路由原理.html" afterPath="$PROJECT_DIR$/_book/7、分布式文档系统/7.3_深度图解剖析document数据路由原理.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/7、分布式文档系统/7.4_document增删改内部原理图解揭秘.html" afterPath="$PROJECT_DIR$/_book/7、分布式文档系统/7.4_document增删改内部原理图解揭秘.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/7、分布式文档系统/7.5_图解写一致性原理以及quorum机制深入剖析.html" afterPath="$PROJECT_DIR$/_book/7、分布式文档系统/7.5_图解写一致性原理以及quorum机制深入剖析.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/7、分布式文档系统/7.6_document查询内部原理图解揭秘.html" afterPath="$PROJECT_DIR$/_book/7、分布式文档系统/7.6_document查询内部原理图解揭秘.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/7、分布式文档系统/7.7_bulk_api的奇特json格式与底层性能优化关系大揭秘.html" afterPath="$PROJECT_DIR$/_book/7、分布式文档系统/7.7_bulk_api的奇特json格式与底层性能优化关系大揭秘.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.10_什么是mapping再次回炉透彻理解.html" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.10_什么是mapping再次回炉透彻理解.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.11_mapping的核心数据类型以及dynamic_mapping.html" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.11_mapping的核心数据类型以及dynamic_mapping.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.12_手动建立和修改mapping以及定制string类型数据是否分词.html" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.12_手动建立和修改mapping以及定制string类型数据是否分词.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.13_mapping复杂数据类型以及object类型数据底层结构大揭秘.html" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.13_mapping复杂数据类型以及object类型数据底层结构大揭秘.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.14_search_api的基础语法介绍.html" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.14_search_api的基础语法介绍.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.15_快速上机动手实战Query_DSL搜索语法.html" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.15_快速上机动手实战Query_DSL搜索语法.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.16_filter与query深入对比解密：相关度，性能.html" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.16_filter与query深入对比解密：相关度，性能.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.17_上机动手实战常用的各种query搜索语法.html" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.17_上机动手实战常用的各种query搜索语法.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.18_上机动手实战多搜索条件组合查询.html" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.18_上机动手实战多搜索条件组合查询.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.19_上机动手实战如何定位不合法的搜索以及其原因.html" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.19_上机动手实战如何定位不合法的搜索以及其原因.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.1_search结果深入解析（search_timeout机制揭秘）.html" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.1_search结果深入解析（search_timeout机制揭秘）.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.21_上机动手实战如何定制搜索结果的排序规则.html" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.21_上机动手实战如何定制搜索结果的排序规则.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.22_解密如何将一个field索引两次来解决字符串排序问题.html" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.22_解密如何将一个field索引两次来解决字符串排序问题.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.23_相关度评分TF&amp;IDF算法独家解密.html" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.23_相关度评分TF&amp;IDF算法独家解密.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.24_内核级知识点之doc_value初步探秘.html" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.24_内核级知识点之doc_value初步探秘.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.27_搜索相关参数梳理以及bouncing_results问题解决方案.html" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.27_搜索相关参数梳理以及bouncing_results问题解决方案.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.28_上机动手实战基于scoll技术滚动搜索大量数据.html" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.28_上机动手实战基于scoll技术滚动搜索大量数据.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.2_multi-index&amp;multi-type搜索模式解析以及搜索原理初步图解.html" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.2_multi-index&amp;multi-type搜索模式解析以及搜索原理初步图解.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.3_分页搜索以及deep_paging性能问题深度图解揭秘.html" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.3_分页搜索以及deep_paging性能问题深度图解揭秘.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.4_快速掌握query_string_search语法以及_all_metadata原理揭秘.html" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.4_快速掌握query_string_search语法以及_all_metadata原理揭秘.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.5_用一个例子告诉你mapping到底是什么.html" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.5_用一个例子告诉你mapping到底是什么.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.6_精确匹配与全文搜索的对比分析.html" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.6_精确匹配与全文搜索的对比分析.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.7_倒排索引核心原理快速揭秘.html" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.7_倒排索引核心原理快速揭秘.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.8_分词器的内部组成到底是什么，以及内置分词器的介绍.html" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.8_分词器的内部组成到底是什么，以及内置分词器的介绍.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.9_query string的分词以及mapping引入案例遗留问题的大揭秘.html" afterPath="$PROJECT_DIR$/_book/8、初识搜索引擎/8.9_query string的分词以及mapping引入案例遗留问题的大揭秘.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/9、索引管理/9.1_快速上机动手实战创建、修改以及删除索引.html" afterPath="$PROJECT_DIR$/_book/9、索引管理/9.1_快速上机动手实战创建、修改以及删除索引.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/9、索引管理/9.2_快速上机动手实战修改分词器以及定制自己的分词器.html" afterPath="$PROJECT_DIR$/_book/9、索引管理/9.2_快速上机动手实战修改分词器以及定制自己的分词器.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/9、索引管理/9.3_内核级知识点：深入探秘type底层数据结构.html" afterPath="$PROJECT_DIR$/_book/9、索引管理/9.3_内核级知识点：深入探秘type底层数据结构.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/9、索引管理/9.4_mapping_root_object深入剖析.html" afterPath="$PROJECT_DIR$/_book/9、索引管理/9.4_mapping_root_object深入剖析.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/9、索引管理/9.5_定制化自己的dynamic_mapping策略.html" afterPath="$PROJECT_DIR$/_book/9、索引管理/9.5_定制化自己的dynamic_mapping策略.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/9、索引管理/9.6_复杂上机实验：基于scoll+bulk+索引别名实现零停机重建索引.html" afterPath="$PROJECT_DIR$/_book/9、索引管理/9.6_复杂上机实验：基于scoll+bulk+索引别名实现零停机重建索引.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/index.html" afterPath="$PROJECT_DIR$/_book/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_book/search_index.json" afterPath="$PROJECT_DIR$/_book/search_index.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -85,12 +106,12 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="8.22_解密如何将一个field索引两次来解决字符串排序问题.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.22_解密如何将一个field索引两次来解决字符串排序问题.md">
+      <file leaf-file-name="8.24_内核级知识点之doc_value初步探秘.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.24_内核级知识点之doc_value初步探秘.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="15">
-                <caret line="51" column="11" lean-forward="false" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="11" />
+              <first_editor relative-caret-position="465">
+                <caret line="36" column="31" lean-forward="false" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -102,8 +123,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="471">
-                <caret line="53" column="51" lean-forward="false" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
+              <first_editor relative-caret-position="336">
+                <caret line="57" column="102" lean-forward="false" selection-start-line="57" selection-start-column="102" selection-end-line="57" selection-end-column="102" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -111,77 +132,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="8.11_mapping的核心数据类型以及dynamic_mapping.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.11_mapping的核心数据类型以及dynamic_mapping.md">
+      <file leaf-file-name="8.25_分布式搜索引擎内核解密query phase和fetch phase.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.25_分布式搜索引擎内核解密query phase和fetch phase.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="300">
-                <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="8.14_search_api的基础语法介绍.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.14_search_api的基础语法介绍.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="315">
-                <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="8.21_上机动手实战如何定制搜索结果的排序规则.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.21_上机动手实战如何定制搜索结果的排序规则.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="576">
-                <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="9.4_mapping_root_object深入剖析.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/9、索引管理/9.4_mapping_root_object深入剖析.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="576">
-                <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="8.1_search结果深入解析（search_timeout机制揭秘）.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.1_search结果深入解析（search_timeout机制揭秘）.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="435">
-                <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="8.15_快速上机动手实战Query_DSL搜索语法.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.15_快速上机动手实战Query_DSL搜索语法.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="576">
-                <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+              <first_editor relative-caret-position="375">
+                <caret line="25" column="43" lean-forward="false" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -193,8 +149,8 @@
         <entry file="file://$PROJECT_DIR$/SUMMARY.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="390">
-                <caret line="46" column="52" lean-forward="false" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
+              <first_editor relative-caret-position="201">
+                <caret line="56" column="102" lean-forward="false" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="102" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -202,12 +158,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="7.7_bulk_api的奇特json格式与底层性能优化关系大揭秘.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/7、分布式文档系统/7.7_bulk_api的奇特json格式与底层性能优化关系大揭秘.md">
+      <file leaf-file-name="10.5_最后优化写入流程实现海量磁盘文件合并（segment merge，optimize）.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/10、内核原理探秘/10.5_最后优化写入流程实现海量磁盘文件合并（segment merge，optimize）.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <first_editor relative-caret-position="240">
+                <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="10.4_继续优化写入流程实现durability可靠存储（translog，flush）.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/10、内核原理探秘/10.4_继续优化写入流程实现durability可靠存储（translog，flush）.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="465">
+                <caret line="31" column="74" lean-forward="false" selection-start-line="31" selection-start-column="74" selection-end-line="31" selection-end-column="74" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -240,12 +209,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/7、分布式文档系统/7.3_深度图解剖析document数据路由原理.md" />
-        <option value="$PROJECT_DIR$/7、分布式文档系统/7.4_document增删改内部原理图解揭秘.md" />
-        <option value="$PROJECT_DIR$/6、上机动手实战演练/6.1_基于_version进行乐观锁并发控制.md" />
-        <option value="$PROJECT_DIR$/1、基本概念.md" />
-        <option value="$PROJECT_DIR$/8、初识搜索引擎/8.3_分页搜索以及deep paging性能问题深度图解揭秘.md" />
-        <option value="$PROJECT_DIR$/8、初识搜索引擎/8.4_快速掌握query string search语法以及_all metadata原理揭秘.md" />
         <option value="$PROJECT_DIR$/8、初识搜索引擎/8.2_multi-index&amp;multi-type搜索模式解析以及搜索原理初步图解.md" />
         <option value="$PROJECT_DIR$/8、初识搜索引擎/8.1_search结果深入解析（search timeout机制揭秘）.md" />
         <option value="$PROJECT_DIR$/8、初识搜索引擎/8.5_用一个例子告诉你mapping到底是什么.md" />
@@ -257,9 +220,6 @@
         <option value="$PROJECT_DIR$/2、安装和启动.md" />
         <option value="$PROJECT_DIR$/8、初识搜索引擎/8.8_分词器的内部组成到底是什么，以及内置分词器的介绍.md" />
         <option value="$PROJECT_DIR$/8、初识搜索引擎/8.9_query string的分词以及mapping引入案例遗留问题的大揭秘.md" />
-        <option value="$PROJECT_DIR$/8、初识搜索引擎/8.10_什么是mapping再次回炉透彻理解.md" />
-        <option value="$PROJECT_DIR$/8、初识搜索引擎/8.22_解密如何将一个field索引两次来解决字符串排序问题.md" />
-        <option value="$PROJECT_DIR$/8、初识搜索引擎/8.23_相关度评分TF&amp;IDF算法独家解密.md" />
         <option value="$PROJECT_DIR$/8、初识搜索引擎/8.24_内核级知识点之doc value初步探秘.md" />
         <option value="$PROJECT_DIR$/8、初识搜索引擎/8.25_分布式搜索引擎内核解密之query phase.md" />
         <option value="$PROJECT_DIR$/8、初识搜索引擎/8.12_手动建立和修改mapping以及定制string类型数据是否分词.md" />
@@ -289,6 +249,15 @@
         <option value="$PROJECT_DIR$/8、初识搜索引擎/8.21_上机动手实战如何定制搜索结果的排序规则.md" />
         <option value="$PROJECT_DIR$/9、索引管理/9.4_mapping root object深入剖析.md" />
         <option value="$PROJECT_DIR$/9、索引管理/9.4_mapping_root_object深入剖析.md" />
+        <option value="$PROJECT_DIR$/8、初识搜索引擎/8.22_解密如何将一个field索引两次来解决字符串排序问题.md" />
+        <option value="$PROJECT_DIR$/10、内核原理探秘/10.3_优化写入流程实现NRT近实时（filesystem cache，refresh）.md" />
+        <option value="$PROJECT_DIR$/8、初识搜索引擎/8.10_什么是mapping再次回炉透彻理解.md" />
+        <option value="$PROJECT_DIR$/8、初识搜索引擎/8.23_相关度评分TF&amp;IDF算法独家解密.md" />
+        <option value="$PROJECT_DIR$/8、初识搜索引擎/8.24_内核级知识点之doc_value初步探秘.md" />
+        <option value="$PROJECT_DIR$/10、内核原理探秘/10.4_继续优化写入流程实现durability可靠存储（translog，flush）.md" />
+        <option value="$PROJECT_DIR$/10、内核原理探秘/10.5_最后优化写入流程实现海量磁盘文件合并（segment merge，optimize）.md" />
+        <option value="$PROJECT_DIR$/8、初识搜索引擎/8.25_分布式搜索引擎内核解密之query_phase.md" />
+        <option value="$PROJECT_DIR$/8、初识搜索引擎/8.25_分布式搜索引擎内核解密query phase和fetch phase.md" />
         <option value="$PROJECT_DIR$/SUMMARY.md" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
@@ -388,62 +357,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gitbook-elasticsearch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gitbook-elasticsearch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="7、分布式文档系统" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gitbook-elasticsearch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gitbook-elasticsearch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="6、上机动手实战演练" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gitbook-elasticsearch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gitbook-elasticsearch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="4、document" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gitbook-elasticsearch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gitbook-elasticsearch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="3、快速入门" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -537,7 +450,7 @@
       <option name="presentableId" value="Default" />
       <updated>1547611067828</updated>
       <workItem from="1547611069974" duration="14902000" />
-      <workItem from="1547708245626" duration="13669000" />
+      <workItem from="1547708245626" duration="15762000" />
     </task>
     <task id="LOCAL-00001" summary="README">
       <created>1547708486238</created>
@@ -567,17 +480,24 @@
       <option name="project" value="LOCAL" />
       <updated>1547798123775</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="8、初识搜索引擎">
+      <created>1547798208535</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1547798208535</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28571000" />
+    <option name="totallyTimeSpent" value="30664000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27546716" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32429174" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3081761" sideWeight="0.5045208" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -611,50 +531,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.3_分页搜索以及deep_paging性能问题深度图解揭秘.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="274">
-            <caret line="68" column="19" lean-forward="false" selection-start-line="68" selection-start-column="19" selection-end-line="68" selection-end-column="19" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.4_快速掌握query_string_search语法以及_all_metadata原理揭秘.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="195">
-            <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.5_用一个例子告诉你mapping到底是什么.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="60">
-            <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="26" selection-end-column="5" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.6_精确匹配与全文搜索的对比分析.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="165">
-            <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/11、Java API初步使用_员工管理案例/11.1_基于Java实现员工信息的增删改查.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -726,61 +602,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="1005">
             <caret line="86" column="15" lean-forward="true" selection-start-line="86" selection-start-column="15" selection-end-line="86" selection-end-column="15" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.9_query string的分词以及mapping引入案例遗留问题的大揭秘.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="424">
-            <caret line="64" column="5" lean-forward="true" selection-start-line="60" selection-start-column="4" selection-end-line="64" selection-end-column="5" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.24_内核级知识点之doc_value初步探秘.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="559">
-            <caret line="45" column="4" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.23_相关度评分TF&amp;IDF算法独家解密.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="8535">
-            <caret line="569" column="0" lean-forward="true" selection-start-line="569" selection-start-column="0" selection-end-line="569" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.25_分布式搜索引擎内核解密之query_phase.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="195">
-            <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.26_分布式搜索引擎内核解密之fetch_phase.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="150">
-            <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
             <folding />
           </first_editor>
           <second_editor />
@@ -908,28 +729,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.10_什么是mapping再次回炉透彻理解.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="135">
-            <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.12_手动建立和修改mapping以及定制string类型数据是否分词.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-905">
-            <caret line="25" column="27" lean-forward="false" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="27" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.13_mapping复杂数据类型以及object类型数据底层结构大揭秘.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -946,17 +745,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="690">
             <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.17_上机动手实战常用的各种query搜索语法.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-84">
-            <caret line="24" column="14" lean-forward="false" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
             <folding />
           </first_editor>
           <second_editor />
@@ -985,33 +773,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.22_解密如何将一个field索引两次来解决字符串排序问题.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="15">
-            <caret line="51" column="11" lean-forward="false" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="11" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.11_mapping的核心数据类型以及dynamic mapping.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="30">
             <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.11_mapping的核心数据类型以及dynamic_mapping.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="300">
-            <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
             <folding />
           </first_editor>
           <second_editor />
@@ -1073,33 +839,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.14_search_api的基础语法介绍.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="315">
-            <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/8、初识搜素引擎/8.21_上机动手实战如何定制搜索结果的排序规则.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="15">
             <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.21_上机动手实战如何定制搜索结果的排序规则.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="576">
-            <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
@@ -1150,11 +894,187 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.14_search_api的基础语法介绍.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="315">
+            <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.21_上机动手实战如何定制搜索结果的排序规则.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="576">
+            <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.17_上机动手实战常用的各种query搜索语法.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="15">
+            <caret line="24" column="14" lean-forward="false" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10、内核原理探秘/10.3_优化写入流程实现NRT近实时（filesystem cache，refresh）.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="345">
+            <caret line="23" column="35" lean-forward="false" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.11_mapping的核心数据类型以及dynamic_mapping.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="300">
+            <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.12_手动建立和修改mapping以及定制string类型数据是否分词.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="15">
+            <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.10_什么是mapping再次回炉透彻理解.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="165">
+            <caret line="11" column="47" lean-forward="false" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.9_query string的分词以及mapping引入案例遗留问题的大揭秘.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="360">
+            <caret line="58" column="9" lean-forward="false" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.23_相关度评分TF&amp;IDF算法独家解密.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-7629">
+            <caret line="29" column="3" lean-forward="false" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.22_解密如何将一个field索引两次来解决字符串排序问题.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="645">
+            <caret line="43" column="5" lean-forward="false" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10、内核原理探秘/10.4_继续优化写入流程实现durability可靠存储（translog，flush）.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="465">
+            <caret line="31" column="74" lean-forward="false" selection-start-line="31" selection-start-column="74" selection-end-line="31" selection-end-column="74" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.24_内核级知识点之doc_value初步探秘.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="465">
+            <caret line="36" column="31" lean-forward="false" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10、内核原理探秘/10.5_最后优化写入流程实现海量磁盘文件合并（segment merge，optimize）.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="240">
+            <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.26_分布式搜索引擎内核解密之fetch_phase.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="10" selection-end-column="43" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.25_分布式搜索引擎内核解密之query_phase.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="30">
+            <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="25" selection-end-column="43" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/8、初识搜索引擎/8.25_分布式搜索引擎内核解密query phase和fetch phase.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="375">
+            <caret line="25" column="43" lean-forward="false" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SUMMARY.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="390">
-            <caret line="46" column="52" lean-forward="false" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
+          <first_editor relative-caret-position="201">
+            <caret line="56" column="102" lean-forward="false" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="102" />
             <folding />
           </first_editor>
           <second_editor />
@@ -1164,8 +1084,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="471">
-            <caret line="53" column="51" lean-forward="false" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
+          <first_editor relative-caret-position="336">
+            <caret line="57" column="102" lean-forward="false" selection-start-line="57" selection-start-column="102" selection-end-line="57" selection-end-column="102" />
             <folding />
           </first_editor>
           <second_editor />

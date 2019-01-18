@@ -816,12 +816,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.24" data-path="../8、初识搜索引擎/8.25_分布式搜索引擎内核解密之query_phase.html">
+        <li class="chapter " data-level="1.9.24" data-path="../8、初识搜索引擎/8.25_分布式搜索引擎内核解密query phase和fetch phase.html">
             
-                <a href="../8、初识搜索引擎/8.25_分布式搜索引擎内核解密之query_phase.html">
+                <a href="../8、初识搜索引擎/8.25_分布式搜索引擎内核解密query phase和fetch phase.html">
             
                     
-                    8.25_分布式搜索引擎内核解密之query phase
+                    8.25_分布式搜索引擎内核解密(query phase和fetch phase)
             
                 </a>
             
@@ -829,20 +829,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.25" data-path="../8、初识搜索引擎/8.26_分布式搜索引擎内核解密之fetch_phase.html">
-            
-                <a href="../8、初识搜索引擎/8.26_分布式搜索引擎内核解密之fetch_phase.html">
-            
-                    
-                    8.26_分布式搜索引擎内核解密之fetch phase
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.9.26" data-path="../8、初识搜索引擎/8.27_搜索相关参数梳理以及bouncing_results问题解决方案.html">
+        <li class="chapter " data-level="1.9.25" data-path="../8、初识搜索引擎/8.27_搜索相关参数梳理以及bouncing_results问题解决方案.html">
             
                 <a href="../8、初识搜索引擎/8.27_搜索相关参数梳理以及bouncing_results问题解决方案.html">
             
@@ -855,7 +842,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.27" data-path="../8、初识搜索引擎/8.28_上机动手实战基于scoll技术滚动搜索大量数据.html">
+        <li class="chapter " data-level="1.9.26" data-path="../8、初识搜索引擎/8.28_上机动手实战基于scoll技术滚动搜索大量数据.html">
             
                 <a href="../8、初识搜索引擎/8.28_上机动手实战基于scoll技术滚动搜索大量数据.html">
             
@@ -1158,6 +1145,21 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="103&#x4F18;&#x5316;&#x5199;&#x5165;&#x6D41;&#x7A0B;&#x5B9E;&#x73B0;nrt&#x8FD1;&#x5B9E;&#x65F6;&#xFF08;filesystem-cache&#xFF0C;refresh&#xFF09;">10.3_&#x4F18;&#x5316;&#x5199;&#x5165;&#x6D41;&#x7A0B;&#x5B9E;&#x73B0;NRT&#x8FD1;&#x5B9E;&#x65F6;&#xFF08;filesystem cache&#xFF0C;refresh&#xFF09;</h1>
+<p>&#x73B0;&#x6709;&#x6D41;&#x7A0B;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x6BCF;&#x6B21;&#x90FD;&#x5FC5;&#x987B;&#x7B49;&#x5F85;fsync&#x5C06;segment&#x5237;&#x5165;&#x78C1;&#x76D8;&#xFF0C;&#x624D;&#x80FD;&#x5C06;segment&#x6253;&#x5F00;&#x4F9B;search&#x4F7F;&#x7528;&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x8BDD;&#xFF0C;&#x4ECE;&#x4E00;&#x4E2A;document&#x5199;&#x5165;&#xFF0C;&#x5230;&#x5B83;&#x53EF;&#x4EE5;&#x88AB;&#x641C;&#x7D22;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x8D85;&#x8FC7;1&#x5206;&#x949F;&#xFF01;&#xFF01;&#xFF01;&#x8FD9;&#x5C31;&#x4E0D;&#x662F;&#x8FD1;&#x5B9E;&#x65F6;&#x7684;&#x641C;&#x7D22;&#x4E86;&#xFF01;&#xFF01;&#xFF01;&#x4E3B;&#x8981;&#x74F6;&#x9888;&#x5728;&#x4E8E;fsync&#x5B9E;&#x9645;&#x53D1;&#x751F;&#x78C1;&#x76D8;IO&#x5199;&#x6570;&#x636E;&#x8FDB;&#x78C1;&#x76D8;&#xFF0C;&#x662F;&#x5F88;&#x8017;&#x65F6;&#x7684;&#x3002;</p>
+<p>&#x5199;&#x5165;&#x6D41;&#x7A0B;&#x522B;&#x6539;&#x8FDB;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>&#xFF08;1&#xFF09;&#x6570;&#x636E;&#x5199;&#x5165;buffer
+&#xFF08;2&#xFF09;&#x6BCF;&#x9694;&#x4E00;&#x5B9A;&#x65F6;&#x95F4;&#xFF0C;buffer&#x4E2D;&#x7684;&#x6570;&#x636E;&#x88AB;&#x5199;&#x5165;segment&#x6587;&#x4EF6;&#xFF0C;&#x4F46;&#x662F;&#x5148;&#x5199;&#x5165;os cache
+&#xFF08;3&#xFF09;&#x53EA;&#x8981;segment&#x5199;&#x5165;os cache&#xFF0C;&#x90A3;&#x5C31;&#x76F4;&#x63A5;&#x6253;&#x5F00;&#x4F9B;search&#x4F7F;&#x7528;&#xFF0C;&#x4E0D;&#x7ACB;&#x5373;&#x6267;&#x884C;commit</p>
+<p>&#x6570;&#x636E;&#x5199;&#x5165;os cache&#xFF0C;&#x5E76;&#x88AB;&#x6253;&#x5F00;&#x4F9B;&#x641C;&#x7D22;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x53EB;&#x505A;refresh&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x6BCF;&#x9694;1&#x79D2;refresh&#x4E00;&#x6B21;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x6BCF;&#x9694;&#x4E00;&#x79D2;&#x5C31;&#x4F1A;&#x5C06;buffer&#x4E2D;&#x7684;&#x6570;&#x636E;&#x5199;&#x5165;&#x4E00;&#x4E2A;&#x65B0;&#x7684;index segment file&#xFF0C;&#x5148;&#x5199;&#x5165;os cache&#x4E2D;&#x3002;&#x6240;&#x4EE5;&#xFF0C;es&#x662F;&#x8FD1;&#x5B9E;&#x65F6;&#x7684;&#xFF0C;&#x6570;&#x636E;&#x5199;&#x5165;&#x5230;&#x53EF;&#x4EE5;&#x88AB;&#x641C;&#x7D22;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;1&#x79D2;&#x3002;</p>
+<p>POST /my_index/_refresh&#xFF0C;&#x53EF;&#x4EE5;&#x624B;&#x52A8;refresh&#xFF0C;&#x4E00;&#x822C;&#x4E0D;&#x9700;&#x8981;&#x624B;&#x52A8;&#x6267;&#x884C;&#xFF0C;&#x6CA1;&#x5FC5;&#x8981;&#xFF0C;&#x8BA9;es&#x81EA;&#x5DF1;&#x641E;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;</p>
+<p>&#x6BD4;&#x5982;&#x8BF4;&#xFF0C;&#x6211;&#x4EEC;&#x73B0;&#x5728;&#x7684;&#x65F6;&#x6548;&#x6027;&#x8981;&#x6C42;&#xFF0C;&#x6BD4;&#x8F83;&#x4F4E;&#xFF0C;&#x53EA;&#x8981;&#x6C42;&#x4E00;&#x6761;&#x6570;&#x636E;&#x5199;&#x5165;es&#xFF0C;&#x4E00;&#x5206;&#x949F;&#x4EE5;&#x540E;&#x624D;&#x8BA9;&#x6211;&#x4EEC;&#x641C;&#x7D22;&#x5230;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x53EF;&#x4EE5;&#x8C03;&#x6574;refresh interval</p>
+<p>PUT /my_index
+{
+  &quot;settings&quot;: {
+    &quot;refresh_interval&quot;: &quot;30s&quot; 
+  }
+}</p>
+<p><img src="../assets/NRT&#x5199;&#x5165;&#x4F18;&#x5316;.png" alt="NRT&#x5199;&#x5165;&#x4F18;&#x5316;.png"></p>
 
                                 
                                 </section>
@@ -1201,7 +1203,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"10.3_优化写入流程实现NRT近实时（filesystem cache，refresh）","level":"1.11.3","depth":2,"next":{"title":"10.4_继续优化写入流程实现durability可靠存储（translog，flush）","level":"1.11.4","depth":2,"path":"10、内核原理探秘/10.4_继续优化写入流程实现durability可靠存储（translog，flush）.md","ref":"10、内核原理探秘/10.4_继续优化写入流程实现durability可靠存储（translog，flush）.md","articles":[]},"previous":{"title":"10.2_深度图解剖析document写入原理（buffer，segment，commit）","level":"1.11.2","depth":2,"path":"10、内核原理探秘/10.2_深度图解剖析document写入原理（buffer，segment，commit）.md","ref":"10、内核原理探秘/10.2_深度图解剖析document写入原理（buffer，segment，commit）.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"10、内核原理探秘/10.3_优化写入流程实现NRT近实时（filesystem cache，refresh）.md","mtime":"2019-01-17T06:57:13.174Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-18T07:55:06.893Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"10.3_优化写入流程实现NRT近实时（filesystem cache，refresh）","level":"1.11.3","depth":2,"next":{"title":"10.4_继续优化写入流程实现durability可靠存储（translog，flush）","level":"1.11.4","depth":2,"path":"10、内核原理探秘/10.4_继续优化写入流程实现durability可靠存储（translog，flush）.md","ref":"10、内核原理探秘/10.4_继续优化写入流程实现durability可靠存储（translog，flush）.md","articles":[]},"previous":{"title":"10.2_深度图解剖析document写入原理（buffer，segment，commit）","level":"1.11.2","depth":2,"path":"10、内核原理探秘/10.2_深度图解剖析document写入原理（buffer，segment，commit）.md","ref":"10、内核原理探秘/10.2_深度图解剖析document写入原理（buffer，segment，commit）.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"10、内核原理探秘/10.3_优化写入流程实现NRT近实时（filesystem cache，refresh）.md","mtime":"2019-01-18T07:59:51.827Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-18T09:41:07.958Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

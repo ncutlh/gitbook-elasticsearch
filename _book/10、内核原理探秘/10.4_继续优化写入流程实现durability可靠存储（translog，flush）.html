@@ -816,12 +816,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.24" data-path="../8、初识搜索引擎/8.25_分布式搜索引擎内核解密之query_phase.html">
+        <li class="chapter " data-level="1.9.24" data-path="../8、初识搜索引擎/8.25_分布式搜索引擎内核解密query phase和fetch phase.html">
             
-                <a href="../8、初识搜索引擎/8.25_分布式搜索引擎内核解密之query_phase.html">
+                <a href="../8、初识搜索引擎/8.25_分布式搜索引擎内核解密query phase和fetch phase.html">
             
                     
-                    8.25_分布式搜索引擎内核解密之query phase
+                    8.25_分布式搜索引擎内核解密(query phase和fetch phase)
             
                 </a>
             
@@ -829,20 +829,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.25" data-path="../8、初识搜索引擎/8.26_分布式搜索引擎内核解密之fetch_phase.html">
-            
-                <a href="../8、初识搜索引擎/8.26_分布式搜索引擎内核解密之fetch_phase.html">
-            
-                    
-                    8.26_分布式搜索引擎内核解密之fetch phase
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.9.26" data-path="../8、初识搜索引擎/8.27_搜索相关参数梳理以及bouncing_results问题解决方案.html">
+        <li class="chapter " data-level="1.9.25" data-path="../8、初识搜索引擎/8.27_搜索相关参数梳理以及bouncing_results问题解决方案.html">
             
                 <a href="../8、初识搜索引擎/8.27_搜索相关参数梳理以及bouncing_results问题解决方案.html">
             
@@ -855,7 +842,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.27" data-path="../8、初识搜索引擎/8.28_上机动手实战基于scoll技术滚动搜索大量数据.html">
+        <li class="chapter " data-level="1.9.26" data-path="../8、初识搜索引擎/8.28_上机动手实战基于scoll技术滚动搜索大量数据.html">
             
                 <a href="../8、初识搜索引擎/8.28_上机动手实战基于scoll技术滚动搜索大量数据.html">
             
@@ -1158,6 +1145,29 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="104&#x7EE7;&#x7EED;&#x4F18;&#x5316;&#x5199;&#x5165;&#x6D41;&#x7A0B;&#x5B9E;&#x73B0;durability&#x53EF;&#x9760;&#x5B58;&#x50A8;&#xFF08;translog&#xFF0C;flush&#xFF09;">10.4_&#x7EE7;&#x7EED;&#x4F18;&#x5316;&#x5199;&#x5165;&#x6D41;&#x7A0B;&#x5B9E;&#x73B0;durability&#x53EF;&#x9760;&#x5B58;&#x50A8;&#xFF08;translog&#xFF0C;flush&#xFF09;</h1>
+<p>&#x518D;&#x6B21;&#x4F18;&#x5316;&#x7684;&#x5199;&#x5165;&#x6D41;&#x7A0B;</p>
+<p>&#xFF08;1&#xFF09;&#x6570;&#x636E;&#x5199;&#x5165;buffer&#x7F13;&#x51B2;&#x548C;translog&#x65E5;&#x5FD7;&#x6587;&#x4EF6;
+&#xFF08;2&#xFF09;&#x6BCF;&#x9694;&#x4E00;&#x79D2;&#x949F;&#xFF0C;buffer&#x4E2D;&#x7684;&#x6570;&#x636E;&#x88AB;&#x5199;&#x5165;&#x65B0;&#x7684;segment file&#xFF0C;&#x5E76;&#x8FDB;&#x5165;os cache&#xFF0C;&#x6B64;&#x65F6;segment&#x88AB;&#x6253;&#x5F00;&#x5E76;&#x4F9B;search&#x4F7F;&#x7528;
+&#xFF08;3&#xFF09;buffer&#x88AB;&#x6E05;&#x7A7A;
+&#xFF08;4&#xFF09;&#x91CD;&#x590D;1~3&#xFF0C;&#x65B0;&#x7684;segment&#x4E0D;&#x65AD;&#x6DFB;&#x52A0;&#xFF0C;buffer&#x4E0D;&#x65AD;&#x88AB;&#x6E05;&#x7A7A;&#xFF0C;&#x800C;translog&#x4E2D;&#x7684;&#x6570;&#x636E;&#x4E0D;&#x65AD;&#x7D2F;&#x52A0;
+&#xFF08;5&#xFF09;&#x5F53;translog&#x957F;&#x5EA6;&#x8FBE;&#x5230;&#x4E00;&#x5B9A;&#x7A0B;&#x5EA6;&#x7684;&#x65F6;&#x5019;&#xFF0C;commit&#x64CD;&#x4F5C;&#x53D1;&#x751F;
+  &#xFF08;5-1&#xFF09;buffer&#x4E2D;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#x5199;&#x5165;&#x4E00;&#x4E2A;&#x65B0;&#x7684;segment&#xFF0C;&#x5E76;&#x5199;&#x5165;os cache&#xFF0C;&#x6253;&#x5F00;&#x4F9B;&#x4F7F;&#x7528;
+  &#xFF08;5-2&#xFF09;buffer&#x88AB;&#x6E05;&#x7A7A;
+  &#xFF08;5-3&#xFF09;&#x4E00;&#x4E2A;commit ponit&#x88AB;&#x5199;&#x5165;&#x78C1;&#x76D8;&#xFF0C;&#x6807;&#x660E;&#x4E86;&#x6240;&#x6709;&#x7684;index segment
+  &#xFF08;5-4&#xFF09;filesystem cache&#x4E2D;&#x7684;&#x6240;&#x6709;index segment file&#x7F13;&#x5B58;&#x6570;&#x636E;&#xFF0C;&#x88AB;fsync&#x5F3A;&#x884C;&#x5237;&#x5230;&#x78C1;&#x76D8;&#x4E0A;
+  &#xFF08;5-5&#xFF09;&#x73B0;&#x6709;&#x7684;translog&#x88AB;&#x6E05;&#x7A7A;&#xFF0C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;translog</p>
+<p>&#x57FA;&#x4E8E;translog&#x548C;commit point&#xFF0C;&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x6062;&#x590D;</p>
+<p>fsync+&#x6E05;&#x7A7A;translog&#xFF0C;&#x5C31;&#x662F;flush&#xFF0C;&#x9ED8;&#x8BA4;&#x6BCF;&#x9694;30&#x5206;&#x949F;flush&#x4E00;&#x6B21;&#xFF0C;&#x6216;&#x8005;&#x5F53;translog&#x8FC7;&#x5927;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E5F;&#x4F1A;flush</p>
+<p>POST /my_index/_flush&#xFF0C;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#x522B;&#x624B;&#x52A8;flush&#xFF0C;&#x8BA9;&#x5B83;&#x81EA;&#x52A8;&#x6267;&#x884C;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;</p>
+<p>translog&#xFF0C;&#x6BCF;&#x9694;5&#x79D2;&#x88AB;fsync&#x4E00;&#x6B21;&#x5230;&#x78C1;&#x76D8;&#x4E0A;&#x3002;&#x5728;&#x4E00;&#x6B21;&#x589E;&#x5220;&#x6539;&#x64CD;&#x4F5C;&#x4E4B;&#x540E;&#xFF0C;&#x5F53;fsync&#x5728;primary shard&#x548C;replica shard&#x90FD;&#x6210;&#x529F;&#x4E4B;&#x540E;&#xFF0C;&#x90A3;&#x6B21;&#x589E;&#x5220;&#x6539;&#x64CD;&#x4F5C;&#x624D;&#x4F1A;&#x6210;&#x529F;</p>
+<p>&#x4F46;&#x662F;&#x8FD9;&#x79CD;&#x5728;&#x4E00;&#x6B21;&#x589E;&#x5220;&#x6539;&#x65F6;&#x5F3A;&#x884C;fsync translog&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x90E8;&#x5206;&#x64CD;&#x4F5C;&#x6BD4;&#x8F83;&#x8017;&#x65F6;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5141;&#x8BB8;&#x90E8;&#x5206;&#x6570;&#x636E;&#x4E22;&#x5931;&#xFF0C;&#x8BBE;&#x7F6E;&#x5F02;&#x6B65;fsync translog</p>
+<p>PUT /my_index/_settings
+{
+    &quot;index.translog.durability&quot;: &quot;async&quot;,
+    &quot;index.translog.sync_interval&quot;: &quot;5s&quot;
+}
+<img src="../assets/&#x7EC8;&#x6781;&#x7248;&#x672C;&#x7684;es&#x6570;&#x636E;&#x5199;&#x5165;&#x6D41;&#x7A0B;.png" alt="&#x7EC8;&#x6781;&#x7248;&#x672C;&#x7684;es&#x6570;&#x636E;&#x5199;&#x5165;&#x6D41;&#x7A0B;.png">
+<img src="../assets/commit point+translog&#x8FDB;&#x884C;&#x6570;&#x636E;&#x6062;&#x590D;.png" alt="commit point+translog&#x8FDB;&#x884C;&#x6570;&#x636E;&#x6062;&#x590D;.png"></p>
 
                                 
                                 </section>
@@ -1201,7 +1211,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"10.4_继续优化写入流程实现durability可靠存储（translog，flush）","level":"1.11.4","depth":2,"next":{"title":"10.5_最后优化写入流程实现海量磁盘文件合并（segment merge，optimize）","level":"1.11.5","depth":2,"path":"10、内核原理探秘/10.5_最后优化写入流程实现海量磁盘文件合并（segment merge，optimize）.md","ref":"10、内核原理探秘/10.5_最后优化写入流程实现海量磁盘文件合并（segment merge，optimize）.md","articles":[]},"previous":{"title":"10.3_优化写入流程实现NRT近实时（filesystem cache，refresh）","level":"1.11.3","depth":2,"path":"10、内核原理探秘/10.3_优化写入流程实现NRT近实时（filesystem cache，refresh）.md","ref":"10、内核原理探秘/10.3_优化写入流程实现NRT近实时（filesystem cache，refresh）.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"10、内核原理探秘/10.4_继续优化写入流程实现durability可靠存储（translog，flush）.md","mtime":"2019-01-17T06:57:13.174Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-18T07:55:06.893Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"10.4_继续优化写入流程实现durability可靠存储（translog，flush）","level":"1.11.4","depth":2,"next":{"title":"10.5_最后优化写入流程实现海量磁盘文件合并（segment merge，optimize）","level":"1.11.5","depth":2,"path":"10、内核原理探秘/10.5_最后优化写入流程实现海量磁盘文件合并（segment merge，optimize）.md","ref":"10、内核原理探秘/10.5_最后优化写入流程实现海量磁盘文件合并（segment merge，optimize）.md","articles":[]},"previous":{"title":"10.3_优化写入流程实现NRT近实时（filesystem cache，refresh）","level":"1.11.3","depth":2,"path":"10、内核原理探秘/10.3_优化写入流程实现NRT近实时（filesystem cache，refresh）.md","ref":"10、内核原理探秘/10.3_优化写入流程实现NRT近实时（filesystem cache，refresh）.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"10、内核原理探秘/10.4_继续优化写入流程实现durability可靠存储（translog，flush）.md","mtime":"2019-01-18T09:21:46.602Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-18T09:41:07.958Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

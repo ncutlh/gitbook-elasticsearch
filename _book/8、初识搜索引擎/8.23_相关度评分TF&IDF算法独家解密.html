@@ -816,12 +816,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.24" data-path="8.25_分布式搜索引擎内核解密之query_phase.html">
+        <li class="chapter " data-level="1.9.24" data-path="8.25_分布式搜索引擎内核解密query phase和fetch phase.html">
             
-                <a href="8.25_分布式搜索引擎内核解密之query_phase.html">
+                <a href="8.25_分布式搜索引擎内核解密query phase和fetch phase.html">
             
                     
-                    8.25_分布式搜索引擎内核解密之query phase
+                    8.25_分布式搜索引擎内核解密(query phase和fetch phase)
             
                 </a>
             
@@ -829,20 +829,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.25" data-path="8.26_分布式搜索引擎内核解密之fetch_phase.html">
-            
-                <a href="8.26_分布式搜索引擎内核解密之fetch_phase.html">
-            
-                    
-                    8.26_分布式搜索引擎内核解密之fetch phase
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.9.26" data-path="8.27_搜索相关参数梳理以及bouncing_results问题解决方案.html">
+        <li class="chapter " data-level="1.9.25" data-path="8.27_搜索相关参数梳理以及bouncing_results问题解决方案.html">
             
                 <a href="8.27_搜索相关参数梳理以及bouncing_results问题解决方案.html">
             
@@ -855,7 +842,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.27" data-path="8.28_上机动手实战基于scoll技术滚动搜索大量数据.html">
+        <li class="chapter " data-level="1.9.26" data-path="8.28_上机动手实战基于scoll技术滚动搜索大量数据.html">
             
                 <a href="8.28_上机动手实战基于scoll技术滚动搜索大量数据.html">
             
@@ -1158,35 +1145,41 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="823&#x76F8;&#x5173;&#x5EA6;&#x8BC4;&#x5206;tfidf&#x7B97;&#x6CD5;&#x72EC;&#x5BB6;&#x89E3;&#x5BC6;">8.23_&#x76F8;&#x5173;&#x5EA6;&#x8BC4;&#x5206;TF&amp;IDF&#x7B97;&#x6CD5;&#x72EC;&#x5BB6;&#x89E3;&#x5BC6;</h1>
-<p>1&#x3001;&#x7B97;&#x6CD5;&#x4ECB;&#x7ECD;</p>
+<h2 id="1&#x3001;&#x7B97;&#x6CD5;&#x4ECB;&#x7ECD;">1&#x3001;&#x7B97;&#x6CD5;&#x4ECB;&#x7ECD;</h2>
+<p><a href="https://blog.csdn.net/weixin_36564655/article/details/82736269" target="_blank">https://blog.csdn.net/weixin_36564655/article/details/82736269</a>
+<a href="https://www.jianshu.com/p/f3b92124cd2b" target="_blank">https://www.jianshu.com/p/f3b92124cd2b</a></p>
 <p>relevance score&#x7B97;&#x6CD5;&#xFF0C;&#x7B80;&#x5355;&#x6765;&#x8BF4;&#xFF0C;&#x5C31;&#x662F;&#x8BA1;&#x7B97;&#x51FA;&#xFF0C;&#x4E00;&#x4E2A;&#x7D22;&#x5F15;&#x4E2D;&#x7684;&#x6587;&#x672C;&#xFF0C;&#x4E0E;&#x641C;&#x7D22;&#x6587;&#x672C;&#xFF0C;&#x4ED6;&#x4EEC;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x8054;&#x5339;&#x914D;&#x7A0B;&#x5EA6;</p>
 <p>Elasticsearch&#x4F7F;&#x7528;&#x7684;&#x662F; term frequency/inverse document frequency&#x7B97;&#x6CD5;&#xFF0C;&#x7B80;&#x79F0;&#x4E3A;TF/IDF&#x7B97;&#x6CD5;</p>
-<p>Term frequency&#xFF1A;&#x641C;&#x7D22;&#x6587;&#x672C;&#x4E2D;&#x7684;&#x5404;&#x4E2A;&#x8BCD;&#x6761;&#x5728;field&#x6587;&#x672C;&#x4E2D;&#x51FA;&#x73B0;&#x4E86;&#x591A;&#x5C11;&#x6B21;&#xFF0C;&#x51FA;&#x73B0;&#x6B21;&#x6570;&#x8D8A;&#x591A;&#xFF0C;&#x5C31;&#x8D8A;&#x76F8;&#x5173;</p>
-<p>&#x641C;&#x7D22;&#x8BF7;&#x6C42;&#xFF1A;hello world</p>
-<p>doc1&#xFF1A;hello you, and world is very good
-doc2&#xFF1A;hello, how are you</p>
-<p>Inverse document frequency&#xFF1A;&#x641C;&#x7D22;&#x6587;&#x672C;&#x4E2D;&#x7684;&#x5404;&#x4E2A;&#x8BCD;&#x6761;&#x5728;&#x6574;&#x4E2A;&#x7D22;&#x5F15;&#x7684;&#x6240;&#x6709;&#x6587;&#x6863;&#x4E2D;&#x51FA;&#x73B0;&#x4E86;&#x591A;&#x5C11;&#x6B21;&#xFF0C;&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;&#x8D8A;&#x591A;&#xFF0C;&#x5C31;&#x8D8A;&#x4E0D;&#x76F8;&#x5173;</p>
-<p>&#x641C;&#x7D22;&#x8BF7;&#x6C42;&#xFF1A;hello world</p>
-<p>doc1&#xFF1A;hello, today is very good
-doc2&#xFF1A;hi world, how are you</p>
-<p>&#x6BD4;&#x5982;&#x8BF4;&#xFF0C;&#x5728;index&#x4E2D;&#x6709;1&#x4E07;&#x6761;document&#xFF0C;hello&#x8FD9;&#x4E2A;&#x5355;&#x8BCD;&#x5728;&#x6240;&#x6709;&#x7684;document&#x4E2D;&#xFF0C;&#x4E00;&#x5171;&#x51FA;&#x73B0;&#x4E86;1000&#x6B21;&#xFF1B;world&#x8FD9;&#x4E2A;&#x5355;&#x8BCD;&#x5728;&#x6240;&#x6709;&#x7684;document&#x4E2D;&#xFF0C;&#x4E00;&#x5171;&#x51FA;&#x73B0;&#x4E86;100&#x6B21;</p>
+<h3 id="11&#x3001;term-frequency&#xFF1A;&#x641C;&#x7D22;&#x6587;&#x672C;&#x4E2D;&#x7684;&#x5404;&#x4E2A;&#x8BCD;&#x6761;&#x5728;field&#x6587;&#x672C;&#x4E2D;&#x51FA;&#x73B0;&#x4E86;&#x591A;&#x5C11;&#x6B21;&#xFF0C;&#x51FA;&#x73B0;&#x6B21;&#x6570;&#x8D8A;&#x591A;&#xFF0C;&#x5C31;&#x8D8A;&#x76F8;&#x5173;">1.1&#x3001;Term frequency&#xFF1A;&#x641C;&#x7D22;&#x6587;&#x672C;&#x4E2D;&#x7684;&#x5404;&#x4E2A;&#x8BCD;&#x6761;&#x5728;field&#x6587;&#x672C;&#x4E2D;&#x51FA;&#x73B0;&#x4E86;&#x591A;&#x5C11;&#x6B21;&#xFF0C;&#x51FA;&#x73B0;&#x6B21;&#x6570;&#x8D8A;&#x591A;&#xFF0C;&#x5C31;&#x8D8A;&#x76F8;&#x5173;</h3>
+<pre><code>&#x641C;&#x7D22;&#x8BF7;&#x6C42;&#xFF1A;hello world
+
+doc1&#xFF1A;hello you, and world is very good
+doc2&#xFF1A;hello, how are you
+</code></pre><h3 id="12&#x3001;inverse-document-frequency&#xFF1A;&#x641C;&#x7D22;&#x6587;&#x672C;&#x4E2D;&#x7684;&#x5404;&#x4E2A;&#x8BCD;&#x6761;&#x5728;&#x6574;&#x4E2A;&#x7D22;&#x5F15;&#x7684;&#x6240;&#x6709;&#x6587;&#x6863;&#x4E2D;&#x51FA;&#x73B0;&#x4E86;&#x591A;&#x5C11;&#x6B21;&#xFF0C;&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;&#x8D8A;&#x591A;&#xFF0C;&#x5C31;&#x8D8A;&#x4E0D;&#x76F8;&#x5173;">1.2&#x3001;Inverse document frequency&#xFF1A;&#x641C;&#x7D22;&#x6587;&#x672C;&#x4E2D;&#x7684;&#x5404;&#x4E2A;&#x8BCD;&#x6761;&#x5728;&#x6574;&#x4E2A;&#x7D22;&#x5F15;&#x7684;&#x6240;&#x6709;&#x6587;&#x6863;&#x4E2D;&#x51FA;&#x73B0;&#x4E86;&#x591A;&#x5C11;&#x6B21;&#xFF0C;&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;&#x8D8A;&#x591A;&#xFF0C;&#x5C31;&#x8D8A;&#x4E0D;&#x76F8;&#x5173;</h3>
+<pre><code>&#x641C;&#x7D22;&#x8BF7;&#x6C42;&#xFF1A;hello world
+
+doc1&#xFF1A;hello, today is very good
+doc2&#xFF1A;hi world, how are you
+</code></pre><p>&#x6BD4;&#x5982;&#x8BF4;&#xFF0C;&#x5728;index&#x4E2D;&#x6709;1&#x4E07;&#x6761;document&#xFF0C;hello&#x8FD9;&#x4E2A;&#x5355;&#x8BCD;&#x5728;&#x6240;&#x6709;&#x7684;document&#x4E2D;&#xFF0C;&#x4E00;&#x5171;&#x51FA;&#x73B0;&#x4E86;1000&#x6B21;&#xFF1B;world&#x8FD9;&#x4E2A;&#x5355;&#x8BCD;&#x5728;&#x6240;&#x6709;&#x7684;document&#x4E2D;&#xFF0C;&#x4E00;&#x5171;&#x51FA;&#x73B0;&#x4E86;100&#x6B21;</p>
 <p>doc2&#x66F4;&#x76F8;&#x5173;</p>
-<p>Field-length norm&#xFF1A;field&#x957F;&#x5EA6;&#xFF0C;field&#x8D8A;&#x957F;&#xFF0C;&#x76F8;&#x5173;&#x5EA6;&#x8D8A;&#x5F31;</p>
-<p>&#x641C;&#x7D22;&#x8BF7;&#x6C42;&#xFF1A;hello world</p>
-<p>doc1&#xFF1A;{ &quot;title&quot;: &quot;hello article&quot;, &quot;content&quot;: &quot;babaaba 1&#x4E07;&#x4E2A;&#x5355;&#x8BCD;&quot; }
-doc2&#xFF1A;{ &quot;title&quot;: &quot;my article&quot;, &quot;content&quot;: &quot;blablabala 1&#x4E07;&#x4E2A;&#x5355;&#x8BCD;&#xFF0C;hi world&quot; }</p>
-<p>hello world&#x5728;&#x6574;&#x4E2A;index&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;&#x662F;&#x4E00;&#x6837;&#x591A;&#x7684;</p>
+<h3 id="13&#x3001;field-length-norm&#xFF1A;field&#x957F;&#x5EA6;&#xFF0C;field&#x8D8A;&#x957F;&#xFF0C;&#x76F8;&#x5173;&#x5EA6;&#x8D8A;&#x5F31;">1.3&#x3001;Field-length norm&#xFF1A;field&#x957F;&#x5EA6;&#xFF0C;field&#x8D8A;&#x957F;&#xFF0C;&#x76F8;&#x5173;&#x5EA6;&#x8D8A;&#x5F31;</h3>
+<pre><code>&#x641C;&#x7D22;&#x8BF7;&#x6C42;&#xFF1A;hello world
+
+doc1&#xFF1A;{ &quot;title&quot;: &quot;hello article&quot;, &quot;content&quot;: &quot;babaaba 1&#x4E07;&#x4E2A;&#x5355;&#x8BCD;&quot; }
+doc2&#xFF1A;{ &quot;title&quot;: &quot;my article&quot;, &quot;content&quot;: &quot;blablabala 1&#x4E07;&#x4E2A;&#x5355;&#x8BCD;&#xFF0C;hi world&quot; }
+</code></pre><p>hello world&#x5728;&#x6574;&#x4E2A;index&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;&#x662F;&#x4E00;&#x6837;&#x591A;&#x7684;</p>
 <p>doc1&#x66F4;&#x76F8;&#x5173;&#xFF0C;title field&#x66F4;&#x77ED;</p>
-<p>2&#x3001;_score&#x662F;&#x5982;&#x4F55;&#x88AB;&#x8BA1;&#x7B97;&#x51FA;&#x6765;&#x7684;</p>
-<p>GET /test_index/test_type/_search?explain
+<h2 id="2&#x3001;score&#x662F;&#x5982;&#x4F55;&#x88AB;&#x8BA1;&#x7B97;&#x51FA;&#x6765;&#x7684;">2&#x3001;_score&#x662F;&#x5982;&#x4F55;&#x88AB;&#x8BA1;&#x7B97;&#x51FA;&#x6765;&#x7684;</h2>
+<pre><code>GET /test_index/test_type/_search?explain
 {
   &quot;query&quot;: {
     &quot;match&quot;: {
       &quot;test_field&quot;: &quot;test hello&quot;
     }
   }
-}</p>
-<p>{
+}
+
+{
   &quot;took&quot;: 6,
   &quot;timed_out&quot;: false,
   &quot;_shards&quot;: {
@@ -1224,111 +1217,50 @@ doc2&#xFF1A;{ &quot;title&quot;: &quot;my article&quot;, &quot;content&quot;: &q
                       &quot;value&quot;: 0.58279467,
                       &quot;description&quot;: &quot;score(doc=0,freq=1.0 = termFreq=1.0\n), product of:&quot;,
                       &quot;details&quot;: [
-                        {
-                          &quot;value&quot;: 0.6931472,
-                          &quot;description&quot;: &quot;idf, computed as log(1 + (docCount - docFreq + 0.5) / (docFreq + 0.5)) from:&quot;,
-                          &quot;details&quot;: [
-                            {
-                              &quot;value&quot;: 2,
-                              &quot;description&quot;: &quot;docFreq&quot;,
-                              &quot;details&quot;: []
-                            },
-                            {
-                              &quot;value&quot;: 4,
-                              &quot;description&quot;: &quot;docCount&quot;,
-                              &quot;details&quot;: []
-                            }
-                          ]
-                        },
-                        {
-                          &quot;value&quot;: 0.840795,
-                          &quot;description&quot;: &quot;tfNorm, computed as (freq <em> (k1 + 1)) / (freq + k1 </em> (1 - b + b <em> fieldLength / avgFieldLength)) from:&quot;,
-                          &quot;details&quot;: [
-                            {
-                              &quot;value&quot;: 1,
-                              &quot;description&quot;: &quot;termFreq=1.0&quot;,
-                              &quot;details&quot;: []
-                            },
-                            {
-                              &quot;value&quot;: 1.2,
-                              &quot;description&quot;: &quot;parameter k1&quot;,
-                              &quot;details&quot;: []
-                            },
-                            {
-                              &quot;value&quot;: 0.75,
-                              &quot;description&quot;: &quot;parameter b&quot;,
-                              &quot;details&quot;: []
-                            },
-                            {
-                              &quot;value&quot;: 1.75,
-                              &quot;description&quot;: &quot;avgFieldLength&quot;,
-                              &quot;details&quot;: []
-                            },
-                            {
-                              &quot;value&quot;: 2.56,
-                              &quot;description&quot;: &quot;fieldLength&quot;,
-                              &quot;details&quot;: []
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  &quot;value&quot;: 1.0122943,
-                  &quot;description&quot;: &quot;weight(test_field:hello in 0) [PerFieldSimilarity], result of:&quot;,
-                  &quot;details&quot;: [
                     {
-                      &quot;value&quot;: 1.0122943,
-                      &quot;description&quot;: &quot;score(doc=0,freq=1.0 = termFreq=1.0\n), product of:&quot;,
+                      &quot;value&quot;: 0.6931472,
+                      &quot;description&quot;: &quot;idf, computed as log(1 + (docCount - docFreq + 0.5) / (docFreq + 0.5)) from:&quot;,
                       &quot;details&quot;: [
                         {
-                          &quot;value&quot;: 1.2039728,
-                          &quot;description&quot;: &quot;idf, computed as log(1 + (docCount - docFreq + 0.5) / (docFreq + 0.5)) from:&quot;,
-                          &quot;details&quot;: [
-                            {
-                              &quot;value&quot;: 1,
-                              &quot;description&quot;: &quot;docFreq&quot;,
-                              &quot;details&quot;: []
-                            },
-                            {
-                              &quot;value&quot;: 4,
-                              &quot;description&quot;: &quot;docCount&quot;,
-                              &quot;details&quot;: []
-                            }
-                          ]
+                          &quot;value&quot;: 2,
+                          &quot;description&quot;: &quot;docFreq&quot;,
+                          &quot;details&quot;: []
                         },
                         {
-                          &quot;value&quot;: 0.840795,
-                          &quot;description&quot;: &quot;tfNorm, computed as (freq </em> (k1 + 1)) / (freq + k1 <em> (1 - b + b </em> fieldLength / avgFieldLength)) from:&quot;,
-                          &quot;details&quot;: [
-                            {
-                              &quot;value&quot;: 1,
-                              &quot;description&quot;: &quot;termFreq=1.0&quot;,
-                              &quot;details&quot;: []
-                            },
-                            {
-                              &quot;value&quot;: 1.2,
-                              &quot;description&quot;: &quot;parameter k1&quot;,
-                              &quot;details&quot;: []
-                            },
-                            {
-                              &quot;value&quot;: 0.75,
-                              &quot;description&quot;: &quot;parameter b&quot;,
-                              &quot;details&quot;: []
-                            },
-                            {
-                              &quot;value&quot;: 1.75,
-                              &quot;description&quot;: &quot;avgFieldLength&quot;,
-                              &quot;details&quot;: []
-                            },
-                            {
-                              &quot;value&quot;: 2.56,
-                              &quot;description&quot;: &quot;fieldLength&quot;,
-                              &quot;details&quot;: []
-                            }
-                          ]
+                          &quot;value&quot;: 4,
+                          &quot;description&quot;: &quot;docCount&quot;,
+                          &quot;details&quot;: []
+                        }
+                      ]
+                    },
+                    {
+                      &quot;value&quot;: 0.840795,
+                      &quot;description&quot;: &quot;tfNorm, computed as (freq * (k1 + 1)) / (freq + k1 * (1 - b + b * fieldLength / avgFieldLength)) from:&quot;,
+                      &quot;details&quot;: [
+                        {
+                          &quot;value&quot;: 1,
+                          &quot;description&quot;: &quot;termFreq=1.0&quot;,
+                          &quot;details&quot;: []
+                        },
+                        {
+                          &quot;value&quot;: 1.2,
+                          &quot;description&quot;: &quot;parameter k1&quot;,
+                          &quot;details&quot;: []
+                        },
+                        {
+                          &quot;value&quot;: 0.75,
+                          &quot;description&quot;: &quot;parameter b&quot;,
+                          &quot;details&quot;: []
+                        },
+                        {
+                          &quot;value&quot;: 1.75,
+                          &quot;description&quot;: &quot;avgFieldLength&quot;,
+                          &quot;details&quot;: []
+                        },
+                        {
+                          &quot;value&quot;: 2.56,
+                          &quot;description&quot;: &quot;fieldLength&quot;,
+                          &quot;details&quot;: []
                         }
                       ]
                     }
@@ -1337,375 +1269,436 @@ doc2&#xFF1A;{ &quot;title&quot;: &quot;my article&quot;, &quot;content&quot;: &q
               ]
             },
             {
-              &quot;value&quot;: 0,
-              &quot;description&quot;: &quot;match on required clause, product of:&quot;,
+              &quot;value&quot;: 1.0122943,
+              &quot;description&quot;: &quot;weight(test_field:hello in 0) [PerFieldSimilarity], result of:&quot;,
               &quot;details&quot;: [
                 {
-                  &quot;value&quot;: 0,
-                  &quot;description&quot;: &quot;# clause&quot;,
-                  &quot;details&quot;: []
-                },
-                {
-                  &quot;value&quot;: 1,
-                  &quot;description&quot;: &quot;<em>:</em>, product of:&quot;,
+                  &quot;value&quot;: 1.0122943,
+                  &quot;description&quot;: &quot;score(doc=0,freq=1.0 = termFreq=1.0\n), product of:&quot;,
                   &quot;details&quot;: [
                     {
-                      &quot;value&quot;: 1,
-                      &quot;description&quot;: &quot;boost&quot;,
-                      &quot;details&quot;: []
+                      &quot;value&quot;: 1.2039728,
+                      &quot;description&quot;: &quot;idf, computed as log(1 + (docCount - docFreq + 0.5) / (docFreq + 0.5)) from:&quot;,
+                      &quot;details&quot;: [
+                        {
+                          &quot;value&quot;: 1,
+                          &quot;description&quot;: &quot;docFreq&quot;,
+                          &quot;details&quot;: []
+                        },
+                        {
+                          &quot;value&quot;: 4,
+                          &quot;description&quot;: &quot;docCount&quot;,
+                          &quot;details&quot;: []
+                        }
+                      ]
                     },
                     {
-                      &quot;value&quot;: 1,
-                      &quot;description&quot;: &quot;queryNorm&quot;,
-                      &quot;details&quot;: []
+                      &quot;value&quot;: 0.840795,
+                      &quot;description&quot;: &quot;tfNorm, computed as (freq * (k1 + 1)) / (freq + k1 * (1 - b + b * fieldLength / avgFieldLength)) from:&quot;,
+                      &quot;details&quot;: [
+                        {
+                          &quot;value&quot;: 1,
+                          &quot;description&quot;: &quot;termFreq=1.0&quot;,
+                          &quot;details&quot;: []
+                        },
+                        {
+                          &quot;value&quot;: 1.2,
+                          &quot;description&quot;: &quot;parameter k1&quot;,
+                          &quot;details&quot;: []
+                        },
+                        {
+                          &quot;value&quot;: 0.75,
+                          &quot;description&quot;: &quot;parameter b&quot;,
+                          &quot;details&quot;: []
+                        },
+                        {
+                          &quot;value&quot;: 1.75,
+                          &quot;description&quot;: &quot;avgFieldLength&quot;,
+                          &quot;details&quot;: []
+                        },
+                        {
+                          &quot;value&quot;: 2.56,
+                          &quot;description&quot;: &quot;fieldLength&quot;,
+                          &quot;details&quot;: []
+                        }
+                      ]
                     }
                   ]
                 }
               ]
             }
           ]
-        }
-      },
-      {
-        &quot;_shard&quot;: &quot;[test_index][2]&quot;,
-        &quot;_node&quot;: &quot;4onsTYVZTjGvIj9_spWz2w&quot;,
-        &quot;_index&quot;: &quot;test_index&quot;,
-        &quot;_type&quot;: &quot;test_type&quot;,
-        &quot;_id&quot;: &quot;6&quot;,
-        &quot;_score&quot;: 0.58279467,
-        &quot;_source&quot;: {
-          &quot;test_field&quot;: &quot;tes test&quot;
         },
-        &quot;_explanation&quot;: {
+        {
+          &quot;value&quot;: 0,
+          &quot;description&quot;: &quot;match on required clause, product of:&quot;,
+          &quot;details&quot;: [
+            {
+              &quot;value&quot;: 0,
+              &quot;description&quot;: &quot;# clause&quot;,
+              &quot;details&quot;: []
+            },
+            {
+              &quot;value&quot;: 1,
+              &quot;description&quot;: &quot;*:*, product of:&quot;,
+              &quot;details&quot;: [
+                {
+                  &quot;value&quot;: 1,
+                  &quot;description&quot;: &quot;boost&quot;,
+                  &quot;details&quot;: []
+                },
+                {
+                  &quot;value&quot;: 1,
+                  &quot;description&quot;: &quot;queryNorm&quot;,
+                  &quot;details&quot;: []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    &quot;_shard&quot;: &quot;[test_index][2]&quot;,
+    &quot;_node&quot;: &quot;4onsTYVZTjGvIj9_spWz2w&quot;,
+    &quot;_index&quot;: &quot;test_index&quot;,
+    &quot;_type&quot;: &quot;test_type&quot;,
+    &quot;_id&quot;: &quot;6&quot;,
+    &quot;_score&quot;: 0.58279467,
+    &quot;_source&quot;: {
+      &quot;test_field&quot;: &quot;tes test&quot;
+    },
+    &quot;_explanation&quot;: {
+      &quot;value&quot;: 0.58279467,
+      &quot;description&quot;: &quot;sum of:&quot;,
+      &quot;details&quot;: [
+        {
           &quot;value&quot;: 0.58279467,
           &quot;description&quot;: &quot;sum of:&quot;,
           &quot;details&quot;: [
             {
               &quot;value&quot;: 0.58279467,
-              &quot;description&quot;: &quot;sum of:&quot;,
+              &quot;description&quot;: &quot;weight(test_field:test in 0) [PerFieldSimilarity], result of:&quot;,
               &quot;details&quot;: [
                 {
                   &quot;value&quot;: 0.58279467,
-                  &quot;description&quot;: &quot;weight(test_field:test in 0) [PerFieldSimilarity], result of:&quot;,
+                  &quot;description&quot;: &quot;score(doc=0,freq=1.0 = termFreq=1.0\n), product of:&quot;,
                   &quot;details&quot;: [
                     {
-                      &quot;value&quot;: 0.58279467,
-                      &quot;description&quot;: &quot;score(doc=0,freq=1.0 = termFreq=1.0\n), product of:&quot;,
+                      &quot;value&quot;: 0.6931472,
+                      &quot;description&quot;: &quot;idf, computed as log(1 + (docCount - docFreq + 0.5) / (docFreq + 0.5)) from:&quot;,
                       &quot;details&quot;: [
                         {
-                          &quot;value&quot;: 0.6931472,
-                          &quot;description&quot;: &quot;idf, computed as log(1 + (docCount - docFreq + 0.5) / (docFreq + 0.5)) from:&quot;,
-                          &quot;details&quot;: [
-                            {
-                              &quot;value&quot;: 2,
-                              &quot;description&quot;: &quot;docFreq&quot;,
-                              &quot;details&quot;: []
-                            },
-                            {
-                              &quot;value&quot;: 4,
-                              &quot;description&quot;: &quot;docCount&quot;,
-                              &quot;details&quot;: []
-                            }
-                          ]
+                          &quot;value&quot;: 2,
+                          &quot;description&quot;: &quot;docFreq&quot;,
+                          &quot;details&quot;: []
                         },
                         {
-                          &quot;value&quot;: 0.840795,
-                          &quot;description&quot;: &quot;tfNorm, computed as (freq <em> (k1 + 1)) / (freq + k1 </em> (1 - b + b <em> fieldLength / avgFieldLength)) from:&quot;,
-                          &quot;details&quot;: [
-                            {
-                              &quot;value&quot;: 1,
-                              &quot;description&quot;: &quot;termFreq=1.0&quot;,
-                              &quot;details&quot;: []
-                            },
-                            {
-                              &quot;value&quot;: 1.2,
-                              &quot;description&quot;: &quot;parameter k1&quot;,
-                              &quot;details&quot;: []
-                            },
-                            {
-                              &quot;value&quot;: 0.75,
-                              &quot;description&quot;: &quot;parameter b&quot;,
-                              &quot;details&quot;: []
-                            },
-                            {
-                              &quot;value&quot;: 1.75,
-                              &quot;description&quot;: &quot;avgFieldLength&quot;,
-                              &quot;details&quot;: []
-                            },
-                            {
-                              &quot;value&quot;: 2.56,
-                              &quot;description&quot;: &quot;fieldLength&quot;,
-                              &quot;details&quot;: []
-                            }
-                          ]
+                          &quot;value&quot;: 4,
+                          &quot;description&quot;: &quot;docCount&quot;,
+                          &quot;details&quot;: []
+                        }
+                      ]
+                    },
+                    {
+                      &quot;value&quot;: 0.840795,
+                      &quot;description&quot;: &quot;tfNorm, computed as (freq * (k1 + 1)) / (freq + k1 * (1 - b + b * fieldLength / avgFieldLength)) from:&quot;,
+                      &quot;details&quot;: [
+                        {
+                          &quot;value&quot;: 1,
+                          &quot;description&quot;: &quot;termFreq=1.0&quot;,
+                          &quot;details&quot;: []
+                        },
+                        {
+                          &quot;value&quot;: 1.2,
+                          &quot;description&quot;: &quot;parameter k1&quot;,
+                          &quot;details&quot;: []
+                        },
+                        {
+                          &quot;value&quot;: 0.75,
+                          &quot;description&quot;: &quot;parameter b&quot;,
+                          &quot;details&quot;: []
+                        },
+                        {
+                          &quot;value&quot;: 1.75,
+                          &quot;description&quot;: &quot;avgFieldLength&quot;,
+                          &quot;details&quot;: []
+                        },
+                        {
+                          &quot;value&quot;: 2.56,
+                          &quot;description&quot;: &quot;fieldLength&quot;,
+                          &quot;details&quot;: []
                         }
                       ]
                     }
                   ]
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          &quot;value&quot;: 0,
+          &quot;description&quot;: &quot;match on required clause, product of:&quot;,
+          &quot;details&quot;: [
             {
               &quot;value&quot;: 0,
-              &quot;description&quot;: &quot;match on required clause, product of:&quot;,
+              &quot;description&quot;: &quot;# clause&quot;,
+              &quot;details&quot;: []
+            },
+            {
+              &quot;value&quot;: 1,
+              &quot;description&quot;: &quot;*:*, product of:&quot;,
               &quot;details&quot;: [
                 {
-                  &quot;value&quot;: 0,
-                  &quot;description&quot;: &quot;# clause&quot;,
+                  &quot;value&quot;: 1,
+                  &quot;description&quot;: &quot;boost&quot;,
                   &quot;details&quot;: []
                 },
                 {
                   &quot;value&quot;: 1,
-                  &quot;description&quot;: &quot;</em>:<em>, product of:&quot;,
-                  &quot;details&quot;: [
-                    {
-                      &quot;value&quot;: 1,
-                      &quot;description&quot;: &quot;boost&quot;,
-                      &quot;details&quot;: []
-                    },
-                    {
-                      &quot;value&quot;: 1,
-                      &quot;description&quot;: &quot;queryNorm&quot;,
-                      &quot;details&quot;: []
-                    }
-                  ]
+                  &quot;description&quot;: &quot;queryNorm&quot;,
+                  &quot;details&quot;: []
                 }
               ]
             }
           ]
         }
-      },
-      {
-        &quot;_shard&quot;: &quot;[test_index][3]&quot;,
-        &quot;_node&quot;: &quot;4onsTYVZTjGvIj9_spWz2w&quot;,
-        &quot;_index&quot;: &quot;test_index&quot;,
-        &quot;_type&quot;: &quot;test_type&quot;,
-        &quot;_id&quot;: &quot;7&quot;,
-        &quot;_score&quot;: 0.5565415,
-        &quot;_source&quot;: {
-          &quot;test_field&quot;: &quot;test client 2&quot;
-        },
-        &quot;_explanation&quot;: {
+      ]
+    }
+  },
+  {
+    &quot;_shard&quot;: &quot;[test_index][3]&quot;,
+    &quot;_node&quot;: &quot;4onsTYVZTjGvIj9_spWz2w&quot;,
+    &quot;_index&quot;: &quot;test_index&quot;,
+    &quot;_type&quot;: &quot;test_type&quot;,
+    &quot;_id&quot;: &quot;7&quot;,
+    &quot;_score&quot;: 0.5565415,
+    &quot;_source&quot;: {
+      &quot;test_field&quot;: &quot;test client 2&quot;
+    },
+    &quot;_explanation&quot;: {
+      &quot;value&quot;: 0.5565415,
+      &quot;description&quot;: &quot;sum of:&quot;,
+      &quot;details&quot;: [
+        {
           &quot;value&quot;: 0.5565415,
           &quot;description&quot;: &quot;sum of:&quot;,
           &quot;details&quot;: [
             {
               &quot;value&quot;: 0.5565415,
-              &quot;description&quot;: &quot;sum of:&quot;,
+              &quot;description&quot;: &quot;weight(test_field:test in 0) [PerFieldSimilarity], result of:&quot;,
               &quot;details&quot;: [
                 {
                   &quot;value&quot;: 0.5565415,
-                  &quot;description&quot;: &quot;weight(test_field:test in 0) [PerFieldSimilarity], result of:&quot;,
+                  &quot;description&quot;: &quot;score(doc=0,freq=1.0 = termFreq=1.0\n), product of:&quot;,
                   &quot;details&quot;: [
                     {
-                      &quot;value&quot;: 0.5565415,
-                      &quot;description&quot;: &quot;score(doc=0,freq=1.0 = termFreq=1.0\n), product of:&quot;,
+                      &quot;value&quot;: 0.6931472,
+                      &quot;description&quot;: &quot;idf, computed as log(1 + (docCount - docFreq + 0.5) / (docFreq + 0.5)) from:&quot;,
                       &quot;details&quot;: [
                         {
-                          &quot;value&quot;: 0.6931472,
-                          &quot;description&quot;: &quot;idf, computed as log(1 + (docCount - docFreq + 0.5) / (docFreq + 0.5)) from:&quot;,
-                          &quot;details&quot;: [
-                            {
-                              &quot;value&quot;: 1,
-                              &quot;description&quot;: &quot;docFreq&quot;,
-                              &quot;details&quot;: []
-                            },
-                            {
-                              &quot;value&quot;: 2,
-                              &quot;description&quot;: &quot;docCount&quot;,
-                              &quot;details&quot;: []
-                            }
-                          ]
+                          &quot;value&quot;: 1,
+                          &quot;description&quot;: &quot;docFreq&quot;,
+                          &quot;details&quot;: []
                         },
                         {
-                          &quot;value&quot;: 0.8029196,
-                          &quot;description&quot;: &quot;tfNorm, computed as (freq </em> (k1 + 1)) / (freq + k1 <em> (1 - b + b </em> fieldLength / avgFieldLength)) from:&quot;,
-                          &quot;details&quot;: [
-                            {
-                              &quot;value&quot;: 1,
-                              &quot;description&quot;: &quot;termFreq=1.0&quot;,
-                              &quot;details&quot;: []
-                            },
-                            {
-                              &quot;value&quot;: 1.2,
-                              &quot;description&quot;: &quot;parameter k1&quot;,
-                              &quot;details&quot;: []
-                            },
-                            {
-                              &quot;value&quot;: 0.75,
-                              &quot;description&quot;: &quot;parameter b&quot;,
-                              &quot;details&quot;: []
-                            },
-                            {
-                              &quot;value&quot;: 2.5,
-                              &quot;description&quot;: &quot;avgFieldLength&quot;,
-                              &quot;details&quot;: []
-                            },
-                            {
-                              &quot;value&quot;: 4,
-                              &quot;description&quot;: &quot;fieldLength&quot;,
-                              &quot;details&quot;: []
-                            }
-                          ]
+                          &quot;value&quot;: 2,
+                          &quot;description&quot;: &quot;docCount&quot;,
+                          &quot;details&quot;: []
+                        }
+                      ]
+                    },
+                    {
+                      &quot;value&quot;: 0.8029196,
+                      &quot;description&quot;: &quot;tfNorm, computed as (freq * (k1 + 1)) / (freq + k1 * (1 - b + b * fieldLength / avgFieldLength)) from:&quot;,
+                      &quot;details&quot;: [
+                        {
+                          &quot;value&quot;: 1,
+                          &quot;description&quot;: &quot;termFreq=1.0&quot;,
+                          &quot;details&quot;: []
+                        },
+                        {
+                          &quot;value&quot;: 1.2,
+                          &quot;description&quot;: &quot;parameter k1&quot;,
+                          &quot;details&quot;: []
+                        },
+                        {
+                          &quot;value&quot;: 0.75,
+                          &quot;description&quot;: &quot;parameter b&quot;,
+                          &quot;details&quot;: []
+                        },
+                        {
+                          &quot;value&quot;: 2.5,
+                          &quot;description&quot;: &quot;avgFieldLength&quot;,
+                          &quot;details&quot;: []
+                        },
+                        {
+                          &quot;value&quot;: 4,
+                          &quot;description&quot;: &quot;fieldLength&quot;,
+                          &quot;details&quot;: []
                         }
                       ]
                     }
                   ]
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          &quot;value&quot;: 0,
+          &quot;description&quot;: &quot;match on required clause, product of:&quot;,
+          &quot;details&quot;: [
             {
               &quot;value&quot;: 0,
-              &quot;description&quot;: &quot;match on required clause, product of:&quot;,
+              &quot;description&quot;: &quot;# clause&quot;,
+              &quot;details&quot;: []
+            },
+            {
+              &quot;value&quot;: 1,
+              &quot;description&quot;: &quot;_type:test_type, product of:&quot;,
               &quot;details&quot;: [
                 {
-                  &quot;value&quot;: 0,
-                  &quot;description&quot;: &quot;# clause&quot;,
+                  &quot;value&quot;: 1,
+                  &quot;description&quot;: &quot;boost&quot;,
                   &quot;details&quot;: []
                 },
                 {
                   &quot;value&quot;: 1,
-                  &quot;description&quot;: &quot;_type:test_type, product of:&quot;,
-                  &quot;details&quot;: [
-                    {
-                      &quot;value&quot;: 1,
-                      &quot;description&quot;: &quot;boost&quot;,
-                      &quot;details&quot;: []
-                    },
-                    {
-                      &quot;value&quot;: 1,
-                      &quot;description&quot;: &quot;queryNorm&quot;,
-                      &quot;details&quot;: []
-                    }
-                  ]
+                  &quot;description&quot;: &quot;queryNorm&quot;,
+                  &quot;details&quot;: []
                 }
               ]
             }
           ]
         }
-      },
-      {
-        &quot;_shard&quot;: &quot;[test_index][1]&quot;,
-        &quot;_node&quot;: &quot;4onsTYVZTjGvIj9_spWz2w&quot;,
-        &quot;_index&quot;: &quot;test_index&quot;,
-        &quot;_type&quot;: &quot;test_type&quot;,
-        &quot;_id&quot;: &quot;8&quot;,
-        &quot;_score&quot;: 0.25316024,
-        &quot;_source&quot;: {
-          &quot;test_field&quot;: &quot;test client 2&quot;
-        },
-        &quot;_explanation&quot;: {
+      ]
+    }
+  },
+  {
+    &quot;_shard&quot;: &quot;[test_index][1]&quot;,
+    &quot;_node&quot;: &quot;4onsTYVZTjGvIj9_spWz2w&quot;,
+    &quot;_index&quot;: &quot;test_index&quot;,
+    &quot;_type&quot;: &quot;test_type&quot;,
+    &quot;_id&quot;: &quot;8&quot;,
+    &quot;_score&quot;: 0.25316024,
+    &quot;_source&quot;: {
+      &quot;test_field&quot;: &quot;test client 2&quot;
+    },
+    &quot;_explanation&quot;: {
+      &quot;value&quot;: 0.25316024,
+      &quot;description&quot;: &quot;sum of:&quot;,
+      &quot;details&quot;: [
+        {
           &quot;value&quot;: 0.25316024,
           &quot;description&quot;: &quot;sum of:&quot;,
           &quot;details&quot;: [
             {
               &quot;value&quot;: 0.25316024,
-              &quot;description&quot;: &quot;sum of:&quot;,
+              &quot;description&quot;: &quot;weight(test_field:test in 0) [PerFieldSimilarity], result of:&quot;,
               &quot;details&quot;: [
                 {
                   &quot;value&quot;: 0.25316024,
-                  &quot;description&quot;: &quot;weight(test_field:test in 0) [PerFieldSimilarity], result of:&quot;,
+                  &quot;description&quot;: &quot;score(doc=0,freq=1.0 = termFreq=1.0\n), product of:&quot;,
                   &quot;details&quot;: [
                     {
-                      &quot;value&quot;: 0.25316024,
-                      &quot;description&quot;: &quot;score(doc=0,freq=1.0 = termFreq=1.0\n), product of:&quot;,
+                      &quot;value&quot;: 0.2876821,
+                      &quot;description&quot;: &quot;idf, computed as log(1 + (docCount - docFreq + 0.5) / (docFreq + 0.5)) from:&quot;,
                       &quot;details&quot;: [
                         {
-                          &quot;value&quot;: 0.2876821,
-                          &quot;description&quot;: &quot;idf, computed as log(1 + (docCount - docFreq + 0.5) / (docFreq + 0.5)) from:&quot;,
-                          &quot;details&quot;: [
-                            {
-                              &quot;value&quot;: 1,
-                              &quot;description&quot;: &quot;docFreq&quot;,
-                              &quot;details&quot;: []
-                            },
-                            {
-                              &quot;value&quot;: 1,
-                              &quot;description&quot;: &quot;docCount&quot;,
-                              &quot;details&quot;: []
-                            }
-                          ]
+                          &quot;value&quot;: 1,
+                          &quot;description&quot;: &quot;docFreq&quot;,
+                          &quot;details&quot;: []
                         },
                         {
-                          &quot;value&quot;: 0.88,
-                          &quot;description&quot;: &quot;tfNorm, computed as (freq <em> (k1 + 1)) / (freq + k1 </em> (1 - b + b <em> fieldLength / avgFieldLength)) from:&quot;,
-                          &quot;details&quot;: [
-                            {
-                              &quot;value&quot;: 1,
-                              &quot;description&quot;: &quot;termFreq=1.0&quot;,
-                              &quot;details&quot;: []
-                            },
-                            {
-                              &quot;value&quot;: 1.2,
-                              &quot;description&quot;: &quot;parameter k1&quot;,
-                              &quot;details&quot;: []
-                            },
-                            {
-                              &quot;value&quot;: 0.75,
-                              &quot;description&quot;: &quot;parameter b&quot;,
-                              &quot;details&quot;: []
-                            },
-                            {
-                              &quot;value&quot;: 3,
-                              &quot;description&quot;: &quot;avgFieldLength&quot;,
-                              &quot;details&quot;: []
-                            },
-                            {
-                              &quot;value&quot;: 4,
-                              &quot;description&quot;: &quot;fieldLength&quot;,
-                              &quot;details&quot;: []
-                            }
-                          ]
+                          &quot;value&quot;: 1,
+                          &quot;description&quot;: &quot;docCount&quot;,
+                          &quot;details&quot;: []
+                        }
+                      ]
+                    },
+                    {
+                      &quot;value&quot;: 0.88,
+                      &quot;description&quot;: &quot;tfNorm, computed as (freq * (k1 + 1)) / (freq + k1 * (1 - b + b * fieldLength / avgFieldLength)) from:&quot;,
+                      &quot;details&quot;: [
+                        {
+                          &quot;value&quot;: 1,
+                          &quot;description&quot;: &quot;termFreq=1.0&quot;,
+                          &quot;details&quot;: []
+                        },
+                        {
+                          &quot;value&quot;: 1.2,
+                          &quot;description&quot;: &quot;parameter k1&quot;,
+                          &quot;details&quot;: []
+                        },
+                        {
+                          &quot;value&quot;: 0.75,
+                          &quot;description&quot;: &quot;parameter b&quot;,
+                          &quot;details&quot;: []
+                        },
+                        {
+                          &quot;value&quot;: 3,
+                          &quot;description&quot;: &quot;avgFieldLength&quot;,
+                          &quot;details&quot;: []
+                        },
+                        {
+                          &quot;value&quot;: 4,
+                          &quot;description&quot;: &quot;fieldLength&quot;,
+                          &quot;details&quot;: []
                         }
                       ]
                     }
                   ]
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          &quot;value&quot;: 0,
+          &quot;description&quot;: &quot;match on required clause, product of:&quot;,
+          &quot;details&quot;: [
             {
               &quot;value&quot;: 0,
-              &quot;description&quot;: &quot;match on required clause, product of:&quot;,
+              &quot;description&quot;: &quot;# clause&quot;,
+              &quot;details&quot;: []
+            },
+            {
+              &quot;value&quot;: 1,
+              &quot;description&quot;: &quot;*:*, product of:&quot;,
               &quot;details&quot;: [
                 {
-                  &quot;value&quot;: 0,
-                  &quot;description&quot;: &quot;# clause&quot;,
+                  &quot;value&quot;: 1,
+                  &quot;description&quot;: &quot;boost&quot;,
                   &quot;details&quot;: []
                 },
                 {
                   &quot;value&quot;: 1,
-                  &quot;description&quot;: &quot;</em>:*, product of:&quot;,
-                  &quot;details&quot;: [
-                    {
-                      &quot;value&quot;: 1,
-                      &quot;description&quot;: &quot;boost&quot;,
-                      &quot;details&quot;: []
-                    },
-                    {
-                      &quot;value&quot;: 1,
-                      &quot;description&quot;: &quot;queryNorm&quot;,
-                      &quot;details&quot;: []
-                    }
-                  ]
+                  &quot;description&quot;: &quot;queryNorm&quot;,
+                  &quot;details&quot;: []
                 }
               ]
             }
           ]
         }
-      }
-    ]
+      ]
+    }
   }
-}</p>
-<p>3&#x3001;&#x5206;&#x6790;&#x4E00;&#x4E2A;document&#x662F;&#x5982;&#x4F55;&#x88AB;&#x5339;&#x914D;&#x4E0A;&#x7684;</p>
-<p>GET /test_index/test_type/6/_explain
+]
+  }
+}
+</code></pre><h2 id="3&#x3001;&#x5206;&#x6790;&#x4E00;&#x4E2A;document&#x662F;&#x5982;&#x4F55;&#x88AB;&#x5339;&#x914D;&#x4E0A;&#x7684;">3&#x3001;&#x5206;&#x6790;&#x4E00;&#x4E2A;document&#x662F;&#x5982;&#x4F55;&#x88AB;&#x5339;&#x914D;&#x4E0A;&#x7684;</h2>
+<pre><code>GET /test_index/test_type/6/_explain
 {
   &quot;query&quot;: {
     &quot;match&quot;: {
       &quot;test_field&quot;: &quot;test hello&quot;
     }
   }
-}</p>
-
+}
+</code></pre>
                                 
                                 </section>
                             
@@ -1748,7 +1741,7 @@ doc2&#xFF1A;{ &quot;title&quot;: &quot;my article&quot;, &quot;content&quot;: &q
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"8.23_相关度评分TF&IDF算法独家解密","level":"1.9.22","depth":2,"next":{"title":"8.24_内核级知识点之doc value初步探秘","level":"1.9.23","depth":2,"path":"8、初识搜索引擎/8.24_内核级知识点之doc_value初步探秘.md","ref":"8、初识搜索引擎/8.24_内核级知识点之doc_value初步探秘.md","articles":[]},"previous":{"title":"8.22_解密如何将一个field索引两次来解决字符串排序问题","level":"1.9.21","depth":2,"path":"8、初识搜索引擎/8.22_解密如何将一个field索引两次来解决字符串排序问题.md","ref":"8、初识搜索引擎/8.22_解密如何将一个field索引两次来解决字符串排序问题.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"8、初识搜索引擎/8.23_相关度评分TF&IDF算法独家解密.md","mtime":"2019-01-18T02:35:53.643Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-18T07:55:06.893Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"8.23_相关度评分TF&IDF算法独家解密","level":"1.9.22","depth":2,"next":{"title":"8.24_内核级知识点之doc value初步探秘","level":"1.9.23","depth":2,"path":"8、初识搜索引擎/8.24_内核级知识点之doc_value初步探秘.md","ref":"8、初识搜索引擎/8.24_内核级知识点之doc_value初步探秘.md","articles":[]},"previous":{"title":"8.22_解密如何将一个field索引两次来解决字符串排序问题","level":"1.9.21","depth":2,"path":"8、初识搜索引擎/8.22_解密如何将一个field索引两次来解决字符串排序问题.md","ref":"8、初识搜索引擎/8.22_解密如何将一个field索引两次来解决字符串排序问题.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"8、初识搜索引擎/8.23_相关度评分TF&IDF算法独家解密.md","mtime":"2019-01-18T09:13:53.657Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-18T09:41:07.958Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

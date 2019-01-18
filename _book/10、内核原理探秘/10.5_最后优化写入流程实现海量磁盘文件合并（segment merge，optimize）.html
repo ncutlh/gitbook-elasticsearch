@@ -814,12 +814,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.24" data-path="../8、初识搜索引擎/8.25_分布式搜索引擎内核解密之query_phase.html">
+        <li class="chapter " data-level="1.9.24" data-path="../8、初识搜索引擎/8.25_分布式搜索引擎内核解密query phase和fetch phase.html">
             
-                <a href="../8、初识搜索引擎/8.25_分布式搜索引擎内核解密之query_phase.html">
+                <a href="../8、初识搜索引擎/8.25_分布式搜索引擎内核解密query phase和fetch phase.html">
             
                     
-                    8.25_分布式搜索引擎内核解密之query phase
+                    8.25_分布式搜索引擎内核解密(query phase和fetch phase)
             
                 </a>
             
@@ -827,20 +827,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.25" data-path="../8、初识搜索引擎/8.26_分布式搜索引擎内核解密之fetch_phase.html">
-            
-                <a href="../8、初识搜索引擎/8.26_分布式搜索引擎内核解密之fetch_phase.html">
-            
-                    
-                    8.26_分布式搜索引擎内核解密之fetch phase
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.9.26" data-path="../8、初识搜索引擎/8.27_搜索相关参数梳理以及bouncing_results问题解决方案.html">
+        <li class="chapter " data-level="1.9.25" data-path="../8、初识搜索引擎/8.27_搜索相关参数梳理以及bouncing_results问题解决方案.html">
             
                 <a href="../8、初识搜索引擎/8.27_搜索相关参数梳理以及bouncing_results问题解决方案.html">
             
@@ -853,7 +840,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.27" data-path="../8、初识搜索引擎/8.28_上机动手实战基于scoll技术滚动搜索大量数据.html">
+        <li class="chapter " data-level="1.9.26" data-path="../8、初识搜索引擎/8.28_上机动手实战基于scoll技术滚动搜索大量数据.html">
             
                 <a href="../8、初识搜索引擎/8.28_上机动手实战基于scoll技术滚动搜索大量数据.html">
             
@@ -1156,6 +1143,16 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="105&#x6700;&#x540E;&#x4F18;&#x5316;&#x5199;&#x5165;&#x6D41;&#x7A0B;&#x5B9E;&#x73B0;&#x6D77;&#x91CF;&#x78C1;&#x76D8;&#x6587;&#x4EF6;&#x5408;&#x5E76;&#xFF08;segment-merge&#xFF0C;optimize&#xFF09;">10.5_&#x6700;&#x540E;&#x4F18;&#x5316;&#x5199;&#x5165;&#x6D41;&#x7A0B;&#x5B9E;&#x73B0;&#x6D77;&#x91CF;&#x78C1;&#x76D8;&#x6587;&#x4EF6;&#x5408;&#x5E76;&#xFF08;segment merge&#xFF0C;optimize&#xFF09;</h1>
+<p>&#x6BCF;&#x79D2;&#x4E00;&#x4E2A;segment file&#xFF0C;&#x6587;&#x4EF6;&#x8FC7;&#x591A;&#xFF0C;&#x800C;&#x4E14;&#x6BCF;&#x6B21;search&#x90FD;&#x8981;&#x641C;&#x7D22;&#x6240;&#x6709;&#x7684;segment&#xFF0C;&#x5F88;&#x8017;&#x65F6;</p>
+<p>&#x9ED8;&#x8BA4;&#x4F1A;&#x5728;&#x540E;&#x53F0;&#x6267;&#x884C;segment merge&#x64CD;&#x4F5C;&#xFF0C;&#x5728;merge&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x88AB;&#x6807;&#x8BB0;&#x4E3A;deleted&#x7684;document&#x4E5F;&#x4F1A;&#x88AB;&#x5F7B;&#x5E95;&#x7269;&#x7406;&#x5220;&#x9664;</p>
+<p>&#x6BCF;&#x6B21;merge&#x64CD;&#x4F5C;&#x7684;&#x6267;&#x884C;&#x6D41;&#x7A0B;</p>
+<p>&#xFF08;1&#xFF09;&#x9009;&#x62E9;&#x4E00;&#x4E9B;&#x6709;&#x76F8;&#x4F3C;&#x5927;&#x5C0F;&#x7684;segment&#xFF0C;merge&#x6210;&#x4E00;&#x4E2A;&#x5927;&#x7684;segment
+&#xFF08;2&#xFF09;&#x5C06;&#x65B0;&#x7684;segment flush&#x5230;&#x78C1;&#x76D8;&#x4E0A;&#x53BB;
+&#xFF08;3&#xFF09;&#x5199;&#x4E00;&#x4E2A;&#x65B0;&#x7684;commit point&#xFF0C;&#x5305;&#x62EC;&#x4E86;&#x65B0;&#x7684;segment&#xFF0C;&#x5E76;&#x4E14;&#x6392;&#x9664;&#x65E7;&#x7684;&#x90A3;&#x4E9B;segment
+&#xFF08;4&#xFF09;&#x5C06;&#x65B0;&#x7684;segment&#x6253;&#x5F00;&#x4F9B;&#x641C;&#x7D22;
+&#xFF08;5&#xFF09;&#x5C06;&#x65E7;&#x7684;segment&#x5220;&#x9664;</p>
+<p>POST /my_index/_optimize?max_num_segments=1&#xFF0C;&#x5C3D;&#x91CF;&#x4E0D;&#x8981;&#x624B;&#x52A8;&#x6267;&#x884C;&#xFF0C;&#x8BA9;&#x5B83;&#x81EA;&#x52A8;&#x9ED8;&#x8BA4;&#x6267;&#x884C;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;
+<img src="../assets/segment_merge.png" alt="segment_merge.png"></p>
 
                                 
                                 </section>
@@ -1195,7 +1192,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"10.5_最后优化写入流程实现海量磁盘文件合并（segment merge，optimize）","level":"1.11.5","depth":2,"next":{"title":"11、Java API初步使用_员工管理案例","level":"1.12","depth":1,"ref":"","articles":[{"title":"11.1_基于Java实现员工信息的增删改查","level":"1.12.1","depth":2,"path":"11、Java API初步使用_员工管理案例/11.1_基于Java实现员工信息的增删改查.md","ref":"11、Java API初步使用_员工管理案例/11.1_基于Java实现员工信息的增删改查.md","articles":[]},{"title":"11.2_基于Java对员工信息进行复杂的搜索操作","level":"1.12.2","depth":2,"path":"11、Java API初步使用_员工管理案例/11.2_基于Java对员工信息进行复杂的搜索操作.md","ref":"11、Java API初步使用_员工管理案例/11.2_基于Java对员工信息进行复杂的搜索操作.md","articles":[]},{"title":"11.3_基于Java对员工信息进行聚合分析","level":"1.12.3","depth":2,"path":"11、Java API初步使用_员工管理案例/11.3_基于Java对员工信息进行聚合分析.md","ref":"11、Java API初步使用_员工管理案例/11.3_基于Java对员工信息进行聚合分析.md","articles":[]}]},"previous":{"title":"10.4_继续优化写入流程实现durability可靠存储（translog，flush）","level":"1.11.4","depth":2,"path":"10、内核原理探秘/10.4_继续优化写入流程实现durability可靠存储（translog，flush）.md","ref":"10、内核原理探秘/10.4_继续优化写入流程实现durability可靠存储（translog，flush）.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"10、内核原理探秘/10.5_最后优化写入流程实现海量磁盘文件合并（segment merge，optimize）.md","mtime":"2019-01-17T06:57:13.174Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-18T07:55:06.893Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"10.5_最后优化写入流程实现海量磁盘文件合并（segment merge，optimize）","level":"1.11.5","depth":2,"next":{"title":"11、Java API初步使用_员工管理案例","level":"1.12","depth":1,"ref":"","articles":[{"title":"11.1_基于Java实现员工信息的增删改查","level":"1.12.1","depth":2,"path":"11、Java API初步使用_员工管理案例/11.1_基于Java实现员工信息的增删改查.md","ref":"11、Java API初步使用_员工管理案例/11.1_基于Java实现员工信息的增删改查.md","articles":[]},{"title":"11.2_基于Java对员工信息进行复杂的搜索操作","level":"1.12.2","depth":2,"path":"11、Java API初步使用_员工管理案例/11.2_基于Java对员工信息进行复杂的搜索操作.md","ref":"11、Java API初步使用_员工管理案例/11.2_基于Java对员工信息进行复杂的搜索操作.md","articles":[]},{"title":"11.3_基于Java对员工信息进行聚合分析","level":"1.12.3","depth":2,"path":"11、Java API初步使用_员工管理案例/11.3_基于Java对员工信息进行聚合分析.md","ref":"11、Java API初步使用_员工管理案例/11.3_基于Java对员工信息进行聚合分析.md","articles":[]}]},"previous":{"title":"10.4_继续优化写入流程实现durability可靠存储（translog，flush）","level":"1.11.4","depth":2,"path":"10、内核原理探秘/10.4_继续优化写入流程实现durability可靠存储（translog，flush）.md","ref":"10、内核原理探秘/10.4_继续优化写入流程实现durability可靠存储（translog，flush）.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"10、内核原理探秘/10.5_最后优化写入流程实现海量磁盘文件合并（segment merge，optimize）.md","mtime":"2019-01-18T09:35:26.692Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-18T09:41:07.958Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
